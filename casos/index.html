@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html class="light" lang="es">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -12,7 +12,6 @@
 
   <script>
     tailwind.config = {
-      darkMode: "class",
       theme: {
         extend: {
           colors: {
@@ -41,14 +40,9 @@
         background-image: radial-gradient(circle at 2px 2px, rgba(13, 43, 69, 0.05) 1px, transparent 0);
         background-size: 40px 40px;
       }
-      .dark .network-pattern {
-        background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
-      }
       .gradient-blur { filter: blur(100px); opacity: 0.4; }
       .node-glow { box-shadow: 0 0 20px rgba(13, 43, 69, 0.2); }
-      .dark .node-glow { box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); }
       .connector-line { background: linear-gradient(90deg, transparent, rgba(13, 43, 69, 0.2), transparent); }
-      .dark .connector-line { background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); }
     }
   </style>
   <style>
@@ -74,12 +68,6 @@
     .nav-link-tech:not(.bg-primary):focus-visible {
       color: #0D2B45;
     }
-
-    .dark .nav-link-tech:not(.bg-primary):hover,
-    .dark .nav-link-tech:not(.bg-primary):focus-visible {
-      color: #fff;
-    }
-
     .nav-link-tech:not(.bg-primary):hover::after,
     .nav-link-tech:not(.bg-primary):focus-visible::after {
       transform: scaleX(1);
@@ -118,17 +106,15 @@
       transition: transform 220ms ease;
     }
 
-    .dark .hero-link-tech::after { background: rgba(255, 255, 255, .55); }
     .hero-link-tech:hover { color: #0D2B45; }
-    .dark .hero-link-tech:hover { color: #fff; }
     .hero-link-tech:hover::after { transform: scaleX(1); }
   </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+<body class="bg-background-light text-slate-800 font-sans transition-colors duration-300">
 
   <!-- NAV (corporativo real) -->
-  <header class="fixed w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <header class="fixed w-full z-50 bg-background-light/80 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a class="flex items-center gap-4" href="/">
         <img alt="Ingeniería Web Miranda Logo" class="h-12 w-auto"
@@ -142,15 +128,10 @@
   <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
 
-  <a class="px-6 py-2 bg-primary text-white border border-primary dark:bg-white dark:text-primary dark:border-white hover:opacity-90 transition-all nav-link-tech"
+  <a class="px-6 py-2 bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
      href="/contacto/">
     Solicitar diagnóstico
   </a>
-
-  <button id="themeToggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-          aria-label="Cambiar tema">
-    <span id="themeIcon" class="material-icons text-xl">dark_mode</span>
-  </button>
 </nav>
     </div>
   </header>
@@ -158,16 +139,16 @@
   <main class="pt-24">
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-6">
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 dark:text-slate-400">Casos</p>
-        <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary dark:text-white">Implementaciones reales.</h1>
-        <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl">Decisiones técnicas documentadas. Entregables claros. Sin humo.</p>
+        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Casos</p>
+        <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary">Implementaciones reales.</h1>
+        <p class="mt-4 text-lg text-slate-600 max-w-3xl">Decisiones técnicas documentadas. Entregables claros. Sin humo.</p>
 
         <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <a class="bg-primary text-white px-8 py-4 text-center hover:opacity-90 transition-all"
              href="/contacto/">
             Solicitar diagnóstico
           </a>
-          <a class="hero-link-tech text-primary dark:text-white/90"
+          <a class="hero-link-tech text-primary"
              href="https://mauromiranda.online" target="_blank" rel="noopener">
             Ver laboratorio
           </a>
@@ -178,46 +159,46 @@
     <section class="pb-12">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-            <span class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600 dark:text-slate-300">PWA</span>
-            <h3 class="mt-4 text-xl font-display text-primary dark:text-white">Migración a PWA</h3>
-            <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">Implementación desde código HTML/CSS existente para habilitar instalación, offline baseline y experiencia app-like.</p>
+          <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+            <span class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">PWA</span>
+            <h3 class="mt-4 text-xl font-display text-primary">Migración a PWA</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">Implementación desde código HTML/CSS existente para habilitar instalación, offline baseline y experiencia app-like.</p>
             <div class="mt-4">
-              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500 dark:text-slate-400">Decisiones clave</p>
-              <ul class="mt-2 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+              <ul class="mt-2 space-y-1 text-sm text-slate-700">
                 <li>• Service Worker + estrategia de caché</li>
                 <li>• Web App Manifest + criterios de instalación</li>
               </ul>
             </div>
-            <a href="/casos/migracion-pwa/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary dark:text-white/90">Ver caso</a>
+            <a href="/casos/migracion-pwa/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary">Ver caso</a>
           </article>
 
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-            <span class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600 dark:text-slate-300">Landing</span>
-            <h3 class="mt-4 text-xl font-display text-primary dark:text-white">Landing de captación</h3>
-            <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">Estructura orientada a conversión con jerarquía clara, performance-first y analítica lista para iterar.</p>
+          <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+            <span class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">Landing</span>
+            <h3 class="mt-4 text-xl font-display text-primary">Landing de captación</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">Estructura orientada a conversión con jerarquía clara, performance-first y analítica lista para iterar.</p>
             <div class="mt-4">
-              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500 dark:text-slate-400">Decisiones clave</p>
-              <ul class="mt-2 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+              <ul class="mt-2 space-y-1 text-sm text-slate-700">
                 <li>• Arquitectura de secciones + CTA</li>
                 <li>• Base SEO técnico on-page</li>
               </ul>
             </div>
-            <a href="/casos/landing-captacion/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary dark:text-white/90">Ver caso</a>
+            <a href="/casos/landing-captacion/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary">Ver caso</a>
           </article>
 
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-            <span class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600 dark:text-slate-300">Landing</span>
-            <h3 class="mt-4 text-xl font-display text-primary dark:text-white">Landing de servicios</h3>
-            <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">Página enfocada en claridad de oferta, confianza y reducción de fricción para contacto calificado.</p>
+          <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+            <span class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">Landing</span>
+            <h3 class="mt-4 text-xl font-display text-primary">Landing de servicios</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">Página enfocada en claridad de oferta, confianza y reducción de fricción para contacto calificado.</p>
             <div class="mt-4">
-              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500 dark:text-slate-400">Decisiones clave</p>
-              <ul class="mt-2 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+              <ul class="mt-2 space-y-1 text-sm text-slate-700">
                 <li>• Microcopy + señales de confianza</li>
                 <li>• Form + rutas de intención</li>
               </ul>
             </div>
-            <a href="/casos/landing-servicios/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary dark:text-white/90">Ver caso</a>
+            <a href="/casos/landing-servicios/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary">Ver caso</a>
           </article>
         </div>
       </div>
@@ -225,9 +206,9 @@
 
     <section class="pb-20">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="border-t border-slate-200 dark:border-slate-800 pt-10">
-          <p class="text-lg text-slate-700 dark:text-slate-300 mb-4">¿Quieres un caso con métricas? Primero definimos baseline y medición.</p>
-          <a href="/contacto/" class="hero-link-tech text-primary dark:text-white/90">Solicitar diagnóstico (contexto real)</a>
+        <div class="border-t border-slate-200 pt-10">
+          <p class="text-lg text-slate-700 mb-4">¿Quieres un caso con métricas? Primero definimos baseline y medición.</p>
+          <a href="/contacto/" class="hero-link-tech text-primary">Solicitar diagnóstico (contexto real)</a>
         </div>
       </div>
     </section>
@@ -276,21 +257,9 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-    const themeToggle = document.getElementById("themeToggle");
-    const themeIcon = document.getElementById("themeIcon");
-
-    const syncThemeIcon = () => {
-      themeIcon.textContent = document.documentElement.classList.contains("dark")
-        ? "light_mode"
-        : "dark_mode";
-    };
-
-    themeToggle.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-      syncThemeIcon();
-    });
-
-    syncThemeIcon();
   </script>
 </body>
 </html>
+
+
+

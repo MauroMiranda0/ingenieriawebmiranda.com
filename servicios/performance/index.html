@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html class="light" lang="es">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -12,7 +12,6 @@
 
   <script>
     tailwind.config = {
-      darkMode: "class",
       theme: {
         extend: {
           colors: {
@@ -41,14 +40,9 @@
         background-image: radial-gradient(circle at 2px 2px, rgba(13, 43, 69, 0.05) 1px, transparent 0);
         background-size: 40px 40px;
       }
-      .dark .network-pattern {
-        background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
-      }
       .gradient-blur { filter: blur(100px); opacity: 0.4; }
       .node-glow { box-shadow: 0 0 20px rgba(13, 43, 69, 0.2); }
-      .dark .node-glow { box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); }
       .connector-line { background: linear-gradient(90deg, transparent, rgba(13, 43, 69, 0.2), transparent); }
-      .dark .connector-line { background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); }
     }
   </style>
   <style>
@@ -74,12 +68,6 @@
     .nav-link-tech:not(.bg-primary):focus-visible {
       color: #0D2B45;
     }
-
-    .dark .nav-link-tech:not(.bg-primary):hover,
-    .dark .nav-link-tech:not(.bg-primary):focus-visible {
-      color: #fff;
-    }
-
     .nav-link-tech:not(.bg-primary):hover::after,
     .nav-link-tech:not(.bg-primary):focus-visible::after {
       transform: scaleX(1);
@@ -118,17 +106,15 @@
       transition: transform 220ms ease;
     }
 
-    .dark .hero-link-tech::after { background: rgba(255, 255, 255, .55); }
     .hero-link-tech:hover { color: #0D2B45; }
-    .dark .hero-link-tech:hover { color: #fff; }
     .hero-link-tech:hover::after { transform: scaleX(1); }
   </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+<body class="bg-background-light text-slate-800 font-sans transition-colors duration-300">
 
   <!-- NAV (corporativo real) -->
-  <header class="fixed w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <header class="fixed w-full z-50 bg-background-light/80 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a class="flex items-center gap-4" href="/">
         <img alt="Ingeniería Web Miranda Logo" class="h-12 w-auto"
@@ -142,36 +128,31 @@
   <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
 
-  <a class="px-6 py-2 bg-primary text-white border border-primary dark:bg-white dark:text-primary dark:border-white hover:opacity-90 transition-all nav-link-tech"
+  <a class="px-6 py-2 bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
      href="/contacto/">
     Solicitar diagnóstico
   </a>
-
-  <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-          onclick="document.documentElement.classList.toggle('dark')" aria-label="Cambiar tema">
-    <span class="material-icons text-xl">dark_mode</span>
-  </button>
 </nav>
     </div>
   </header>
 
   <main class="pt-24">
-    <section class="py-16 border-b border-slate-200 dark:border-slate-800">
+    <section class="py-16 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-6">
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 dark:text-slate-400">Servicio</p>
-        <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary dark:text-white">Performance & Core Web Vitals</h1>
-        <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl">Reducimos fricción de carga e interacción. Mejor experiencia. Mejor conversión sin humo.</p>
+        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Servicio</p>
+        <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary">Performance & Core Web Vitals</h1>
+        <p class="mt-4 text-lg text-slate-600 max-w-3xl">Reducimos fricción de carga e interacción. Mejor experiencia. Mejor conversión sin humo.</p>
         <div class="mt-6 flex flex-wrap gap-3 text-xs">
-          <span class="px-3 py-1 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300">Enfoque: LCP / INP / CLS</span>
-          <span class="px-3 py-1 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300">Método: medición + optimización</span>
-          <span class="px-3 py-1 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300">Entrega: cambios trazables</span>
+          <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Enfoque: LCP / INP / CLS</span>
+          <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Método: medición + optimización</span>
+          <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Entrega: cambios trazables</span>
         </div>
         <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <a class="bg-primary text-white px-8 py-4 text-center hover:opacity-90 transition-all"
              href="/contacto/">
             Solicitar diagnóstico
           </a>
-          <a class="hero-link-tech text-primary dark:text-white/90"
+          <a class="hero-link-tech text-primary"
              href="/casos/">
             Ver casos
           </a>
@@ -181,34 +162,34 @@
 
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">Qué resolvemos</h2>
+        <h2 class="font-display text-3xl text-primary mb-8">Qué resolvemos</h2>
         <div class="grid md:grid-cols-3 gap-5">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-            <h3 class="text-xl font-display text-primary dark:text-white">Carga lenta (LCP)</h3>
-            <p class="mt-3 font-medium text-slate-800 dark:text-slate-200">Optimizamos render crítico y recursos.</p>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Priorizamos lo que aparece primero y reducimos trabajo innecesario del navegador.</p>
+          <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+            <h3 class="text-xl font-display text-primary">Carga lenta (LCP)</h3>
+            <p class="mt-3 font-medium text-slate-800">Optimizamos render crítico y recursos.</p>
+            <p class="mt-2 text-sm text-slate-600">Priorizamos lo que aparece primero y reducimos trabajo innecesario del navegador.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-            <h3 class="text-xl font-display text-primary dark:text-white">Interacción lenta (INP)</h3>
-            <p class="mt-3 font-medium text-slate-800 dark:text-slate-200">Reducimos bloqueo de main thread.</p>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Menos JS inútil, mejor manejo de eventos y tareas.</p>
+          <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+            <h3 class="text-xl font-display text-primary">Interacción lenta (INP)</h3>
+            <p class="mt-3 font-medium text-slate-800">Reducimos bloqueo de main thread.</p>
+            <p class="mt-2 text-sm text-slate-600">Menos JS inútil, mejor manejo de eventos y tareas.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-            <h3 class="text-xl font-display text-primary dark:text-white">Inestabilidad visual (CLS)</h3>
-            <p class="mt-3 font-medium text-slate-800 dark:text-slate-200">Evitamos saltos de layout.</p>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Reservamos espacio, controlamos fuentes/medios y estabilizamos UI.</p>
+          <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+            <h3 class="text-xl font-display text-primary">Inestabilidad visual (CLS)</h3>
+            <p class="mt-3 font-medium text-slate-800">Evitamos saltos de layout.</p>
+            <p class="mt-2 text-sm text-slate-600">Reservamos espacio, controlamos fuentes/medios y estabilizamos UI.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="py-16 border-t border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+    <section class="py-16 border-t border-b border-slate-200 bg-slate-50">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">Entregables típicos</h2>
+        <h2 class="font-display text-3xl text-primary mb-8">Entregables típicos</h2>
         <div class="grid md:grid-cols-2 gap-6">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-4">Entregables</h3>
-            <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+          <article class="border border-slate-200 bg-white p-8">
+            <h3 class="font-display text-2xl text-primary mb-4">Entregables</h3>
+            <ul class="space-y-2 text-slate-600">
               <li>• Baseline de performance (Lighthouse + campo si existe)</li>
               <li>• Lista priorizada de oportunidades (impacto/esfuerzo)</li>
               <li>• Performance budget (límites de JS/CSS/imagen)</li>
@@ -216,9 +197,9 @@
               <li>• Checklist de regresión (antes/después)</li>
             </ul>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-4">Qué NO hacemos</h3>
-            <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+          <article class="border border-slate-200 bg-white p-8">
+            <h3 class="font-display text-2xl text-primary mb-4">Qué NO hacemos</h3>
+            <ul class="space-y-2 text-slate-600">
               <li>• Puntaje de Lighthouse como objetivo vacío</li>
               <li>• Optimizar ‘a ciegas’ sin baseline</li>
               <li>• Micro-optimización sin impacto real</li>
@@ -231,72 +212,72 @@
 
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">Palancas de optimización</h2>
+        <h2 class="font-display text-3xl text-primary mb-8">Palancas de optimización</h2>
         <div class="grid md:grid-cols-3 gap-5">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Render crítico</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">CSS crítico y orden de carga para contenido above-the-fold.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Render crítico</h3>
+            <p class="text-sm text-slate-600">CSS crítico y orden de carga para contenido above-the-fold.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Imágenes</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Compresión, formatos modernos y dimensionado correcto.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Imágenes</h3>
+            <p class="text-sm text-slate-600">Compresión, formatos modernos y dimensionado correcto.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">JS</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Reducir, dividir, diferir. Menos trabajo en main thread.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">JS</h3>
+            <p class="text-sm text-slate-600">Reducir, dividir, diferir. Menos trabajo en main thread.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Fuentes</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Carga eficiente y fallback para evitar CLS.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Fuentes</h3>
+            <p class="text-sm text-slate-600">Carga eficiente y fallback para evitar CLS.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Caching</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Políticas y headers para repetir carga más rápido.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Caching</h3>
+            <p class="text-sm text-slate-600">Políticas y headers para repetir carga más rápido.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Infra/Entrega</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">CDN, compresión, HTTP/2/3 cuando aplica.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Infra/Entrega</h3>
+            <p class="text-sm text-slate-600">CDN, compresión, HTTP/2/3 cuando aplica.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="py-16 border-t border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+    <section class="py-16 border-t border-b border-slate-200 bg-slate-50">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">Proceso</h2>
+        <h2 class="font-display text-3xl text-primary mb-8">Proceso</h2>
         <div class="grid md:grid-cols-3 gap-5">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Medimos</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Definimos baseline y detectamos cuellos de botella reales.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Medimos</h3>
+            <p class="text-sm text-slate-600">Definimos baseline y detectamos cuellos de botella reales.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Optimizamos</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Aplicamos cambios con impacto y control de regresión.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Optimizamos</h3>
+            <p class="text-sm text-slate-600">Aplicamos cambios con impacto y control de regresión.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Sostenemos</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Budget + checklist para que no se degrade con el tiempo.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Sostenemos</h3>
+            <p class="text-sm text-slate-600">Budget + checklist para que no se degrade con el tiempo.</p>
           </article>
         </div>
-        <p class="mt-6 text-xs text-slate-500 dark:text-slate-400">Instrumentación mínima desde día 1 (eventos + baseline) para defender decisiones con datos.</p>
+        <p class="mt-6 text-xs text-slate-500">Instrumentación mínima desde día 1 (eventos + baseline) para defender decisiones con datos.</p>
       </div>
     </section>
 
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">FAQ</h2>
+        <h2 class="font-display text-3xl text-primary mb-8">FAQ</h2>
         <div class="space-y-4">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-medium text-slate-900 dark:text-slate-100">¿Necesito Analytics o datos de campo?</h3>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">No para iniciar. Empezamos con laboratorio y definimos cómo capturar baseline real.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-medium text-slate-900">¿Necesito Analytics o datos de campo?</h3>
+            <p class="mt-2 text-sm text-slate-600">No para iniciar. Empezamos con laboratorio y definimos cómo capturar baseline real.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-medium text-slate-900 dark:text-slate-100">¿Performance es solo front?</h3>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">No. Revisamos delivery, caching e infra cuando el cuello está ahí.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-medium text-slate-900">¿Performance es solo front?</h3>
+            <p class="mt-2 text-sm text-slate-600">No. Revisamos delivery, caching e infra cuando el cuello está ahí.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-medium text-slate-900 dark:text-slate-100">¿Cuánto tarda?</h3>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Depende del baseline y del stack. Por eso primero diagnosticamos y priorizamos.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-medium text-slate-900">¿Cuánto tarda?</h3>
+            <p class="mt-2 text-sm text-slate-600">Depende del baseline y del stack. Por eso primero diagnosticamos y priorizamos.</p>
           </article>
         </div>
       </div>
@@ -368,3 +349,6 @@
   </script>
 </body>
 </html>
+
+
+

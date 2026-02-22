@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html class="light" lang="es">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
   <script>
-    tailwind.config={darkMode:"class",theme:{extend:{colors:{primary:"#0D2B45","background-light":"#FDFDFD","background-dark":"#050B10"},fontFamily:{display:["Playfair Display","serif"],sans:["Inter","sans-serif"]}}}};
+    tailwind.config={theme:{extend:{colors:{primary:"#0D2B45","background-light":"#FDFDFD","background-dark":"#050B10"},fontFamily:{display:["Playfair Display","serif"],sans:["Inter","sans-serif"]}}}};
   </script>
   <style>
     .nav-link-tech {
@@ -34,12 +34,6 @@
     .nav-link-tech:not(.bg-primary):focus-visible {
       color: #0D2B45;
     }
-
-    .dark .nav-link-tech:not(.bg-primary):hover,
-    .dark .nav-link-tech:not(.bg-primary):focus-visible {
-      color: #fff;
-    }
-
     .nav-link-tech:not(.bg-primary):hover::after,
     .nav-link-tech:not(.bg-primary):focus-visible::after {
       transform: scaleX(1);
@@ -51,8 +45,8 @@
     }
   </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
-  <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<body class="bg-background-light text-slate-800 font-sans transition-colors duration-300">
+  <header class="sticky top-0 z-50 bg-background-light/80 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a class="flex items-center gap-4" href="/"><img alt="Logo" class="h-12 w-auto" src="/assets/img/logo.png"/></a>
       <nav class="hidden md:flex items-center gap-10 font-medium text-sm tracking-widest uppercase">
@@ -62,30 +56,25 @@
   <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
 
-  <a class="px-6 py-2 bg-primary text-white border border-primary dark:bg-white dark:text-primary dark:border-white hover:opacity-90 transition-all nav-link-tech"
+  <a class="px-6 py-2 bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
      href="/contacto/">
     Solicitar diagnóstico
   </a>
-
-  <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-          onclick="document.documentElement.classList.toggle('dark')" aria-label="Cambiar tema">
-    <span class="material-icons text-xl">dark_mode</span>
-  </button>
 </nav>
     </div>
   </header>
 
   <main class="max-w-7xl mx-auto px-6 py-16">
     <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Servicio</p>
-    <h1 class="font-display text-5xl md:text-6xl text-primary dark:text-white mb-6">Diagnóstico técnico</h1>
-    <p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed mb-12">
+    <h1 class="font-display text-5xl md:text-6xl text-primary mb-6">Diagnóstico técnico</h1>
+    <p class="text-lg text-slate-600 max-w-3xl leading-relaxed mb-12">
       Un diagnóstico defendible para tomar decisiones: qué atacar primero, qué riesgos existen y cuál es el siguiente paso realista.
     </p>
 
     <section class="grid md:grid-cols-2 gap-8 mb-12">
-      <div class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-4">Qué incluye</h2>
-        <ul class="space-y-3 text-slate-600 dark:text-slate-400 leading-relaxed">
+      <div class="border border-slate-200 bg-white/70 p-8">
+        <h2 class="font-display text-3xl text-primary mb-4">Qué incluye</h2>
+        <ul class="space-y-3 text-slate-600 leading-relaxed">
           <li>• Revisión técnica del estado actual (sitio o requerimiento).</li>
           <li>• Identificación de riesgos y cuellos de botella.</li>
           <li>• Prioridades y quick wins (defendibles).</li>
@@ -93,9 +82,9 @@
         </ul>
       </div>
 
-      <div class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-4">Entregables</h2>
-        <ul class="space-y-3 text-slate-600 dark:text-slate-400 leading-relaxed">
+      <div class="border border-slate-200 bg-white/70 p-8">
+        <h2 class="font-display text-3xl text-primary mb-4">Entregables</h2>
+        <ul class="space-y-3 text-slate-600 leading-relaxed">
           <li>• Resumen ejecutivo (1–2 páginas).</li>
           <li>• Lista priorizada de acciones (backlog inicial).</li>
           <li>• Recomendación de ruta (modernizar / optimizar / construir).</li>
@@ -104,7 +93,7 @@
       </div>
     </section>
 
-    <section class="border border-slate-200 dark:border-slate-800 bg-primary text-white p-10">
+    <section class="border border-slate-200 bg-primary text-white p-10">
       <h3 class="font-display text-4xl mb-4">¿Listo para empezar con claridad?</h3>
       <p class="text-white/80 mb-8 max-w-2xl">
         Un diagnóstico técnico evita decisiones caras y acelera la ejecución correcta.
@@ -159,3 +148,6 @@
   <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 </body>
 </html>
+
+
+

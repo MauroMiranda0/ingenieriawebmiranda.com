@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html class="light" lang="es">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -12,7 +12,6 @@
 
   <script>
     tailwind.config = {
-      darkMode: "class",
       theme: {
         extend: {
           colors: {
@@ -41,14 +40,9 @@
         background-image: radial-gradient(circle at 2px 2px, rgba(13, 43, 69, 0.05) 1px, transparent 0);
         background-size: 40px 40px;
       }
-      .dark .network-pattern {
-        background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
-      }
       .gradient-blur { filter: blur(100px); opacity: 0.4; }
       .node-glow { box-shadow: 0 0 20px rgba(13, 43, 69, 0.2); }
-      .dark .node-glow { box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); }
       .connector-line { background: linear-gradient(90deg, transparent, rgba(13, 43, 69, 0.2), transparent); }
-      .dark .connector-line { background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); }
     }
   </style>
   <style>
@@ -74,12 +68,6 @@
     .nav-link-tech:not(.bg-primary):focus-visible {
       color: #0D2B45;
     }
-
-    .dark .nav-link-tech:not(.bg-primary):hover,
-    .dark .nav-link-tech:not(.bg-primary):focus-visible {
-      color: #fff;
-    }
-
     .nav-link-tech:not(.bg-primary):hover::after,
     .nav-link-tech:not(.bg-primary):focus-visible::after {
       transform: scaleX(1);
@@ -118,17 +106,15 @@
       transition: transform 220ms ease;
     }
 
-    .dark .hero-link-tech::after { background: rgba(255, 255, 255, .55); }
     .hero-link-tech:hover { color: #0D2B45; }
-    .dark .hero-link-tech:hover { color: #fff; }
     .hero-link-tech:hover::after { transform: scaleX(1); }
   </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+<body class="bg-background-light text-slate-800 font-sans transition-colors duration-300">
 
   <!-- NAV (corporativo real) -->
-  <header class="fixed w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <header class="fixed w-full z-50 bg-background-light/80 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a class="flex items-center gap-4" href="/">
         <img alt="Ingeniería Web Miranda Logo" class="h-12 w-auto"
@@ -142,48 +128,43 @@
   <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
 
-  <a class="px-6 py-2 bg-primary text-white border border-primary dark:bg-white dark:text-primary dark:border-white hover:opacity-90 transition-all nav-link-tech"
+  <a class="px-6 py-2 bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
      href="/contacto/">
     Solicitar diagnóstico
   </a>
-
-  <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-          onclick="document.documentElement.classList.toggle('dark')" aria-label="Cambiar tema">
-    <span class="material-icons text-xl">dark_mode</span>
-  </button>
 </nav>
     </div>
   </header>
 
   <main class="pt-24">
-    <section class="py-16 border-b border-slate-200 dark:border-slate-800">
+    <section class="py-16 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-6">
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 dark:text-slate-400">Caso</p>
-        <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary dark:text-white">Landing de servicios</h1>
-        <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl">Página enfocada en claridad de oferta, confianza y reducción de fricción para contacto calificado.</p>
+        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Caso</p>
+        <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary">Landing de servicios</h1>
+        <p class="mt-4 text-lg text-slate-600 max-w-3xl">Página enfocada en claridad de oferta, confianza y reducción de fricción para contacto calificado.</p>
         <div class="mt-6 flex flex-wrap gap-3 text-xs">
-          <span class="px-3 py-1 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300">Tipo: Landing</span>
-          <span class="px-3 py-1 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300">Rol: Implementación</span>
-          <span class="px-3 py-1 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300">Enfoque: Claridad + confianza + contacto calificado</span>
+          <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Tipo: Landing</span>
+          <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Rol: Implementación</span>
+          <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Enfoque: Claridad + confianza + contacto calificado</span>
         </div>
       </div>
     </section>
 
     <section class="py-14">
       <div class="max-w-7xl mx-auto px-6 space-y-10">
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-          <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Contexto</h2>
-          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Se requería presentar servicios con mayor claridad de alcance y filtrar mejor la intención para evitar contactos no calificados.</p>
+        <article class="border border-slate-200 bg-white p-8">
+          <h2 class="font-display text-3xl text-primary mb-3">Contexto</h2>
+          <p class="text-slate-600 leading-relaxed">Se requería presentar servicios con mayor claridad de alcance y filtrar mejor la intención para evitar contactos no calificados.</p>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-          <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Objetivo</h2>
-          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Construir confianza y facilitar acción directa hacia contacto calificado, reduciendo ambigüedad en oferta y siguiente paso.</p>
+        <article class="border border-slate-200 bg-white p-8">
+          <h2 class="font-display text-3xl text-primary mb-3">Objetivo</h2>
+          <p class="text-slate-600 leading-relaxed">Construir confianza y facilitar acción directa hacia contacto calificado, reduciendo ambigüedad en oferta y siguiente paso.</p>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-          <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Qué se implementó</h2>
-          <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+        <article class="border border-slate-200 bg-white p-8">
+          <h2 class="font-display text-3xl text-primary mb-3">Qué se implementó</h2>
+          <ul class="space-y-2 text-slate-600">
             <li>Arquitectura por intención: bloques ordenados para que el usuario entienda oferta, evidencia y siguiente paso.</li>
             <li>Alcance explícito de servicios: límites y foco para reducir expectativas ambiguas.</li>
             <li>Señales de confianza: elementos de credibilidad ubicados en puntos de decisión.</li>
@@ -193,9 +174,9 @@
           </ul>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-          <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Decisiones clave</h2>
-          <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+        <article class="border border-slate-200 bg-white p-8">
+          <h2 class="font-display text-3xl text-primary mb-3">Decisiones clave</h2>
+          <ul class="space-y-2 text-slate-600">
             <li>Oferta explícita desde arriba: qué se resuelve, para quién y con qué alcance.</li>
             <li>Orden de secciones como filtro: primero claridad, luego evidencia, después acción.</li>
             <li>CTA principal dominante para evitar dispersión en la toma de decisión.</li>
@@ -204,18 +185,18 @@
           </ul>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-          <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Riesgos y mitigaciones</h2>
-          <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+        <article class="border border-slate-200 bg-white p-8">
+          <h2 class="font-display text-3xl text-primary mb-3">Riesgos y mitigaciones</h2>
+          <ul class="space-y-2 text-slate-600">
             <li>Mensaje ambiguo de oferta: mitigado con encabezados explícitos y alcance visible por bloque.</li>
             <li>Baja conversión por fricción de contacto: mitigada con formulario corto y rutas alternativas de intención.</li>
             <li>Caída de interacción por carga lenta: mitigada con control de assets críticos y optimización base.</li>
           </ul>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-          <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Entregables</h2>
-          <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+        <article class="border border-slate-200 bg-white p-8">
+          <h2 class="font-display text-3xl text-primary mb-3">Entregables</h2>
+          <ul class="space-y-2 text-slate-600">
             <li>Layout de landing de servicios listo para implementación.</li>
             <li>Microcopy estructural para titulares, bloques y CTAs.</li>
             <li>Checklist de señales de confianza.</li>
@@ -224,9 +205,9 @@
           </ul>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-          <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Lo que haríamos distinto hoy</h2>
-          <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+        <article class="border border-slate-200 bg-white p-8">
+          <h2 class="font-display text-3xl text-primary mb-3">Lo que haríamos distinto hoy</h2>
+          <ul class="space-y-2 text-slate-600">
             <li>Pruebas de orden de secciones para validar secuencia de decisión.</li>
             <li>Variantes de copy para ajustar claridad según segmento.</li>
             <li>Medición específica de abandono en formulario por campo y etapa.</li>
@@ -238,9 +219,9 @@
 
     <section class="pb-20">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-10">
-          <h2 class="font-display text-3xl text-primary dark:text-white mb-3">¿Quieres un diagnóstico en tu contexto?</h2>
-          <p class="text-slate-600 dark:text-slate-400 mb-8">Definimos baseline, riesgos y un plan de ejecución defendible.</p>
+        <div class="border border-slate-200 bg-white p-10">
+          <h2 class="font-display text-3xl text-primary mb-3">¿Quieres un diagnóstico en tu contexto?</h2>
+          <p class="text-slate-600 mb-8">Definimos baseline, riesgos y un plan de ejecución defendible.</p>
           <a class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 hover:opacity-90 transition-all"
              href="/contacto/">
             Solicitar diagnóstico <span class="material-icons text-base">arrow_forward</span>
@@ -296,3 +277,6 @@
   </script>
 </body>
 </html>
+
+
+

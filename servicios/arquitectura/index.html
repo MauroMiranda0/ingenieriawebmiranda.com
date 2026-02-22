@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html class="light" lang="es">
+<html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -12,7 +12,6 @@
 
   <script>
     tailwind.config = {
-      darkMode: "class",
       theme: {
         extend: {
           colors: {
@@ -41,14 +40,9 @@
         background-image: radial-gradient(circle at 2px 2px, rgba(13, 43, 69, 0.05) 1px, transparent 0);
         background-size: 40px 40px;
       }
-      .dark .network-pattern {
-        background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
-      }
       .gradient-blur { filter: blur(100px); opacity: 0.4; }
       .node-glow { box-shadow: 0 0 20px rgba(13, 43, 69, 0.2); }
-      .dark .node-glow { box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); }
       .connector-line { background: linear-gradient(90deg, transparent, rgba(13, 43, 69, 0.2), transparent); }
-      .dark .connector-line { background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); }
     }
   </style>
   <style>
@@ -74,12 +68,6 @@
     .nav-link-tech:not(.bg-primary):focus-visible {
       color: #0D2B45;
     }
-
-    .dark .nav-link-tech:not(.bg-primary):hover,
-    .dark .nav-link-tech:not(.bg-primary):focus-visible {
-      color: #fff;
-    }
-
     .nav-link-tech:not(.bg-primary):hover::after,
     .nav-link-tech:not(.bg-primary):focus-visible::after {
       transform: scaleX(1);
@@ -118,17 +106,15 @@
       transition: transform 220ms ease;
     }
 
-    .dark .hero-link-tech::after { background: rgba(255, 255, 255, .55); }
     .hero-link-tech:hover { color: #0D2B45; }
-    .dark .hero-link-tech:hover { color: #fff; }
     .hero-link-tech:hover::after { transform: scaleX(1); }
   </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+<body class="bg-background-light text-slate-800 font-sans transition-colors duration-300">
 
   <!-- NAV (corporativo real) -->
-  <header class="fixed w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <header class="fixed w-full z-50 bg-background-light/80 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a class="flex items-center gap-4" href="/">
         <img alt="Ingeniería Web Miranda Logo" class="h-12 w-auto"
@@ -142,36 +128,31 @@
   <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
 
-  <a class="px-6 py-2 bg-primary text-white border border-primary dark:bg-white dark:text-primary dark:border-white hover:opacity-90 transition-all nav-link-tech"
+  <a class="px-6 py-2 bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
      href="/contacto/">
     Solicitar diagnóstico
   </a>
-
-  <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-          onclick="document.documentElement.classList.toggle('dark')" aria-label="Cambiar tema">
-    <span class="material-icons text-xl">dark_mode</span>
-  </button>
 </nav>
     </div>
   </header>
 
   <main class="pt-24">
-    <section class="py-16 border-b border-slate-200 dark:border-slate-800">
+    <section class="py-16 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-6">
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 dark:text-slate-400">Servicio</p>
-        <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary dark:text-white">Arquitectura & Modernización</h1>
-        <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl">Reducimos deuda técnica sin detener operación. Diseñamos un camino defendible para escalar.</p>
+        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Servicio</p>
+        <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary">Arquitectura & Modernización</h1>
+        <p class="mt-4 text-lg text-slate-600 max-w-3xl">Reducimos deuda técnica sin detener operación. Diseñamos un camino defendible para escalar.</p>
         <div class="mt-6 flex flex-wrap gap-3 text-xs">
-          <span class="px-3 py-1 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300">Enfoque: mantenibilidad</span>
-          <span class="px-3 py-1 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300">Entrega: roadmap por fases</span>
-          <span class="px-3 py-1 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300">Resultado: ejecución trazable</span>
+          <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Enfoque: mantenibilidad</span>
+          <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Entrega: roadmap por fases</span>
+          <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Resultado: ejecución trazable</span>
         </div>
         <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <a class="bg-primary text-white px-8 py-4 text-center hover:opacity-90 transition-all"
              href="/contacto/">
             Solicitar diagnóstico
           </a>
-          <a class="hero-link-tech text-primary dark:text-white/90"
+          <a class="hero-link-tech text-primary"
              href="/casos/">
             Ver casos
           </a>
@@ -181,34 +162,34 @@
 
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">Qué resolvemos</h2>
+        <h2 class="font-display text-3xl text-primary mb-8">Qué resolvemos</h2>
         <div class="grid md:grid-cols-3 gap-5">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-            <h3 class="text-xl font-display text-primary dark:text-white">Deuda técnica que frena</h3>
-            <p class="mt-3 font-medium text-slate-800 dark:text-slate-200">Arquitectura clara + plan de refactor.</p>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Convertimos caos en un mapa: módulos, dependencias y decisiones documentadas.</p>
+          <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+            <h3 class="text-xl font-display text-primary">Deuda técnica que frena</h3>
+            <p class="mt-3 font-medium text-slate-800">Arquitectura clara + plan de refactor.</p>
+            <p class="mt-2 text-sm text-slate-600">Convertimos caos en un mapa: módulos, dependencias y decisiones documentadas.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-            <h3 class="text-xl font-display text-primary dark:text-white">Cambios que rompen todo</h3>
-            <p class="mt-3 font-medium text-slate-800 dark:text-slate-200">Menos regresión, más control.</p>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Definimos límites, patrones y puntos críticos para cambiar sin apagar incendios.</p>
+          <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+            <h3 class="text-xl font-display text-primary">Cambios que rompen todo</h3>
+            <p class="mt-3 font-medium text-slate-800">Menos regresión, más control.</p>
+            <p class="mt-2 text-sm text-slate-600">Definimos límites, patrones y puntos críticos para cambiar sin apagar incendios.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-            <h3 class="text-xl font-display text-primary dark:text-white">Escalabilidad sin dirección</h3>
-            <p class="mt-3 font-medium text-slate-800 dark:text-slate-200">Ruta de evolución tecnológica.</p>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Modernización progresiva: priorizamos impacto y reducimos riesgo en cada fase.</p>
+          <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+            <h3 class="text-xl font-display text-primary">Escalabilidad sin dirección</h3>
+            <p class="mt-3 font-medium text-slate-800">Ruta de evolución tecnológica.</p>
+            <p class="mt-2 text-sm text-slate-600">Modernización progresiva: priorizamos impacto y reducimos riesgo en cada fase.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="py-16 border-t border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+    <section class="py-16 border-t border-b border-slate-200 bg-slate-50">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">Lo que entregamos</h2>
+        <h2 class="font-display text-3xl text-primary mb-8">Lo que entregamos</h2>
         <div class="grid md:grid-cols-2 gap-6">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-4">Entregables</h3>
-            <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+          <article class="border border-slate-200 bg-white p-8">
+            <h3 class="font-display text-2xl text-primary mb-4">Entregables</h3>
+            <ul class="space-y-2 text-slate-600">
               <li>• Mapa del sistema (componentes, flujos, riesgos)</li>
               <li>• Roadmap técnico por fases (impacto / esfuerzo / riesgo)</li>
               <li>• Decisiones de arquitectura (ADR simple)</li>
@@ -216,9 +197,9 @@
               <li>• Lineamientos mínimos: estructura, naming, boundaries</li>
             </ul>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-4">Qué NO hacemos</h3>
-            <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+          <article class="border border-slate-200 bg-white p-8">
+            <h3 class="font-display text-2xl text-primary mb-4">Qué NO hacemos</h3>
+            <ul class="space-y-2 text-slate-600">
               <li>• Reescribir todo como primer paso</li>
               <li>• Cambios ‘bonitos’ sin impacto en operación</li>
               <li>• Arquitectura por moda (stack por tendencia)</li>
@@ -231,62 +212,62 @@
 
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">Patrones que aplicamos</h2>
+        <h2 class="font-display text-3xl text-primary mb-8">Patrones que aplicamos</h2>
         <div class="grid md:grid-cols-3 gap-5">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Boundaries</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Separación clara por dominio / módulos para reducir acoplamiento.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Boundaries</h3>
+            <p class="text-sm text-slate-600">Separación clara por dominio / módulos para reducir acoplamiento.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Contratos</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Interfaces y responsabilidades explícitas, menos ambigüedad.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Contratos</h3>
+            <p class="text-sm text-slate-600">Interfaces y responsabilidades explícitas, menos ambigüedad.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Observabilidad mínima</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Eventos clave para entender fallos y cuellos.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Observabilidad mínima</h3>
+            <p class="text-sm text-slate-600">Eventos clave para entender fallos y cuellos.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Deuda visible</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Backlog técnico priorizado, no deuda escondida.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Deuda visible</h3>
+            <p class="text-sm text-slate-600">Backlog técnico priorizado, no deuda escondida.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Estrategia de migración</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Strangler pattern / fases para modernizar sin apagar producción.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Estrategia de migración</h3>
+            <p class="text-sm text-slate-600">Strangler pattern / fases para modernizar sin apagar producción.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Documentación útil</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">ADRs breves + decisiones y tradeoffs (sin PDFs eternos).</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Documentación útil</h3>
+            <p class="text-sm text-slate-600">ADRs breves + decisiones y tradeoffs (sin PDFs eternos).</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="py-16 border-t border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+    <section class="py-16 border-t border-b border-slate-200 bg-slate-50">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">Proceso</h2>
+        <h2 class="font-display text-3xl text-primary mb-8">Proceso</h2>
         <div class="grid md:grid-cols-3 gap-5">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Diagnóstico</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Levantamos mapa real: flujos, dependencias, puntos frágiles y deuda.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Diagnóstico</h3>
+            <p class="text-sm text-slate-600">Levantamos mapa real: flujos, dependencias, puntos frágiles y deuda.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Diseño</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Definimos arquitectura objetivo y un roadmap por fases defendible.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Diseño</h3>
+            <p class="text-sm text-slate-600">Definimos arquitectura objetivo y un roadmap por fases defendible.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-display text-2xl text-primary dark:text-white mb-2">Ejecución</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Implementamos por etapas con control de regresión y criterios de salida.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-display text-2xl text-primary mb-2">Ejecución</h3>
+            <p class="text-sm text-slate-600">Implementamos por etapas con control de regresión y criterios de salida.</p>
           </article>
         </div>
-        <p class="mt-6 text-xs text-slate-500 dark:text-slate-400">Instrumentación mínima desde día 1 (eventos + baseline) para defender decisiones con datos.</p>
+        <p class="mt-6 text-xs text-slate-500">Instrumentación mínima desde día 1 (eventos + baseline) para defender decisiones con datos.</p>
       </div>
     </section>
 
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">Señales</h2>
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8">
-          <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+        <h2 class="font-display text-3xl text-primary mb-8">Señales</h2>
+        <article class="border border-slate-200 bg-white p-8">
+          <ul class="space-y-2 text-slate-600">
             <li>• Cada cambio genera regresión inesperada.</li>
             <li>• Nadie sabe qué depende de qué.</li>
             <li>• La velocidad de entrega cae cada mes.</li>
@@ -298,21 +279,21 @@
       </div>
     </section>
 
-    <section class="py-16 border-t border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+    <section class="py-16 border-t border-b border-slate-200 bg-slate-50">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="font-display text-3xl text-primary dark:text-white mb-8">FAQ</h2>
+        <h2 class="font-display text-3xl text-primary mb-8">FAQ</h2>
         <div class="space-y-4">
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-medium text-slate-900 dark:text-slate-100">¿Esto es consultoría o implementación?</h3>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Ambas, según contexto. Primero definimos plan defendible; luego ejecutamos por fases.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-medium text-slate-900">¿Esto es consultoría o implementación?</h3>
+            <p class="mt-2 text-sm text-slate-600">Ambas, según contexto. Primero definimos plan defendible; luego ejecutamos por fases.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-medium text-slate-900 dark:text-slate-100">¿Van a cambiar todo el stack?</h3>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">No por defecto. Modernización progresiva: se cambia lo que limita, no lo que ‘se ve viejo’.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-medium text-slate-900">¿Van a cambiar todo el stack?</h3>
+            <p class="mt-2 text-sm text-slate-600">No por defecto. Modernización progresiva: se cambia lo que limita, no lo que ‘se ve viejo’.</p>
           </article>
-          <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <h3 class="font-medium text-slate-900 dark:text-slate-100">¿Cómo se evita que el roadmap se quede en papel?</h3>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Con entregables accionables, criterios de salida por fase y control de regresión.</p>
+          <article class="border border-slate-200 bg-white p-6">
+            <h3 class="font-medium text-slate-900">¿Cómo se evita que el roadmap se quede en papel?</h3>
+            <p class="mt-2 text-sm text-slate-600">Con entregables accionables, criterios de salida por fase y control de regresión.</p>
           </article>
         </div>
       </div>
@@ -384,3 +365,6 @@
   </script>
 </body>
 </html>
+
+
+

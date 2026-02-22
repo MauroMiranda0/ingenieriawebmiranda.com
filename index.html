@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html class="light" lang="es">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -12,7 +12,6 @@
 
   <script>
     tailwind.config = {
-      darkMode: "class",
       theme: {
         extend: {
           colors: {
@@ -41,14 +40,9 @@
         background-image: radial-gradient(circle at 2px 2px, rgba(13, 43, 69, 0.05) 1px, transparent 0);
         background-size: 40px 40px;
       }
-      .dark .network-pattern {
-        background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
-      }
       .gradient-blur { filter: blur(100px); opacity: 0.4; }
       .node-glow { box-shadow: 0 0 20px rgba(13, 43, 69, 0.2); }
-      .dark .node-glow { box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); }
       .connector-line { background: linear-gradient(90deg, transparent, rgba(13, 43, 69, 0.2), transparent); }
-      .dark .connector-line { background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); }
     }
   </style>
   <style>
@@ -74,12 +68,6 @@
     .nav-link-tech:not(.bg-primary):focus-visible {
       color: #0D2B45;
     }
-
-    .dark .nav-link-tech:not(.bg-primary):hover,
-    .dark .nav-link-tech:not(.bg-primary):focus-visible {
-      color: #fff;
-    }
-
     .nav-link-tech:not(.bg-primary):hover::after,
     .nav-link-tech:not(.bg-primary):focus-visible::after {
       transform: scaleX(1);
@@ -118,17 +106,15 @@
       transition: transform 220ms ease;
     }
 
-    .dark .hero-link-tech::after { background: rgba(255, 255, 255, .55); }
     .hero-link-tech:hover { color: #0D2B45; }
-    .dark .hero-link-tech:hover { color: #fff; }
     .hero-link-tech:hover::after { transform: scaleX(1); }
   </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+<body class="bg-background-light text-slate-800 font-sans transition-colors duration-300">
 
   <!-- NAV (corporativo real) -->
-  <header class="fixed w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <header class="fixed w-full z-50 bg-background-light/80 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a class="flex items-center gap-4" href="/">
         <img alt="Ingeniería Web Miranda Logo" class="h-12 w-auto"
@@ -142,15 +128,10 @@
   <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
 
-  <a class="px-6 py-2 bg-primary text-white border border-primary dark:bg-white dark:text-primary dark:border-white hover:opacity-90 transition-all nav-link-tech"
+  <a class="px-6 py-2 bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
      href="/contacto/">
     Solicitar diagnóstico
   </a>
-
-  <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-          onclick="document.documentElement.classList.toggle('dark')" aria-label="Cambiar tema">
-    <span class="material-icons text-xl">dark_mode</span>
-  </button>
 </nav>
     </div>
   </header>
@@ -160,16 +141,16 @@
 
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
       <div>
-        <h1 class="font-display text-5xl md:text-7xl leading-tight mb-6 text-primary dark:text-white">
+        <h1 class="font-display text-5xl md:text-7xl leading-tight mb-6 text-primary">
           Ingeniería con<br/>
           <span class="italic font-normal">Propósito.</span>
         </h1>
 
-        <p class="text-xl leading-relaxed text-slate-600 dark:text-slate-300 mb-4 max-w-xl">
+        <p class="text-xl leading-relaxed text-slate-600 mb-4 max-w-xl">
           Soluciones digitales que preparan tu evolución tecnológica.
         </p>
 
-        <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 mb-10 max-w-xl">
+        <p class="text-lg leading-relaxed text-slate-600 mb-10 max-w-xl">
           Desarrollamos sistemas web con arquitectura preparada para escalabilidad, performance sostenida y seguridad operativa.
         </p>
 
@@ -179,7 +160,7 @@
             Solicitar diagnóstico
           </a>
 
-          <a class="hero-link-tech text-primary dark:text-white/90 hover:text-primary dark:hover:text-white"
+          <a class="hero-link-tech text-primary hover:text-primary"
              href="/casos/">
             Ver casos
           </a>
@@ -187,175 +168,175 @@
       </div>
 
       <div class="relative">
-        <div class="aspect-square border border-slate-200 dark:border-slate-800 overflow-hidden">
+        <div class="aspect-square border border-slate-200 overflow-hidden">
           <img class="hero-blueprint w-full h-full object-cover"
                src="/assets/img/hero-blueprint.png"
                alt="Blueprint técnico de arquitectura web"/>
 
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background-light/70 via-background-light/15 to-transparent dark:from-background-dark/45 dark:via-background-dark/20 dark:to-transparent"></div>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background-light/70 via-background-light/15 to-transparent"></div>
 
-          <div class="pointer-events-none absolute inset-0 text-primary/15 dark:text-white/10"
+          <div class="pointer-events-none absolute inset-0 text-primary/15"
                style="background-image:linear-gradient(to right,currentColor 1px,transparent 1px),linear-gradient(to bottom,currentColor 1px,transparent 1px);background-size:28px 28px;"></div>
         </div>
 
-        <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 shadow-xl">
-          <p class="font-display text-4xl text-primary dark:text-white">Sistemas</p>
+        <div class="absolute -bottom-6 -left-6 bg-white border border-slate-200 p-6 shadow-xl">
+          <p class="font-display text-4xl text-primary">Sistemas</p>
           <p class="text-xs tracking-widest uppercase opacity-60">Web · PWA · Landing</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="que-resolvemos" class="bg-slate-50 dark:bg-slate-900/50">
+  <section id="que-resolvemos" class="bg-slate-50">
     <div class="max-w-7xl mx-auto px-6 py-20">
       <div class="max-w-3xl">
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 dark:text-slate-400">Qué resolvemos</p>
-        <h2 class="mt-3 font-display text-3xl md:text-4xl text-primary dark:text-white">Transformación digital desde la ingeniería.</h2>
-        <p class="mt-4 text-base text-slate-600 dark:text-slate-400">Desarrollamos sistemas web y corregimos fricción técnica con diagnóstico, decisiones documentadas y ejecución verificable.</p>
+        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Qué resolvemos</p>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl text-primary">Transformación digital desde la ingeniería.</h2>
+        <p class="mt-4 text-base text-slate-600">Desarrollamos sistemas web y corregimos fricción técnica con diagnóstico, decisiones documentadas y ejecución verificable.</p>
       </div>
 
       <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-          <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Sitios lentos / CWV</h3>
-          <p class="mt-3 font-medium text-slate-800 dark:text-slate-200">Mejoramos LCP/INP y removemos fricción de conversión</p>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Aplicamos performance budget, optimización crítica y medición continua para sostener mejoras.</p>
-          <p class="mt-4 text-xs font-mono text-slate-500 dark:text-slate-400">Entregables: audit · budget · plan</p>
+        <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+          <h3 class="text-base font-semibold text-slate-900">Sitios lentos / CWV</h3>
+          <p class="mt-3 font-medium text-slate-800">Mejoramos LCP/INP y removemos fricción de conversión</p>
+          <p class="mt-2 text-sm text-slate-600">Aplicamos performance budget, optimización crítica y medición continua para sostener mejoras.</p>
+          <p class="mt-4 text-xs font-mono text-slate-500">Entregables: audit · budget · plan</p>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-          <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Deuda técnica</h3>
-          <p class="mt-3 font-medium text-slate-800 dark:text-slate-200">Arquitectura clara, roadmap y refactor defendible</p>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Partimos de diagnóstico, documentamos decisiones y entregamos artefactos accionables para ejecución.</p>
-          <p class="mt-4 text-xs font-mono text-slate-500 dark:text-slate-400">Entregables: mapa · arquitectura · roadmap</p>
+        <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+          <h3 class="text-base font-semibold text-slate-900">Deuda técnica</h3>
+          <p class="mt-3 font-medium text-slate-800">Arquitectura clara, roadmap y refactor defendible</p>
+          <p class="mt-2 text-sm text-slate-600">Partimos de diagnóstico, documentamos decisiones y entregamos artefactos accionables para ejecución.</p>
+          <p class="mt-4 text-xs font-mono text-slate-500">Entregables: mapa · arquitectura · roadmap</p>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-          <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Riesgo de seguridad</h3>
-          <p class="mt-3 font-medium text-slate-800 dark:text-slate-200">Hardening + OWASP + prácticas DevSecOps</p>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Implementamos headers, revisión de dependencias y controles básicos integrados al ciclo de entrega.</p>
-          <p class="mt-4 text-xs font-mono text-slate-500 dark:text-slate-400">Entregables: baseline · hardening · checklist</p>
+        <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+          <h3 class="text-base font-semibold text-slate-900">Riesgo de seguridad</h3>
+          <p class="mt-3 font-medium text-slate-800">Hardening + OWASP + prácticas DevSecOps</p>
+          <p class="mt-2 text-sm text-slate-600">Implementamos headers, revisión de dependencias y controles básicos integrados al ciclo de entrega.</p>
+          <p class="mt-4 text-xs font-mono text-slate-500">Entregables: baseline · hardening · checklist</p>
         </article>
       </div>
 
       <div class="mt-10">
-        <a href="/contacto/" class="hero-link-tech text-primary dark:text-white/90">Solicitar diagnóstico</a>
+        <a href="/contacto/" class="hero-link-tech text-primary">Solicitar diagnóstico</a>
       </div>
     </div>
   </section>
 
-  <section id="casos" class="bg-background-light dark:bg-background-dark">
+  <section id="casos" class="bg-background-light">
     <div class="max-w-7xl mx-auto px-6 py-20">
       <div class="max-w-3xl">
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 dark:text-slate-400">Casos</p>
-        <h2 class="mt-3 font-display text-3xl md:text-4xl text-primary dark:text-white">Implementaciones reales. Enfoque de ingeniería.</h2>
-        <p class="mt-4 text-base text-slate-600 dark:text-slate-400">Tres entregas con objetivos claros y decisiones técnicas documentadas. Más demostraciones en el Laboratorio.</p>
+        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Casos</p>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl text-primary">Implementaciones reales. Enfoque de ingeniería.</h2>
+        <p class="mt-4 text-base text-slate-600">Tres entregas con objetivos claros y decisiones técnicas documentadas. Más demostraciones en el Laboratorio.</p>
       </div>
 
       <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-          <span class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600 dark:text-slate-300">PWA</span>
-          <h3 class="mt-4 text-xl font-display text-primary dark:text-white">Migración a PWA</h3>
-          <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">Implementación desde código HTML/CSS existente para habilitar instalación, offline baseline y experiencia app-like.</p>
+        <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+          <span class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">PWA</span>
+          <h3 class="mt-4 text-xl font-display text-primary">Migración a PWA</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600">Implementación desde código HTML/CSS existente para habilitar instalación, offline baseline y experiencia app-like.</p>
           <div class="mt-4">
-            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500 dark:text-slate-400">Decisiones clave</p>
-            <ul class="mt-2 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+            <ul class="mt-2 space-y-1 text-sm text-slate-700">
               <li>• Service Worker + estrategia de caché</li>
               <li>• Web App Manifest + criterios de instalación</li>
             </ul>
           </div>
-          <a href="/casos/migracion-pwa/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary dark:text-white/90">Ver caso</a>
+          <a href="/casos/migracion-pwa/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary">Ver caso</a>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-          <span class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600 dark:text-slate-300">Landing</span>
-          <h3 class="mt-4 text-xl font-display text-primary dark:text-white">Landing de captación</h3>
-          <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">Estructura orientada a conversión con jerarquía clara, performance-first y analítica lista para iterar.</p>
+        <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+          <span class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">Landing</span>
+          <h3 class="mt-4 text-xl font-display text-primary">Landing de captación</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600">Estructura orientada a conversión con jerarquía clara, performance-first y analítica lista para iterar.</p>
           <div class="mt-4">
-            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500 dark:text-slate-400">Decisiones clave</p>
-            <ul class="mt-2 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+            <ul class="mt-2 space-y-1 text-sm text-slate-700">
               <li>• Arquitectura de secciones + CTA</li>
               <li>• Base SEO técnico on-page</li>
             </ul>
           </div>
-          <a href="/casos/landing-captacion/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary dark:text-white/90">Ver caso</a>
+          <a href="/casos/landing-captacion/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary">Ver caso</a>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40 dark:hover:border-white/30">
-          <span class="inline-flex items-center rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600 dark:text-slate-300">Landing</span>
-          <h3 class="mt-4 text-xl font-display text-primary dark:text-white">Landing de servicios</h3>
-          <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">Página enfocada en claridad de oferta, confianza y reducción de fricción para contacto calificado.</p>
+        <article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+          <span class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">Landing</span>
+          <h3 class="mt-4 text-xl font-display text-primary">Landing de servicios</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600">Página enfocada en claridad de oferta, confianza y reducción de fricción para contacto calificado.</p>
           <div class="mt-4">
-            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500 dark:text-slate-400">Decisiones clave</p>
-            <ul class="mt-2 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+            <ul class="mt-2 space-y-1 text-sm text-slate-700">
               <li>• Microcopy + señales de confianza</li>
               <li>• Form + rutas de intención</li>
             </ul>
           </div>
-          <a href="/casos/landing-servicios/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary dark:text-white/90">Ver caso</a>
+          <a href="/casos/landing-servicios/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary">Ver caso</a>
         </article>
       </div>
 
       <div class="mt-10 flex flex-col items-start gap-4">
-        <a href="https://mauromiranda.online" target="_blank" rel="noopener" class="hero-link-tech text-primary dark:text-white/90">Ver demostraciones técnicas en el Laboratorio</a>
-        <a href="/contacto/" class="hero-link-tech text-primary dark:text-white/90">Solicitar diagnóstico</a>
+        <a href="https://mauromiranda.online" target="_blank" rel="noopener" class="hero-link-tech text-primary">Ver demostraciones técnicas en el Laboratorio</a>
+        <a href="/contacto/" class="hero-link-tech text-primary">Solicitar diagnóstico</a>
       </div>
     </div>
   </section>
 
   <!-- Áreas clave de transformación (4 cards) -->
-  <section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="areas">
+  <section class="py-24 bg-slate-50" id="areas">
     <div class="max-w-7xl mx-auto px-6">
       <div class="mb-14">
-        <h2 class="font-display text-4xl text-primary dark:text-white mb-4">Áreas clave de transformación digital</h2>
-        <p class="text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+        <h2 class="font-display text-4xl text-primary mb-4">Áreas clave de transformación digital</h2>
+        <p class="text-slate-600 max-w-2xl leading-relaxed">
           Intervenimos donde la tecnología impacta operación, experiencia y evolución.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <article class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all">
-          <span class="material-icons text-primary dark:text-white mb-4">speed</span>
-          <h3 class="font-display text-2xl mb-3 text-primary dark:text-white">Modernización y performance</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+        <article class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all">
+          <span class="material-icons text-primary mb-4">speed</span>
+          <h3 class="font-display text-2xl mb-3 text-primary">Modernización y performance</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">
             Optimización de carga y experiencia fluida para preparar plataformas que evolucionan con menos fricción.
           </p>
-          <a class="text-sm font-medium text-primary dark:text-white inline-flex items-center gap-2 hover:opacity-80 transition"
+          <a class="text-sm font-medium text-primary inline-flex items-center gap-2 hover:opacity-80 transition"
              href="/servicios/performance/">
             Ver enfoque <span class="material-icons text-base">arrow_forward</span>
           </a>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all">
-          <span class="material-icons text-primary dark:text-white mb-4">account_tree</span>
-          <h3 class="font-display text-2xl mb-3 text-primary dark:text-white">Claridad arquitectónica</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+        <article class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all">
+          <span class="material-icons text-primary mb-4">account_tree</span>
+          <h3 class="font-display text-2xl mb-3 text-primary">Claridad arquitectónica</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">
             Estructuras técnicas comprensibles que reducen complejidad, deuda y costos de cambio.
           </p>
-          <a class="text-sm font-medium text-primary dark:text-white inline-flex items-center gap-2 hover:opacity-80 transition"
+          <a class="text-sm font-medium text-primary inline-flex items-center gap-2 hover:opacity-80 transition"
              href="/servicios/modernizacion-web/">
             Ver enfoque <span class="material-icons text-base">arrow_forward</span>
           </a>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all">
-          <span class="material-icons text-primary dark:text-white mb-4">security</span>
-          <h3 class="font-display text-2xl mb-3 text-primary dark:text-white">Buenas prácticas de seguridad</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+        <article class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all">
+          <span class="material-icons text-primary mb-4">security</span>
+          <h3 class="font-display text-2xl mb-3 text-primary">Buenas prácticas de seguridad</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">
             Configuración segura y prevención de errores comunes para reducir riesgos operativos.
           </p>
-          <a class="text-sm font-medium text-primary dark:text-white inline-flex items-center gap-2 hover:opacity-80 transition"
+          <a class="text-sm font-medium text-primary inline-flex items-center gap-2 hover:opacity-80 transition"
              href="/metodo/">
             Ver método <span class="material-icons text-base">arrow_forward</span>
           </a>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all">
-          <span class="material-icons text-primary dark:text-white mb-4">developer_mode</span>
-          <h3 class="font-display text-2xl mb-3 text-primary dark:text-white">Desarrollo de sistemas web</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+        <article class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all">
+          <span class="material-icons text-primary mb-4">developer_mode</span>
+          <h3 class="font-display text-2xl mb-3 text-primary">Desarrollo de sistemas web</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">
             Construcción de soluciones funcionales: portales, dashboards y flujos internos listos para escalar.
           </p>
-          <a class="text-sm font-medium text-primary dark:text-white inline-flex items-center gap-2 hover:opacity-80 transition"
+          <a class="text-sm font-medium text-primary inline-flex items-center gap-2 hover:opacity-80 transition"
              href="/servicios/sistemas-web/">
             Ver enfoque <span class="material-icons text-base">arrow_forward</span>
           </a>
@@ -369,22 +350,22 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14">
         <div>
-          <h2 class="font-display text-4xl text-primary dark:text-white mb-4">Transformación digital en acción</h2>
-          <p class="text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+          <h2 class="font-display text-4xl text-primary mb-4">Transformación digital en acción</h2>
+          <p class="text-slate-600 max-w-2xl leading-relaxed">
             Ejemplos de intervenciones reales donde modernizamos experiencias y fortalecimos capacidades digitales.
           </p>
         </div>
-        <a class="inline-flex items-center gap-2 text-primary dark:text-white font-medium hover:opacity-80 transition"
+        <a class="inline-flex items-center gap-2 text-primary font-medium hover:opacity-80 transition"
            href="/casos/">
           Ver todos los casos <span class="material-icons text-base">arrow_forward</span>
         </a>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <article class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8">
+        <article class="border border-slate-200 bg-white/70 p-8">
           <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-3">Caso 01</p>
-          <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Modernización progresiva a PWA</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+          <h3 class="font-display text-2xl text-primary mb-3">Modernización progresiva a PWA</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">
             Migración de implementación web a arquitectura PWA para mejorar experiencia, disponibilidad y preparación para evolución.
           </p>
           <div class="text-xs uppercase tracking-widest opacity-70 space-y-2">
@@ -393,10 +374,10 @@
           </div>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8">
+        <article class="border border-slate-200 bg-white/70 p-8">
           <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-3">Caso 02</p>
-          <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Canal digital de captación</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+          <h3 class="font-display text-2xl text-primary mb-3">Canal digital de captación</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">
             Desarrollo de landing page orientada a claridad de propuesta y estructura lista para crecimiento.
           </p>
           <div class="text-xs uppercase tracking-widest opacity-70 space-y-2">
@@ -405,10 +386,10 @@
           </div>
         </article>
 
-        <article class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8">
+        <article class="border border-slate-200 bg-white/70 p-8">
           <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-3">Caso 03</p>
-          <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Experiencia web funcional</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+          <h3 class="font-display text-2xl text-primary mb-3">Experiencia web funcional</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">
             Landing page implementada como base de presencia digital, con estructura preparada para evolución a sitio corporativo.
           </p>
           <div class="text-xs uppercase tracking-widest opacity-70 space-y-2">
@@ -421,44 +402,44 @@
   </section>
 
   <!-- Servicios (resumen + links a páginas profundas) -->
-  <section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="services">
+  <section class="py-24 bg-slate-50" id="services">
     <div class="max-w-7xl mx-auto px-6">
       <div class="mb-14">
-        <h2 class="font-display text-4xl text-primary dark:text-white mb-4">Servicios</h2>
-        <p class="text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+        <h2 class="font-display text-4xl text-primary mb-4">Servicios</h2>
+        <p class="text-slate-600 max-w-2xl leading-relaxed">
           Un catálogo claro: diagnóstico, modernización, performance y construcción de sistemas web.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <a class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all block"
+        <a class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
            href="/servicios/diagnostico-tecnico/">
-          <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Diagnóstico técnico</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          <h3 class="font-display text-2xl text-primary mb-3">Diagnóstico técnico</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
             Claridad, riesgos y próximos pasos. Te entregamos un panorama defendible antes de construir.
           </p>
         </a>
 
-        <a class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all block"
+        <a class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
            href="/servicios/modernizacion-web/">
-          <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Modernización web</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          <h3 class="font-display text-2xl text-primary mb-3">Modernización web</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
             Evolución progresiva: de “sitio” a plataforma sostenible, con bases para crecer.
           </p>
         </a>
 
-        <a class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all block"
+        <a class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
            href="/servicios/performance/">
-          <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Performance</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          <h3 class="font-display text-2xl text-primary mb-3">Performance</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
             Optimización priorizada por impacto: velocidad percibida, estabilidad visual y experiencia fluida.
           </p>
         </a>
 
-        <a class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all block"
+        <a class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
            href="/servicios/sistemas-web/">
-          <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Sistemas web</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          <h3 class="font-display text-2xl text-primary mb-3">Sistemas web</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
             Portales, dashboards e integraciones orientadas a operación real.
           </p>
         </a>
@@ -467,11 +448,11 @@
   </section>
 
   <!-- Método (resumen en home; profundo en /metodo) -->
-  <section class="py-32 bg-background-light dark:bg-background-dark overflow-hidden" id="method">
+  <section class="py-32 bg-background-light overflow-hidden" id="method">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-20">
-        <h2 class="font-display text-5xl text-primary dark:text-white mb-6">Método de ingeniería</h2>
-        <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto uppercase tracking-widest text-sm">
+        <h2 class="font-display text-5xl text-primary mb-6">Método de ingeniería</h2>
+        <p class="text-slate-500 max-w-2xl mx-auto uppercase tracking-widest text-sm">
           Proceso estructurado para avanzar con claridad y control
         </p>
       </div>
@@ -481,44 +462,44 @@
 
         <!-- Discovery -->
         <div class="relative z-10 w-56 text-center">
-          <div class="w-16 h-16 mx-auto rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center node-glow">
-            <span class="material-icons text-primary dark:text-white">travel_explore</span>
+          <div class="w-16 h-16 mx-auto rounded-full bg-white border border-slate-200 flex items-center justify-center node-glow">
+            <span class="material-icons text-primary">travel_explore</span>
           </div>
-          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary dark:text-white">Discovery</p>
-          <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">
+          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary">Discovery</p>
+          <p class="text-sm text-slate-600 mt-3">
             Contexto, objetivos y riesgos. Definimos lo que importa.
           </p>
         </div>
 
         <!-- Architecture -->
         <div class="relative z-10 w-56 text-center">
-          <div class="w-16 h-16 mx-auto rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center node-glow">
-            <span class="material-icons text-primary dark:text-white">schema</span>
+          <div class="w-16 h-16 mx-auto rounded-full bg-white border border-slate-200 flex items-center justify-center node-glow">
+            <span class="material-icons text-primary">schema</span>
           </div>
-          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary dark:text-white">Architecture</p>
-          <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">
+          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary">Architecture</p>
+          <p class="text-sm text-slate-600 mt-3">
             Diseñamos estructura y decisiones defendibles.
           </p>
         </div>
 
         <!-- Development -->
         <div class="relative z-10 w-56 text-center">
-          <div class="w-16 h-16 mx-auto rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center node-glow">
-            <span class="material-icons text-primary dark:text-white">code</span>
+          <div class="w-16 h-16 mx-auto rounded-full bg-white border border-slate-200 flex items-center justify-center node-glow">
+            <span class="material-icons text-primary">code</span>
           </div>
-          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary dark:text-white">Implementation</p>
-          <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">
+          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary">Implementation</p>
+          <p class="text-sm text-slate-600 mt-3">
             Construcción controlada: calidad, performance y mantenibilidad.
           </p>
         </div>
 
         <!-- Evolution -->
         <div class="relative z-10 w-56 text-center">
-          <div class="w-16 h-16 mx-auto rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center node-glow">
-            <span class="material-icons text-primary dark:text-white">autorenew</span>
+          <div class="w-16 h-16 mx-auto rounded-full bg-white border border-slate-200 flex items-center justify-center node-glow">
+            <span class="material-icons text-primary">autorenew</span>
           </div>
-          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary dark:text-white">Evolution</p>
-          <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">
+          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary">Evolution</p>
+          <p class="text-sm text-slate-600 mt-3">
             Optimización continua y preparación para el siguiente nivel.
           </p>
         </div>
@@ -526,7 +507,7 @@
 
       <div class="mt-14 text-center">
         <a href="/metodo/"
-           class="inline-flex items-center gap-2 px-8 py-4 border border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all">
+           class="inline-flex items-center gap-2 px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-white transition-all">
           Ver método completo <span class="material-icons">arrow_forward</span>
         </a>
       </div>
@@ -534,12 +515,12 @@
   </section>
 
   <!-- Laboratorio teaser (externo) -->
-  <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+  <section class="py-24 bg-slate-50">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-12 md:p-16">
+      <div class="border border-slate-200 bg-white/70 p-12 md:p-16">
         <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Laboratorio</p>
-        <h2 class="font-display text-4xl text-primary dark:text-white mb-6">Ingeniería aplicada + exploración técnica</h2>
-        <p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl mb-10">
+        <h2 class="font-display text-4xl text-primary mb-6">Ingeniería aplicada + exploración técnica</h2>
+        <p class="text-slate-600 leading-relaxed max-w-3xl mb-10">
           Explora el laboratorio técnico de Mauro Miranda: patrones, prototipos y herramientas que alimentan nuestro trabajo
           y anticipan la evolución tecnológica.
         </p>
@@ -623,4 +604,6 @@
   </script>
 </body>
 </html>
+
+
 
