@@ -9,20 +9,67 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
   <script>tailwind.config={darkMode:"class",theme:{extend:{colors:{primary:"#0D2B45","background-light":"#FDFDFD","background-dark":"#050B10"},fontFamily:{display:["Playfair Display","serif"],sans:["Inter","sans-serif"]}}}};</script>
+  <style>
+    .nav-link-tech {
+      position: relative;
+      transition: color 240ms ease;
+    }
+
+    .nav-link-tech:not(.bg-primary)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 240ms ease;
+    }
+
+    .nav-link-tech:not(.bg-primary):hover,
+    .nav-link-tech:not(.bg-primary):focus-visible {
+      color: #0D2B45;
+    }
+
+    .dark .nav-link-tech:not(.bg-primary):hover,
+    .dark .nav-link-tech:not(.bg-primary):focus-visible {
+      color: #fff;
+    }
+
+    .nav-link-tech:not(.bg-primary):hover::after,
+    .nav-link-tech:not(.bg-primary):focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .nav-link-tech:focus-visible {
+      outline: 1px solid currentColor;
+      outline-offset: 3px;
+    }
+  </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
   <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a class="flex items-center gap-4" href="/"><img alt="Logo" class="h-12 w-auto" src="/assets/img/logo.png"/></a>
       <nav class="hidden md:flex items-center gap-10 font-medium text-sm tracking-widest uppercase">
-        <a class="hover:text-primary transition-colors" href="/servicios/">Servicios</a>
-        <a class="hover:text-primary transition-colors" href="/casos/">Casos</a>
-        <a class="hover:text-primary transition-colors" href="/metodo/">Método</a>
-        <a class="hover:text-primary transition-colors" href="/recursos/">Recursos</a>
-        <a class="hover:text-primary transition-colors" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
-        <a class="px-6 py-2 border border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all" href="/contacto/">Solicitar diagnóstico</a>
-        <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" onclick="document.documentElement.classList.toggle('dark')" aria-label="Cambiar tema"><span class="material-icons text-xl">dark_mode</span></button>
-      </nav>
+  <a class="hover:text-primary transition-colors nav-link-tech" href="/servicios/">Servicios</a>
+  <a class="hover:text-primary transition-colors nav-link-tech" href="/casos/">Casos</a>
+  <a class="hover:text-primary transition-colors nav-link-tech" href="/metodo/">Método</a>
+  <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
+  <a class="hover:text-primary transition-colors nav-link-tech" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
+
+  <a class="px-6 py-2 bg-primary text-white border border-primary dark:bg-white dark:text-primary dark:border-white hover:opacity-90 transition-all nav-link-tech"
+     href="/contacto/">
+    Solicitar diagnóstico
+  </a>
+
+  <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          onclick="document.documentElement.classList.toggle('dark')" aria-label="Cambiar tema">
+    <span class="material-icons text-xl">dark_mode</span>
+  </button>
+</nav>
     </div>
   </header>
 
