@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Contacto | Solicitar diagnóstico | Ingeniería Web Miranda</title>
+  <meta name="description" content="Solicita un diagnóstico técnico: cuéntanos tu contexto y te respondemos con claridad en menos de 48 horas."/>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <script>tailwind.config={darkMode:"class",theme:{extend:{colors:{primary:"#0D2B45","background-light":"#FDFDFD","background-dark":"#050B10"},fontFamily:{display:["Playfair Display","serif"],sans:["Inter","sans-serif"]}}}};</script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+  <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a class="flex items-center gap-4" href="/"><img alt="Logo" class="h-12 w-auto" src="/assets/img/logo.png"/></a>
+      <nav class="hidden md:flex items-center gap-10 font-medium text-sm tracking-widest uppercase">
+        <a class="hover:text-primary transition-colors" href="/servicios/">Servicios</a>
+        <a class="hover:text-primary transition-colors" href="/casos/">Casos</a>
+        <a class="hover:text-primary transition-colors" href="/metodo/">Método</a>
+        <a class="hover:text-primary transition-colors" href="/recursos/">Recursos</a>
+        <a class="hover:text-primary transition-colors" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
+        <a class="px-6 py-2 border border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all" href="/contacto/">Solicitar diagnóstico</a>
+        <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" onclick="document.documentElement.classList.toggle('dark')" aria-label="Cambiar tema"><span class="material-icons text-xl">dark_mode</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid lg:grid-cols-12 gap-10 items-start">
+      <div class="lg:col-span-5">
+        <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Contacto</p>
+        <h1 class="font-display text-5xl md:text-6xl text-primary dark:text-white mb-6">Solicitar diagnóstico técnico</h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
+          Cuéntanos tu contexto. Responderemos con claridad: riesgos, oportunidades y siguiente paso defendible.
+        </p>
+
+        <div class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+          <p><span class="material-icons align-middle text-primary mr-2">schedule</span> Respuesta en menos de 48 horas</p>
+          <p><span class="material-icons align-middle text-primary mr-2">lock</span> Confidencialidad por defecto</p>
+          <p><span class="material-icons align-middle text-primary mr-2">rule</span> Sin improvisación: decisiones documentadas</p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <form class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-10 space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="text-xs tracking-widest uppercase opacity-60">Nombre</label>
+              <input class="mt-2 w-full bg-transparent border-b border-slate-300 dark:border-slate-700 focus:border-primary outline-none py-3" type="text" placeholder="Tu nombre"/>
+            </div>
+            <div>
+              <label class="text-xs tracking-widest uppercase opacity-60">Email</label>
+              <input class="mt-2 w-full bg-transparent border-b border-slate-300 dark:border-slate-700 focus:border-primary outline-none py-3" type="email" placeholder="tu@email.com"/>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="text-xs tracking-widest uppercase opacity-60">Organización (opcional)</label>
+              <input class="mt-2 w-full bg-transparent border-b border-slate-300 dark:border-slate-700 focus:border-primary outline-none py-3" type="text" placeholder="Empresa o proyecto"/>
+            </div>
+            <div>
+              <label class="text-xs tracking-widest uppercase opacity-60">Tipo de necesidad</label>
+              <select class="mt-2 w-full bg-transparent border-b border-slate-300 dark:border-slate-700 focus:border-primary outline-none py-3">
+                <option>Diagnóstico</option>
+                <option>Modernización</option>
+                <option>Performance</option>
+                <option>Sistema web</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="text-xs tracking-widest uppercase opacity-60">Describe el reto / objetivo</label>
+            <textarea class="mt-2 w-full bg-transparent border-b border-slate-300 dark:border-slate-700 focus:border-primary outline-none py-3" rows="5"
+                      placeholder="¿Qué quieres lograr? ¿Qué te preocupa? ¿Qué no está funcionando?"></textarea>
+          </div>
+
+          <div>
+            <label class="text-xs tracking-widest uppercase opacity-60">Link (si aplica)</label>
+            <input class="mt-2 w-full bg-transparent border-b border-slate-300 dark:border-slate-700 focus:border-primary outline-none py-3" type="url" placeholder="https://..."/>
+          </div>
+
+          <button class="w-full bg-primary text-white px-10 py-4 font-bold hover:opacity-90 transition-all uppercase tracking-widest text-sm">
+            Enviar solicitud
+          </button>
+
+          <p class="text-center text-[10px] text-slate-500 dark:text-slate-400">
+            Tus datos se usan solo para responder esta solicitud. Consulta nuestra <a class="underline" href="/legal/privacidad/">política de privacidad</a>.
+          </p>
+        </form>
+
+        <p class="text-xs opacity-60 mt-4">
+          Nota: este formulario es estático. Conecta a Formspree/Netlify Forms cuando lo publiques.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-primary text-white pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex gap-6 text-xs tracking-widest uppercase opacity-70">
+          <a class="hover:opacity-100" href="/legal/privacidad/">Privacidad</a>
+          <a class="hover:opacity-100" href="/legal/terminos/">Términos</a>
+        </div>
+        <p class="text-xs opacity-60">© <span id="y"></span> Ingeniería Web Miranda. México · Remoto.</p>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>

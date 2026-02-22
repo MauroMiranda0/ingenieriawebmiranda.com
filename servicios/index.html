@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Servicios | Ingeniería Web Miranda</title>
+  <meta name="description" content="Servicios de ingeniería web: diagnóstico técnico, modernización, performance y desarrollo de sistemas web."/>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{
+        colors:{primary:"#0D2B45","background-light":"#FDFDFD","background-dark":"#050B10"},
+        fontFamily:{display:["Playfair Display","serif"],sans:["Inter","sans-serif"]}
+      }}
+    };
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a class="flex items-center gap-4" href="/">
+        <img alt="Ingeniería Web Miranda Logo" class="h-12 w-auto"
+             src="/assets/img/logo.png"/>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-10 font-medium text-sm tracking-widest uppercase">
+        <a class="hover:text-primary transition-colors" href="/servicios/">Servicios</a>
+        <a class="hover:text-primary transition-colors" href="/casos/">Casos</a>
+        <a class="hover:text-primary transition-colors" href="/metodo/">Método</a>
+        <a class="hover:text-primary transition-colors" href="/recursos/">Recursos</a>
+        <a class="hover:text-primary transition-colors" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
+
+        <a class="px-6 py-2 border border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all"
+           href="/contacto/">
+          Solicitar diagnóstico
+        </a>
+
+        <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                onclick="document.documentElement.classList.toggle('dark')" aria-label="Cambiar tema">
+          <span class="material-icons text-xl">dark_mode</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Servicios</p>
+    <h1 class="font-display text-5xl md:text-6xl text-primary dark:text-white mb-6">Cómo podemos ayudarte a evolucionar</h1>
+    <p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed mb-12">
+      Un catálogo claro: diagnóstico, modernización, performance y construcción de sistemas web. Cada servicio se entrega con enfoque técnico y próximos pasos defendibles.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <a class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all block"
+         href="/servicios/diagnostico-tecnico/">
+        <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Diagnóstico técnico</h2>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Claridad, riesgos y próximos pasos. Ideal para empezar sin improvisar.</p>
+        <p class="text-xs tracking-widest uppercase opacity-60 mt-6">Ver qué incluye →</p>
+      </a>
+
+      <a class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all block"
+         href="/servicios/modernizacion-web/">
+        <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Modernización web</h2>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Transformación progresiva: estructura, UX y bases para evolución.</p>
+        <p class="text-xs tracking-widest uppercase opacity-60 mt-6">Ver alcance →</p>
+      </a>
+
+      <a class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all block"
+         href="/servicios/performance/">
+        <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Performance</h2>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Optimización priorizada por impacto: carga, estabilidad y experiencia.</p>
+        <p class="text-xs tracking-widest uppercase opacity-60 mt-6">Ver enfoque →</p>
+      </a>
+
+      <a class="border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-8 hover:shadow-xl transition-all block"
+         href="/servicios/sistemas-web/">
+        <h2 class="font-display text-3xl text-primary dark:text-white mb-3">Sistemas web</h2>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Portales, dashboards e integraciones listos para operar y crecer.</p>
+        <p class="text-xs tracking-widest uppercase opacity-60 mt-6">Ver enfoque →</p>
+      </a>
+    </div>
+
+    <div class="mt-16 border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/40 p-10">
+      <h3 class="font-display text-3xl text-primary dark:text-white mb-4">¿No sabes por dónde empezar?</h3>
+      <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 max-w-2xl">
+        Empieza por diagnóstico. Te ayuda a decidir qué atacar primero y qué evitar.
+      </p>
+      <a class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 hover:opacity-90 transition-all"
+         href="/contacto/">
+        Solicitar diagnóstico <span class="material-icons">arrow_forward</span>
+      </a>
+      <p class="text-xs opacity-60 mt-3">Respuesta en menos de 48 horas.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex gap-6 text-xs tracking-widest uppercase opacity-70">
+          <a class="hover:opacity-100" href="/legal/privacidad/">Privacidad</a>
+          <a class="hover:opacity-100" href="/legal/terminos/">Términos</a>
+        </div>
+        <p class="text-xs opacity-60">© <span id="y"></span> Ingeniería Web Miranda. México · Remoto.</p>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
