@@ -89,6 +89,44 @@
       outline: 1px solid currentColor;
       outline-offset: 3px;
     }
+    .hero-blueprint {
+      animation: blueprintDrift 18s ease-in-out infinite;
+      transform-origin: center center;
+    }
+
+    @keyframes blueprintDrift {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-6px) scale(1.02); }
+    }
+
+    .hero-link-tech {
+      position: relative;
+      display: inline-flex;
+      transition: color 240ms ease;
+    }
+
+    .hero-link-tech::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 240ms ease;
+    }
+
+    .hero-link-tech:hover::after,
+    .hero-link-tech:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .hero-link-tech:focus-visible {
+      outline: 1px solid currentColor;
+      outline-offset: 3px;
+    }
   </style>
 </head>
 
@@ -121,75 +159,53 @@
 </nav>
     </div>
   </header>
-
   <!-- HERO (home tipo landing) -->
   <section class="relative min-h-screen flex items-center pt-20 overflow-hidden network-pattern">
     <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary rounded-full gradient-blur"></div>
 
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
       <div>
-        <p class="text-xs tracking-[0.3em] uppercase text-primary/70 dark:text-white/70 mb-6">
-          Soluciones digitales desde la ingeniería
-        </p>
-
-        <h1 class="font-display text-5xl md:text-7xl leading-tight mb-8 text-primary dark:text-white">
-          Soluciones digitales que preparan <br/>
-          <span class="italic font-normal">tu evolución tecnológica.</span>
+        <h1 class="font-display text-5xl md:text-7xl leading-tight mb-6 text-primary dark:text-white">
+          Ingeniería con<br/>
+          <span class="italic font-normal">Propósito.</span>
         </h1>
 
-        <p class="text-xl leading-relaxed text-slate-600 dark:text-slate-400 mb-8 max-w-xl">
-          Acompañamos procesos de transformación digital mediante modernización progresiva,
-          optimización de rendimiento y construcción de sistemas web sostenibles.
+        <p class="text-xl leading-relaxed text-slate-600 dark:text-slate-300 mb-4 max-w-xl">
+          Soluciones digitales que preparan tu evolución tecnológica.
         </p>
 
-        <div class="grid sm:grid-cols-3 gap-3 text-sm mb-10 max-w-xl">
-          <div class="border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-900/40 px-4 py-3">
-            <span class="material-icons text-primary align-middle text-base mr-2">bolt</span>
-            Modernización web
-          </div>
-          <div class="border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-900/40 px-4 py-3">
-            <span class="material-icons text-primary align-middle text-base mr-2">speed</span>
-            Performance y estabilidad
-          </div>
-          <div class="border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-900/40 px-4 py-3">
-            <span class="material-icons text-primary align-middle text-base mr-2">account_tree</span>
-            Evolución sin deuda
-          </div>
-        </div>
+        <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 mb-10 max-w-xl">
+          Desarrollamos sistemas web con arquitectura preparada para escalabilidad, performance sostenida y seguridad operativa.
+        </p>
 
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a class="bg-primary text-white px-8 py-4 text-center hover:opacity-90 transition-all flex items-center justify-center gap-2"
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+          <a class="bg-primary text-white px-8 py-4 text-center hover:opacity-90 transition-all"
              href="/contacto/">
-            Solicitar diagnóstico técnico <span class="material-icons">arrow_forward</span>
+            Solicitar diagnóstico
           </a>
 
-          <a class="px-8 py-4 border border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all text-center"
+          <a class="hero-link-tech text-primary dark:text-white/90 hover:text-primary dark:hover:text-white"
              href="/casos/">
-            Ver casos de transformación
+            Ver casos
           </a>
         </div>
-
-        <p class="text-xs opacity-60 mt-4">Consulta inicial sin compromiso. Respuesta en menos de 48 horas.</p>
       </div>
 
       <div class="relative">
-        <div class="aspect-square border border-slate-200 dark:border-slate-800 p-8 flex items-center justify-center">
-          <svg class="w-full h-full text-primary dark:text-slate-500 opacity-80" viewBox="0 0 400 400">
-            <circle cx="200" cy="200" fill="none" r="180" stroke="currentColor" stroke-width="0.5"></circle>
-            <path d="M100 100 L300 300 M300 100 L100 300 M200 50 L200 350 M50 200 L350 200"
-                  stroke="currentColor" stroke-dasharray="4" stroke-width="0.5"></path>
-            <circle cx="100" cy="100" fill="currentColor" r="4"></circle>
-            <circle cx="300" cy="300" fill="currentColor" r="4"></circle>
-            <circle cx="300" cy="100" fill="currentColor" r="4"></circle>
-            <circle cx="100" cy="300" fill="currentColor" r="4"></circle>
-            <circle cx="200" cy="50" fill="currentColor" r="4"></circle>
-            <circle cx="200" cy="350" fill="currentColor" r="4"></circle>
-          </svg>
+        <div class="aspect-square border border-slate-200 dark:border-slate-800 overflow-hidden">
+          <img class="hero-blueprint w-full h-full object-cover"
+               src="/assets/img/hero-blueprint.png"
+               alt="Blueprint técnico de arquitectura web"/>
+
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background-light/70 via-background-light/15 to-transparent dark:from-background-dark/45 dark:via-background-dark/20 dark:to-transparent"></div>
+
+          <div class="pointer-events-none absolute inset-0 text-primary/15 dark:text-white/10"
+               style="background-image:linear-gradient(to right,currentColor 1px,transparent 1px),linear-gradient(to bottom,currentColor 1px,transparent 1px);background-size:28px 28px;"></div>
         </div>
 
         <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 shadow-xl">
-          <p class="font-display text-4xl text-primary dark:text-white">IWM</p>
-          <p class="text-xs tracking-widest uppercase opacity-60">Firma de ingeniería</p>
+          <p class="font-display text-4xl text-primary dark:text-white">Sistemas</p>
+          <p class="text-xs tracking-widest uppercase opacity-60">Web · PWA · Landing</p>
         </div>
       </div>
     </div>
