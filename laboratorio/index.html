@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Modernización web | Ingeniería Web Miranda</title>
-  <meta name="description" content="Modernización progresiva: estructura técnica, claridad, y base para evolucionar hacia un sistema sostenible."/>
+  <title>Laboratorio | Ingeniería Web Miranda</title>
+  <meta name="description" content="Laboratorio técnico en construcción: pronto compartiremos patrones, prototipos y demos aplicadas.">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
@@ -62,37 +62,60 @@
   </header>
 
   <main class="max-w-7xl mx-auto px-6 py-16">
-    <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Servicio</p>
-    <h1 class="font-display text-5xl md:text-6xl text-primary mb-6">Modernización web</h1>
-    <p class="text-lg text-slate-600 max-w-3xl leading-relaxed mb-12">
-      Modernización progresiva para pasar de un sitio estático o una implementación limitada a una base sostenible: estructura, claridad y evolución.
-    </p>
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Laboratorio</p>
+        <h1 class="font-display text-5xl md:text-6xl text-primary leading-tight mb-6">Ensamblando el laboratorio técnico.</h1>
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+          Estamos preparando demostraciones navegables, prototipos y librerías que usamos para modernizar experiencias web.
+        </p>
+        <p class="text-sm uppercase tracking-[0.3em] text-slate-500 mb-4 flex items-center gap-3">
+          <span class="inline-flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+          En construcción
+        </p>
+        <div class="space-y-3 text-sm text-slate-600">
+          <p class="flex items-center gap-3"><span class="material-icons text-primary">description</span> Guías técnicas y notas de campo</p>
+          <p class="flex items-center gap-3"><span class="material-icons text-primary">monitor_heart</span> Prototipos de performance y seguridad</p>
+          <p class="flex items-center gap-3"><span class="material-icons text-primary">hub</span> Integraciones y flujos internos</p>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a class="bg-primary text-white px-8 py-4 text-sm tracking-widest uppercase hover:opacity-90 transition-all" href="/contacto/">Solicitar demostración</a>
+          <a class="underline decoration-dotted underline-offset-4 text-primary hover:text-primary/80" href="/recursos/">Ver recursos disponibles</a>
+        </div>
+      </div>
 
-    <section class="grid md:grid-cols-3 gap-6 mb-12">
-      <div class="border border-slate-200 bg-white/70 p-8">
-        <h2 class="font-display text-2xl text-primary mb-3">Para quién</h2>
-        <p class="text-slate-600 leading-relaxed">Equipos que necesitan evolucionar sin rehacer todo cada 6 meses.</p>
+      <div class="border border-slate-200 bg-white/80 p-8 lg:p-12 shadow-xl relative overflow-hidden">
+        <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.35em] text-primary/70 mb-4">
+          <span class="material-icons text-sm">construction</span>
+          Blueprint
+        </span>
+        <h2 class="font-display text-3xl text-primary mb-4">Próximos módulos</h2>
+        <ul class="space-y-4 text-slate-600">
+          <li class="flex items-start gap-3">
+            <span class="material-icons text-primary">schema</span>
+            <div>
+              <p class="font-semibold">Patrones de arquitectura</p>
+              <p class="text-sm text-slate-500">Diagramas interactivos con decisiones documentadas.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-icons text-primary">bolt</span>
+            <div>
+              <p class="font-semibold">Laboratorios CWV</p>
+              <p class="text-sm text-slate-500">Pruebas reproducibles de performance y hardening.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-icons text-primary">integration_instructions</span>
+            <div>
+              <p class="font-semibold">Sistemas internos</p>
+              <p class="text-sm text-slate-500">Flujos de dashboards y portales corporativos listos para adaptar.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="mt-8 text-xs uppercase tracking-[0.3em] text-slate-400">Actualización: Marzo 2026</div>
       </div>
-      <div class="border border-slate-200 bg-white/70 p-8">
-        <h2 class="font-display text-2xl text-primary mb-3">Qué atacamos</h2>
-        <p class="text-slate-600 leading-relaxed">Estructura, mantenibilidad, claridad de secciones y bases técnicas.</p>
-      </div>
-      <div class="border border-slate-200 bg-white/70 p-8">
-        <h2 class="font-display text-2xl text-primary mb-3">Resultado</h2>
-        <p class="text-slate-600 leading-relaxed">Una plataforma lista para crecer con control y menos deuda.</p>
-      </div>
-    </section>
-
-    <section class="border border-slate-200 bg-primary text-white p-10">
-      <h3 class="font-display text-4xl mb-4">Empieza por diagnóstico</h3>
-      <p class="text-white/80 mb-8 max-w-2xl">
-        Modernizar sin diagnóstico es rediseñar a ciegas. Primero claridad; después ejecución.
-      </p>
-      <a class="bg-white text-primary px-10 py-4 font-bold hover:bg-opacity-90 transition-all uppercase tracking-widest text-sm inline-flex items-center gap-2"
-         href="/contacto/">
-        Solicitar diagnóstico <span class="material-icons">arrow_forward</span>
-      </a>
-    </section>
+    </div>
   </main>
 
   <footer class="bg-primary text-white pt-16 pb-10">
@@ -113,6 +136,7 @@
             <li><a class="hover:text-white" href="/casos/">Casos</a></li>
             <li><a class="hover:text-white" href="/metodo/">Método</a></li>
             <li><a class="hover:text-white" href="/recursos/">Recursos</a></li>
+            <li><a class="hover:text-white" href="/laboratorio/">Laboratorio</a></li>
           </ul>
         </div>
 
@@ -120,7 +144,8 @@
           <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Contacto</p>
           <ul class="space-y-2 text-sm text-white/80">
             <li><a class="hover:text-white" href="/contacto/">Solicitar diagnóstico</a></li>
-            <li><a class="hover:text-white" href="/laboratorio/">Laboratorio</a></li>
+            <li><a class="hover:text-white" href="/legal/privacidad/">Privacidad</a></li>
+            <li><a class="hover:text-white" href="/legal/terminos/">Términos</a></li>
           </ul>
         </div>
       </div>
@@ -137,7 +162,3 @@
   <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 </body>
 </html>
-
-
-
-
