@@ -121,7 +121,11 @@
              src="/assets/img/logo.png"/>
       </a>
 
-      <nav class="hidden md:flex items-center gap-10 font-medium text-sm tracking-widest uppercase">
+            <button class="md:hidden p-2 rounded-lg border border-slate-200 text-slate-700 hover:text-primary hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+              type="button" aria-label="Abrir menú" id="menu-toggle">
+        <span class="material-icons" aria-hidden="true">menu</span>
+      </button>
+<nav class="hidden md:flex items-center gap-10 font-medium text-sm tracking-widest uppercase">
   <a class="hover:text-primary transition-colors nav-link-tech" href="/servicios/">Servicios</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="/casos/" aria-current="page">Casos</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="/metodo/">Método</a>
@@ -133,6 +137,19 @@
     Solicitar diagnóstico
   </a>
 </nav>
+    </div>
+    <div class="md:hidden border-t border-slate-200 bg-background-light/95 backdrop-blur" id="mobile-menu" hidden>
+      <nav class="flex flex-col gap-4 px-6 py-6 text-sm font-medium tracking-widest uppercase">
+        <a class="hover:text-primary transition-colors nav-link-tech" href="/servicios/">Servicios</a>
+        <a class="hover:text-primary transition-colors nav-link-tech" href="/casos/">Casos</a>
+        <a class="hover:text-primary transition-colors nav-link-tech" href="/metodo/">Método</a>
+        <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
+        <a class="hover:text-primary transition-colors nav-link-tech" href="/laboratorio/">Laboratorio</a>
+        <a class="px-6 py-3 text-center bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
+           href="/contacto/">
+          Solicitar diagnóstico
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -274,6 +291,31 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+  <script>
+    (function() {
+      const toggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (!toggle || !mobileMenu) return;
+      const icon = toggle.querySelector(".material-icons");
+      const closeMenu = () => {
+        mobileMenu.setAttribute("hidden", "");
+        toggle.setAttribute("aria-label", "Abrir menú");
+        if (icon) icon.textContent = "menu";
+      };
+      const openMenu = () => {
+        mobileMenu.removeAttribute("hidden");
+        toggle.setAttribute("aria-label", "Cerrar menú");
+        if (icon) icon.textContent = "close";
+      };
+      toggle.addEventListener("click", () => {
+        if (mobileMenu.hasAttribute("hidden")) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+    })();
   </script>
 </body>
 </html>
