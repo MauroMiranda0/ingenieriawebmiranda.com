@@ -5,10 +5,42 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Ingeniería Web Miranda | Transformación Digital desde la Ingeniería</title>
   <meta name="description" content="Soluciones digitales desde la ingeniería. Modernizamos experiencias web, optimizamos rendimiento y construimos sistemas preparados para evolucionar sin deuda técnica."/>
+  <link rel="canonical" href="https://ingenieriawebmiranda.com/"/>
+  <meta name="robots" content="index,follow"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Ingeniería Web Miranda | Transformación digital desde la ingeniería"/>
+  <meta property="og:description" content="Diagnóstico técnico, modernización web y performance con entregables defendibles. Conversemos sobre tu siguiente paso."/>
+  <meta property="og:url" content="https://ingenieriawebmiranda.com/"/>
+  <meta property="og:image" content="https://ingenieriawebmiranda.com/assets/img/og-cover.png"/>
+  <meta property="og:locale" content="es_MX"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Ingeniería Web Miranda | Transformación digital desde la ingeniería"/>
+  <meta name="twitter:description" content="Arquitectura, performance y sistemas web con claridad técnica. Solicita un diagnóstico defendible."/>
+  <meta name="twitter:image" content="https://ingenieriawebmiranda.com/assets/img/og-cover.png"/>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ingeniería Web Miranda",
+    "url": "https://ingenieriawebmiranda.com/",
+    "logo": "https://ingenieriawebmiranda.com/assets/img/logo.png",
+    "description": "Consultoría y desarrollo de ingeniería web: diagnósticos técnicos, modernización progresiva y performance.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Consultoría",
+      "email": "hola@ingenieriawebmiranda.com",
+      "areaServed": "MX",
+      "availableLanguage": ["es", "en"]
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/ingenieria-web-miranda"
+    ]
+  }
+  </script>
 
   <script>
     tailwind.config = {
@@ -121,18 +153,34 @@
              src="/assets/img/logo.png"/>
       </a>
 
-      <nav class="hidden md:flex items-center gap-10 font-medium text-sm tracking-widest uppercase">
+            <button class="md:hidden p-2 rounded-lg border border-slate-200 text-slate-700 hover:text-primary hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+              type="button" aria-label="Abrir menú" id="menu-toggle">
+        <span class="material-icons" aria-hidden="true">menu</span>
+      </button>
+<nav class="hidden md:flex items-center gap-10 font-medium text-sm tracking-widest uppercase">
   <a class="hover:text-primary transition-colors nav-link-tech" href="/servicios/">Servicios</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="/casos/">Casos</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="/metodo/">Método</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
-  <a class="hover:text-primary transition-colors nav-link-tech" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a>
-
+  <a class="hover:text-primary transition-colors nav-link-tech" href="/proyectos/">Proyectos</a>
   <a class="px-6 py-2 bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
      href="/contacto/">
     Solicitar diagnóstico
   </a>
 </nav>
+    </div>
+    <div class="md:hidden border-t border-slate-200 bg-background-light/95 backdrop-blur" id="mobile-menu" hidden>
+      <nav class="flex flex-col gap-4 px-6 py-6 text-sm font-medium tracking-widest uppercase">
+        <a class="hover:text-primary transition-colors nav-link-tech" href="/servicios/">Servicios</a>
+        <a class="hover:text-primary transition-colors nav-link-tech" href="/casos/">Casos</a>
+        <a class="hover:text-primary transition-colors nav-link-tech" href="/metodo/">Método</a>
+        <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
+        <a class="hover:text-primary transition-colors nav-link-tech" href="/proyectos/">Proyectos</a>
+        <a class="px-6 py-3 text-center bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
+           href="/contacto/">
+          Solicitar diagnóstico
+        </a>
+      </nav>
     </div>
   </header>
   <!-- HERO (home tipo landing) -->
@@ -229,7 +277,7 @@
       <div class="max-w-3xl">
         <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Casos</p>
         <h2 class="mt-3 font-display text-3xl md:text-4xl text-primary">Implementaciones reales. Enfoque de ingeniería.</h2>
-        <p class="mt-4 text-base text-slate-600">Tres entregas con objetivos claros y decisiones técnicas documentadas. Más demostraciones en el Laboratorio.</p>
+        <p class="mt-4 text-base text-slate-600">Tres entregas con objetivos claros y decisiones técnicas documentadas. Más demostraciones en <a class="underline decoration-dotted underline-offset-4 hover:text-primary" href="/proyectos/">Proyectos</a>.</p>
       </div>
 
       <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -277,7 +325,7 @@
       </div>
 
       <div class="mt-10 flex flex-col items-start gap-4">
-        <a href="https://mauromiranda.online" target="_blank" rel="noopener" class="hero-link-tech text-primary">Ver demostraciones técnicas en el Laboratorio</a>
+        <a href="/proyectos/" class="hero-link-tech text-primary">Ver demostraciones técnicas (Proyectos en construcción)</a>
         <a href="/contacto/" class="hero-link-tech text-primary">Solicitar diagnóstico</a>
       </div>
     </div>
@@ -457,51 +505,59 @@
         </p>
       </div>
 
-      <div class="relative min-h-[420px] flex items-center justify-between">
-        <div class="absolute top-1/2 left-0 w-full h-px connector-line z-0"></div>
-
-        <!-- Discovery -->
-        <div class="relative z-10 w-56 text-center">
-          <div class="w-16 h-16 mx-auto rounded-full bg-white border border-slate-200 flex items-center justify-center node-glow">
-            <span class="material-icons text-primary">travel_explore</span>
+      <div class="relative max-w-4xl mx-auto">
+        <div class="flex flex-col gap-12" aria-label="Fases del método de ingeniería">
+          <!-- Discovery -->
+          <div class="relative pl-16 sm:pl-24">
+            <div class="absolute left-0 sm:left-8 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-200 node-glow">
+              <span class="material-icons text-primary">travel_explore</span>
+            </div>
+            <div class="bg-white/70 border border-slate-200 p-6">
+              <p class="font-display text-xl tracking-[0.2em] uppercase text-primary">Discovery</p>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                Contexto, objetivos y riesgos. Definimos lo que importa.
+              </p>
+            </div>
           </div>
-          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary">Discovery</p>
-          <p class="text-sm text-slate-600 mt-3">
-            Contexto, objetivos y riesgos. Definimos lo que importa.
-          </p>
-        </div>
 
-        <!-- Architecture -->
-        <div class="relative z-10 w-56 text-center">
-          <div class="w-16 h-16 mx-auto rounded-full bg-white border border-slate-200 flex items-center justify-center node-glow">
-            <span class="material-icons text-primary">schema</span>
+          <!-- Architecture -->
+          <div class="relative pl-16 sm:pl-24">
+            <div class="absolute left-0 sm:left-8 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-200 node-glow">
+              <span class="material-icons text-primary">schema</span>
+            </div>
+            <div class="bg-white/70 border border-slate-200 p-6">
+              <p class="font-display text-xl tracking-[0.2em] uppercase text-primary">Architecture</p>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                Diseñamos estructura y decisiones defendibles.
+              </p>
+            </div>
           </div>
-          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary">Architecture</p>
-          <p class="text-sm text-slate-600 mt-3">
-            Diseñamos estructura y decisiones defendibles.
-          </p>
-        </div>
 
-        <!-- Development -->
-        <div class="relative z-10 w-56 text-center">
-          <div class="w-16 h-16 mx-auto rounded-full bg-white border border-slate-200 flex items-center justify-center node-glow">
-            <span class="material-icons text-primary">code</span>
+          <!-- Development -->
+          <div class="relative pl-16 sm:pl-24">
+            <div class="absolute left-0 sm:left-8 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-200 node-glow">
+              <span class="material-icons text-primary">code</span>
+            </div>
+            <div class="bg-white/70 border border-slate-200 p-6">
+              <p class="font-display text-xl tracking-[0.2em] uppercase text-primary">Implementation</p>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                Construcción controlada: calidad, performance y mantenibilidad.
+              </p>
+            </div>
           </div>
-          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary">Implementation</p>
-          <p class="text-sm text-slate-600 mt-3">
-            Construcción controlada: calidad, performance y mantenibilidad.
-          </p>
-        </div>
 
-        <!-- Evolution -->
-        <div class="relative z-10 w-56 text-center">
-          <div class="w-16 h-16 mx-auto rounded-full bg-white border border-slate-200 flex items-center justify-center node-glow">
-            <span class="material-icons text-primary">autorenew</span>
+          <!-- Evolution -->
+          <div class="relative pl-16 sm:pl-24">
+            <div class="absolute left-0 sm:left-8 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-200 node-glow">
+              <span class="material-icons text-primary">autorenew</span>
+            </div>
+            <div class="bg-white/70 border border-slate-200 p-6">
+              <p class="font-display text-xl tracking-[0.2em] uppercase text-primary">Evolution</p>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                Optimización continua y preparación para el siguiente nivel.
+              </p>
+            </div>
           </div>
-          <p class="mt-4 font-display text-lg tracking-widest uppercase text-primary">Evolution</p>
-          <p class="text-sm text-slate-600 mt-3">
-            Optimización continua y preparación para el siguiente nivel.
-          </p>
         </div>
       </div>
 
@@ -514,21 +570,20 @@
     </div>
   </section>
 
-  <!-- Laboratorio teaser (externo) -->
+  <!-- Proyectos teaser -->
   <section class="py-24 bg-slate-50">
     <div class="max-w-7xl mx-auto px-6">
       <div class="border border-slate-200 bg-white/70 p-12 md:p-16">
-        <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Laboratorio</p>
+        <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Proyectos</p>
         <h2 class="font-display text-4xl text-primary mb-6">Ingeniería aplicada + exploración técnica</h2>
-        <p class="text-slate-600 leading-relaxed max-w-3xl mb-10">
-          Explora el laboratorio técnico de Mauro Miranda: patrones, prototipos y herramientas que alimentan nuestro trabajo
-          y anticipan la evolución tecnológica.
+        <p class="text-slate-600 leading-relaxed max-w-3xl mb-6">
+          Estamos rediseñando la vitrina de proyectos técnicos para documentar patrones, prototipos y herramientas propias.
         </p>
-
         <a class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 hover:opacity-90 transition-all"
-           href="https://mauromiranda.online" target="_blank" rel="noopener">
-          Explorar laboratorio <span class="material-icons">open_in_new</span>
+           href="/proyectos/">
+          Ver proyectos <span class="material-icons">arrow_forward</span>
         </a>
+        <p class="text-sm text-slate-500 uppercase tracking-[0.3em] mt-6">Proyectos en construcción</p>
       </div>
     </div>
   </section>
@@ -553,7 +608,7 @@
           </a>
         </div>
 
-        <p class="text-xs opacity-70 mt-4">Respuesta en menos de 48 horas. Confidencialidad por defecto.</p>
+        <p class="text-xs opacity-70 mt-4">Respuesta en menos de 24 horas. Confidencialidad por defecto.</p>
       </div>
     </div>
   </section>
@@ -577,6 +632,7 @@
             <li><a class="hover:text-white" href="/casos/">Casos</a></li>
             <li><a class="hover:text-white" href="/metodo/">Método</a></li>
             <li><a class="hover:text-white" href="/recursos/">Recursos</a></li>
+            <li><a class="hover:text-white" href="/proyectos/">Proyectos</a></li>
           </ul>
         </div>
 
@@ -584,7 +640,6 @@
           <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Contacto</p>
           <ul class="space-y-2 text-sm text-white/80">
             <li><a class="hover:text-white" href="/contacto/">Solicitar diagnóstico</a></li>
-            <li><a class="hover:text-white" href="https://mauromiranda.online" target="_blank" rel="noopener">Laboratorio</a></li>
           </ul>
         </div>
       </div>
@@ -601,6 +656,31 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+  <script>
+    (function() {
+      const toggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (!toggle || !mobileMenu) return;
+      const icon = toggle.querySelector(".material-icons");
+      const closeMenu = () => {
+        mobileMenu.setAttribute("hidden", "");
+        toggle.setAttribute("aria-label", "Abrir menú");
+        if (icon) icon.textContent = "menu";
+      };
+      const openMenu = () => {
+        mobileMenu.removeAttribute("hidden");
+        toggle.setAttribute("aria-label", "Cerrar menú");
+        if (icon) icon.textContent = "close";
+      };
+      toggle.addEventListener("click", () => {
+        if (mobileMenu.hasAttribute("hidden")) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+    })();
   </script>
 </body>
 </html>
