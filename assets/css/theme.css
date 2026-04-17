@@ -17,13 +17,55 @@
   background: linear-gradient(90deg, transparent, rgba(13, 43, 69, 0.2), transparent);
 }
 
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 200ms ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #0D2B45;
+  color: #fff;
+  border: 1px solid #0D2B45;
+}
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-outline {
+  border: 1px solid #0D2B45;
+  color: #0D2B45;
+  background: transparent;
+}
+.btn-outline:hover { background: #0D2B45; color: #fff; }
+
+.btn-ghost {
+  border: 1px solid rgba(255,255,255,0.7);
+  color: #fff;
+  background: transparent;
+}
+.btn-ghost:hover { border-color: #fff; }
+
+.btn-white {
+  background: #fff;
+  color: #0D2B45;
+}
+.btn-white:hover { opacity: 0.9; }
+
 /* Navigation + links */
 .nav-link-tech {
   position: relative;
   transition: color 240ms ease;
 }
 
-.nav-link-tech:not(.bg-primary)::after {
+.nav-link-tech:not(.btn-primary)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -36,13 +78,13 @@
   transition: transform 240ms ease;
 }
 
-.nav-link-tech:not(.bg-primary):hover,
-.nav-link-tech:not(.bg-primary):focus-visible {
+.nav-link-tech:not(.btn-primary):hover,
+.nav-link-tech:not(.btn-primary):focus-visible {
   color: #0D2B45;
 }
 
-.nav-link-tech:not(.bg-primary):hover::after,
-.nav-link-tech:not(.bg-primary):focus-visible::after {
+.nav-link-tech:not(.btn-primary):hover::after,
+.nav-link-tech:not(.btn-primary):focus-visible::after {
   transform: scaleX(1);
 }
 

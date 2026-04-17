@@ -20,107 +20,9 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/assets/css/theme.css"/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#0D2B45",
-            "background-light": "#FDFDFD",
-            "background-dark": "#050B10",
-            secondary: "#1A3C5A",
-            accent: "#E5E7EB"
-          },
-          fontFamily: {
-            display: ["Playfair Display", "serif"],
-            sans: ["Inter", "sans-serif"],
-          },
-          borderRadius: {
-            DEFAULT: "0.25rem",
-            lg: "0.5rem",
-          },
-        },
-      },
-    };
-  </script>
-
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .network-pattern {
-        background-image: radial-gradient(circle at 2px 2px, rgba(13, 43, 69, 0.05) 1px, transparent 0);
-        background-size: 40px 40px;
-      }
-      .gradient-blur { filter: blur(100px); opacity: 0.4; }
-      .node-glow { box-shadow: 0 0 20px rgba(13, 43, 69, 0.2); }
-      .connector-line { background: linear-gradient(90deg, transparent, rgba(13, 43, 69, 0.2), transparent); }
-    }
-  </style>
-  <style>
-    .nav-link-tech {
-      position: relative;
-      transition: color 240ms ease;
-    }
-
-    .nav-link-tech:not(.bg-primary)::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 1px;
-      background: currentColor;
-      transform: scaleX(0);
-      transform-origin: left center;
-      transition: transform 240ms ease;
-    }
-
-    .nav-link-tech:not(.bg-primary):hover,
-    .nav-link-tech:not(.bg-primary):focus-visible {
-      color: #0D2B45;
-    }
-    .nav-link-tech:not(.bg-primary):hover::after,
-    .nav-link-tech:not(.bg-primary):focus-visible::after {
-      transform: scaleX(1);
-    }
-
-    .nav-link-tech:focus-visible {
-      outline: 1px solid currentColor;
-      outline-offset: 3px;
-    }
-    .hero-blueprint {
-      animation: blueprintDrift 18s ease-in-out infinite;
-      transform-origin: center center;
-    }
-
-    @keyframes blueprintDrift {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-6px) scale(1.02); }
-    }
-
-    .hero-link-tech {
-      position: relative;
-      display: inline-block;
-      padding-bottom: 2px;
-      transition: color 180ms ease;
-    }
-
-    .hero-link-tech::after {
-      content: "";
-      position: absolute;
-      left: 0; right: 0;
-      bottom: -2px;
-      height: 1px;
-      background: rgba(13, 43, 69, .55);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 220ms ease;
-    }
-
-    .hero-link-tech:hover { color: #0D2B45; }
-    .hero-link-tech:hover::after { transform: scaleX(1); }
-  </style>
+  <script src="/assets/js/tailwind-config.js"></script>
 </head>
 
 <body class="bg-background-light text-slate-800 font-sans transition-colors duration-300">
@@ -144,7 +46,7 @@
   <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
   <a class="hover:text-primary transition-colors nav-link-tech" href="/proyectos/">Proyectos</a>
 
-  <a class="px-6 py-2 bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
+  <a class="btn btn-primary nav-link-tech"
      href="/contacto/">
     Solicitar diagnóstico
   </a>
@@ -157,7 +59,7 @@
         <a class="hover:text-primary transition-colors nav-link-tech" href="/metodo/">Método</a>
         <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
         <a class="hover:text-primary transition-colors nav-link-tech" href="/proyectos/">Proyectos</a>
-        <a class="px-6 py-3 text-center bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
+        <a class="btn btn-primary nav-link-tech"
            href="/contacto/">
           Solicitar diagnóstico
         </a>
@@ -256,7 +158,7 @@
         <div class="border border-slate-200 bg-white p-10">
           <h2 class="font-display text-3xl text-primary mb-3">¿Quieres un diagnóstico en tu contexto?</h2>
           <p class="text-slate-600 mb-8">Definimos baseline, riesgos y un plan de ejecución defendible.</p>
-          <a class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 hover:opacity-90 transition-all"
+          <a class="btn btn-primary"
              href="/contacto/">
             Solicitar diagnóstico <span class="material-icons text-base">arrow_forward</span>
           </a>
@@ -306,34 +208,7 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-  <script>
-    (function() {
-      const toggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-      if (!toggle || !mobileMenu) return;
-      const icon = toggle.querySelector(".material-icons");
-      const closeMenu = () => {
-        mobileMenu.setAttribute("hidden", "");
-        toggle.setAttribute("aria-label", "Abrir menú");
-        if (icon) icon.textContent = "menu";
-      };
-      const openMenu = () => {
-        mobileMenu.removeAttribute("hidden");
-        toggle.setAttribute("aria-label", "Cerrar menú");
-        if (icon) icon.textContent = "close";
-      };
-      toggle.addEventListener("click", () => {
-        if (mobileMenu.hasAttribute("hidden")) {
-          openMenu();
-        } else {
-          closeMenu();
-        }
-      });
-    })();
-  </script>
+  <script src="/assets/js/ui.js"></script>
 </body>
 </html>
 

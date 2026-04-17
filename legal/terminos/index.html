@@ -18,8 +18,9 @@
   <meta name="description" content="Términos y condiciones de Ingeniería Web Miranda."/>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/assets/css/theme.css"/>
   <script src="https://cdn.tailwindcss.com?plugins=typography,forms"></script>
-  <script>tailwind.config={theme:{extend:{colors:{primary:"#0D2B45","background-light":"#FDFDFD","background-dark":"#050B10"},fontFamily:{display:["Playfair Display","serif"],sans:["Inter","sans-serif"]}}}};</script>
+  <script src="/assets/js/tailwind-config.js"></script>
 </head>
 <body class="bg-background-light text-slate-800 font-sans transition-colors duration-300">
   <header class="border-b border-slate-200 bg-background-light/90 backdrop-blur">
@@ -37,7 +38,7 @@
         <a class="hover:text-primary transition-colors nav-link-tech" href="/metodo/">Método</a>
         <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
         <a class="hover:text-primary transition-colors nav-link-tech" href="/proyectos/">Proyectos</a>
-        <a class="px-4 py-2 bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
+        <a class="btn btn-primary nav-link-tech"
            href="/contacto/">
           Diagnóstico
         </a>
@@ -50,7 +51,7 @@
         <a class="hover:text-primary transition-colors nav-link-tech" href="/metodo/">Método</a>
         <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
         <a class="hover:text-primary transition-colors nav-link-tech" href="/proyectos/">Proyectos</a>
-        <a class="px-6 py-3 text-center bg-primary text-white border border-primary hover:opacity-90 transition-all nav-link-tech"
+        <a class="btn btn-primary nav-link-tech"
            href="/contacto/">
           Solicitar diagnóstico
         </a>
@@ -107,31 +108,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    const toggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    if (toggle && mobileMenu) {
-      const icon = toggle.querySelector(".material-icons");
-      const openMenu = () => {
-        mobileMenu.removeAttribute("hidden");
-        toggle.setAttribute("aria-label", "Cerrar menú");
-        if (icon) icon.textContent = "close";
-      };
-      const closeMenu = () => {
-        mobileMenu.setAttribute("hidden", "");
-        toggle.setAttribute("aria-label", "Abrir menú");
-        if (icon) icon.textContent = "menu";
-      };
-      toggle.addEventListener("click", () => {
-        if (mobileMenu.hasAttribute("hidden")) {
-          openMenu();
-        } else {
-          closeMenu();
-        }
-      });
-    }
-  </script>
+  <script src="/assets/js/ui.js"></script>
 </body>
 </html>
 
