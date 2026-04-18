@@ -1,0 +1,5 @@
+_site/
+node_modules/
+tailwind.config.js
+_includes/partials/nav.njk
+_includes/partials/nav-legal.njk

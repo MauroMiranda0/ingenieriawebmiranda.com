@@ -1,0 +1,16 @@
+{
+  "name": "ingenieriawebmiranda",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "watch": "eleventy --watch",
+    "format": "prettier --write \"**/*.{njk,css,js}\"",
+    "format:check": "prettier --check \"**/*.{njk,css,js}\""
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "prettier": "^3.8.3"
+  }
+}

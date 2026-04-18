@@ -1,0 +1,124 @@
+---
+layout: layouts/base.njk
+title: "Caso | Migración a PWA | Ingeniería Web Miranda"
+description: "Caso técnico: migración a PWA desde base HTML/CSS existente, con enfoque en instalación y offline baseline."
+ogTitle: "Ingeniería Web Miranda"
+ogDescription: "Soluciones digitales desde la ingeniería."
+ogImage: "og-cover.png"
+twitterTitle: "Ingeniería Web Miranda"
+twitterDescription: "Diagnóstico técnico, modernización y performance con claridad."
+---
+
+<main class="pt-24">
+  <section class="py-16 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Caso</p>
+      <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary">Migración a PWA</h1>
+      <p class="mt-4 text-lg text-slate-600 max-w-3xl">
+        Implementación desde base HTML/CSS existente para experiencia instalable y offline baseline.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3 text-xs">
+        <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Tipo: PWA</span>
+        <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Rol: Implementación</span>
+        <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">Enfoque: Experiencia app-like</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14">
+    <div class="max-w-7xl mx-auto px-6 space-y-10">
+      <article class="border border-slate-200 bg-white p-8">
+        <h2 class="font-display text-3xl text-primary mb-3">Contexto</h2>
+        <p class="text-slate-600 leading-relaxed">
+          Base existente en HTML/CSS, con necesidad de mejorar experiencia de uso y portabilidad en distintos contextos
+          de acceso.
+        </p>
+      </article>
+
+      <article class="border border-slate-200 bg-white p-8">
+        <h2 class="font-display text-3xl text-primary mb-3">Objetivo</h2>
+        <p class="text-slate-600 leading-relaxed">
+          Habilitar instalación, offline baseline, consistencia de carga y control de actualización sin rehacer toda la
+          base existente.
+        </p>
+      </article>
+
+      <article class="border border-slate-200 bg-white p-8">
+        <h2 class="font-display text-3xl text-primary mb-3">Qué se implementó</h2>
+        <ul class="space-y-2 text-slate-600">
+          <li>Web App Manifest: definición de identidad, íconos, modo de visualización y acceso instalable.</li>
+          <li>Service Worker: capa de control para interceptar solicitudes y gestionar comportamiento offline.</li>
+          <li>Cache strategy (offline baseline): reglas de caché por recurso para mantener disponibilidad básica.</li>
+          <li>Criterios de instalación: validación de requisitos y comportamiento esperado al instalar.</li>
+        </ul>
+      </article>
+
+      <article class="border border-slate-200 bg-white p-8">
+        <h2 class="font-display text-3xl text-primary mb-3">Decisiones clave</h2>
+        <ul class="space-y-2 text-slate-600">
+          <li>Scope del Service Worker acotado al caso para reducir riesgo de interferir con rutas no objetivo.</li>
+          <li>
+            Caché por tipo de recurso: estáticos con mayor persistencia y datos dinámicos con refresco más agresivo.
+          </li>
+          <li>Actualización controlada con estrategia stale/refresh para balancear continuidad y versión vigente.</li>
+          <li>Compatibilidad progresiva: experiencia funcional en navegadores modernos y fallback sin bloquear uso.</li>
+        </ul>
+      </article>
+
+      <article class="border border-slate-200 bg-white p-8">
+        <h2 class="font-display text-3xl text-primary mb-3">Riesgos y mitigaciones</h2>
+        <ul class="space-y-2 text-slate-600">
+          <li>Contenido obsoleto: mitigado con invalidación selectiva y políticas de expiración por recurso.</li>
+          <li>
+            Actualización invisible para usuarios: mitigada con control de versión y recarga en ventana de cambio.
+          </li>
+          <li>
+            Almacenamiento limitado en dispositivo: mitigado con priorización de assets críticos y limpieza periódica.
+          </li>
+        </ul>
+      </article>
+
+      <article class="border border-slate-200 bg-white p-8">
+        <h2 class="font-display text-3xl text-primary mb-3">Limitaciones conscientes</h2>
+        <ul class="space-y-2 text-slate-600">
+          <li>No se realizó reescritura completa de frontend para evitar ampliar alcance sin validación previa.</li>
+          <li>No se implementó sincronización avanzada offline para mantener complejidad operativa bajo control.</li>
+          <li>No se prometió mejora de performance sin baseline e instrumentación de medición definidos.</li>
+        </ul>
+      </article>
+
+      <article class="border border-slate-200 bg-white p-8">
+        <h2 class="font-display text-3xl text-primary mb-3">Entregables</h2>
+        <ul class="space-y-2 text-slate-600">
+          <li>manifest.json</li>
+          <li>service-worker.js</li>
+          <li>checklist de pruebas</li>
+          <li>notas técnicas (resumen)</li>
+        </ul>
+      </article>
+
+      <article class="border border-slate-200 bg-white p-8">
+        <h2 class="font-display text-3xl text-primary mb-3">Lo que haríamos distinto hoy</h2>
+        <ul class="space-y-2 text-slate-600">
+          <li>Definir baseline con medición desde el día 1</li>
+          <li>Instrumentación mínima (eventos de instalación/uso)</li>
+          <li>Estrategia de actualización más explícita</li>
+          <li>Instrumentación mínima desde día 1 (eventos + baseline) para defender decisiones con datos.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="pb-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="border border-slate-200 bg-white p-10">
+        <h2 class="font-display text-3xl text-primary mb-3">¿Quieres un diagnóstico en tu contexto?</h2>
+        <p class="text-slate-600 mb-8">Definimos baseline, riesgos y un plan de ejecución defendible.</p>
+        <a class="btn btn-primary" href="/contacto/">
+          Solicitar diagnóstico
+          <span class="material-icons text-base">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
