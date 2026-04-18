@@ -1,2 +1,15 @@
+# Dependencias
 node_modules/
+
+# Output del build (se genera con npm run build)
 _site/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
