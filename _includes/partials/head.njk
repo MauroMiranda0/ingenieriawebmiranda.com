@@ -1,0 +1,28 @@
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}" />
+<link rel="canonical" href="https://ingenieriawebmiranda.com{{ page.url }}" />
+<meta name="robots" content="index,follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ ogTitle }}" />
+<meta property="og:description" content="{{ ogDescription }}" />
+<meta property="og:url" content="https://ingenieriawebmiranda.com{{ page.url }}" />
+<meta property="og:image" content="https://ingenieriawebmiranda.com/assets/img/{{ ogImage }}" />
+<meta property="og:locale" content="es_MX" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ twitterTitle }}" />
+<meta name="twitter:description" content="{{ twitterDescription }}" />
+<meta name="twitter:image" content="https://ingenieriawebmiranda.com/assets/img/{{ ogImage }}" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+  rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/theme.css" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script src="/assets/js/tailwind-config.js"></script>
+{% if jsonld %}
+<script type="application/ld+json">
+  {{ jsonld | safe }}
+</script>
+{% endif %}

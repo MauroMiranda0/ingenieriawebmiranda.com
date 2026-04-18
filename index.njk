@@ -1,0 +1,519 @@
+---
+layout: layouts/base.njk
+title: "Ingeniería Web Miranda | Transformación Digital desde la Ingeniería"
+description: "Soluciones digitales desde la ingeniería. Modernizamos experiencias web, optimizamos rendimiento y construimos sistemas preparados para evolucionar sin deuda técnica."
+ogTitle: "Ingeniería Web Miranda | Transformación digital desde la ingeniería"
+ogDescription: "Diagnóstico técnico, modernización web y performance con entregables defendibles. Conversemos sobre tu siguiente paso."
+ogImage: "og-cover.png"
+twitterTitle: "Ingeniería Web Miranda | Transformación digital desde la ingeniería"
+twitterDescription: "Arquitectura, performance y sistemas web con claridad técnica. Solicita un diagnóstico defendible."
+jsonld: |
+  {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ingeniería Web Miranda",
+      "url": "https://ingenieriawebmiranda.com/",
+      "logo": "https://ingenieriawebmiranda.com/assets/img/logo.png",
+      "description": "Consultoría y desarrollo de ingeniería web: diagnósticos técnicos, modernización progresiva y performance.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Consultoría",
+        "email": "hola@ingenieriawebmiranda.com",
+        "areaServed": "MX",
+        "availableLanguage": ["es", "en"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/ingenieria-web-miranda"
+      ]
+    }
+---
+
+<!-- HERO (home tipo landing) -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden network-pattern">
+  <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary rounded-full gradient-blur"></div>
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+    <div>
+      <h1 class="font-display text-5xl md:text-7xl leading-tight mb-6 text-primary">
+        Ingeniería con
+        <br />
+        <span class="italic font-normal">Propósito.</span>
+      </h1>
+
+      <p class="text-xl leading-relaxed text-slate-600 mb-4 max-w-xl">
+        Soluciones digitales que preparan tu evolución tecnológica.
+      </p>
+
+      <p class="text-lg leading-relaxed text-slate-600 mb-10 max-w-xl">
+        Desarrollamos sistemas web con arquitectura preparada para escalabilidad, performance sostenida y seguridad
+        operativa.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+        <a class="btn btn-primary" href="/contacto/">Solicitar diagnóstico</a>
+
+        <a class="hero-link-tech text-primary hover:text-primary" href="/casos/">Ver casos</a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="aspect-square border border-slate-200 overflow-hidden">
+        <img
+          class="hero-blueprint w-full h-full object-cover"
+          src="/assets/img/hero-blueprint.png"
+          alt="Blueprint técnico de arquitectura web" />
+
+        <div
+          class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background-light/70 via-background-light/15 to-transparent"></div>
+
+        <div
+          class="pointer-events-none absolute inset-0 text-primary/15"
+          style="
+            background-image:
+              linear-gradient(to right, currentColor 1px, transparent 1px),
+              linear-gradient(to bottom, currentColor 1px, transparent 1px);
+            background-size: 28px 28px;
+          "></div>
+      </div>
+
+      <div class="absolute -bottom-6 -left-6 bg-white border border-slate-200 p-6 shadow-xl">
+        <p class="font-display text-4xl text-primary">Sistemas</p>
+        <p class="text-xs tracking-widest uppercase opacity-60">Web · PWA · Landing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="que-resolvemos" class="bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6 py-20">
+    <div class="max-w-3xl">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Qué resolvemos</p>
+      <h2 class="mt-3 font-display text-3xl md:text-4xl text-primary">Transformación digital desde la ingeniería</h2>
+      <p class="mt-4 text-base text-slate-600">
+        Desarrollamos sistemas web y corregimos fricción técnica con diagnóstico, decisiones documentadas y ejecución
+        verificable.
+      </p>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
+      <article
+        class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+        <h3 class="text-base font-semibold text-slate-900">Sitios lentos / CWV</h3>
+        <p class="mt-3 font-medium text-slate-800">Mejoramos LCP/INP y removemos fricción de conversión</p>
+        <p class="mt-2 text-sm text-slate-600">
+          Aplicamos performance budget, optimización crítica y medición continua para sostener mejoras.
+        </p>
+        <p class="mt-4 text-xs font-mono text-slate-500">Entregables: audit · budget · plan</p>
+      </article>
+
+      <article
+        class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+        <h3 class="text-base font-semibold text-slate-900">Deuda técnica</h3>
+        <p class="mt-3 font-medium text-slate-800">Arquitectura clara, roadmap y refactor defendible</p>
+        <p class="mt-2 text-sm text-slate-600">
+          Partimos de diagnóstico, documentamos decisiones y entregamos artefactos accionables para ejecución.
+        </p>
+        <p class="mt-4 text-xs font-mono text-slate-500">Entregables: mapa · arquitectura · roadmap</p>
+      </article>
+
+      <article
+        class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+        <h3 class="text-base font-semibold text-slate-900">Riesgo de seguridad</h3>
+        <p class="mt-3 font-medium text-slate-800">Hardening + OWASP + prácticas DevSecOps</p>
+        <p class="mt-2 text-sm text-slate-600">
+          Implementamos headers, revisión de dependencias y controles básicos integrados al ciclo de entrega.
+        </p>
+        <p class="mt-4 text-xs font-mono text-slate-500">Entregables: baseline · hardening · checklist</p>
+      </article>
+    </div>
+
+    <div class="mt-10">
+      <a href="/contacto/" class="hero-link-tech text-primary">Solicitar diagnóstico</a>
+    </div>
+  </div>
+</section>
+
+<section id="casos" class="bg-background-light">
+  <div class="max-w-7xl mx-auto px-6 py-20">
+    <div class="max-w-3xl">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Casos</p>
+      <h2 class="mt-3 font-display text-3xl md:text-4xl text-primary">
+        Implementaciones reales. Enfoque de ingeniería.
+      </h2>
+      <p class="mt-4 text-base text-slate-600">
+        Tres entregas con objetivos claros y decisiones técnicas documentadas. Más demostraciones en
+        <a class="underline decoration-dotted underline-offset-4 hover:text-primary" href="/proyectos/">Proyectos</a>
+        .
+      </p>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
+      <article
+        class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+        <span
+          class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
+          PWA
+        </span>
+        <h3 class="mt-4 text-xl font-display text-primary">Migración a PWA</h3>
+        <p class="mt-3 text-sm leading-relaxed text-slate-600">
+          Implementación desde código HTML/CSS existente para habilitar instalación, offline baseline y experiencia
+          app-like.
+        </p>
+        <div class="mt-4">
+          <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+          <ul class="mt-2 space-y-1 text-sm text-slate-700">
+            <li>• Service Worker + estrategia de caché</li>
+            <li>• Web App Manifest + criterios de instalación</li>
+          </ul>
+        </div>
+        <a href="/casos/migracion-pwa/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary">
+          Ver caso
+        </a>
+      </article>
+
+      <article
+        class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+        <span
+          class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
+          Landing
+        </span>
+        <h3 class="mt-4 text-xl font-display text-primary">Landing de captación</h3>
+        <p class="mt-3 text-sm leading-relaxed text-slate-600">
+          Estructura orientada a conversión con jerarquía clara, performance-first y analítica lista para iterar.
+        </p>
+        <div class="mt-4">
+          <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+          <ul class="mt-2 space-y-1 text-sm text-slate-700">
+            <li>• Arquitectura de secciones + CTA</li>
+            <li>• Base SEO técnico on-page</li>
+          </ul>
+        </div>
+        <a href="/casos/landing-captacion/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary">
+          Ver caso
+        </a>
+      </article>
+
+      <article
+        class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+        <span
+          class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
+          Landing
+        </span>
+        <h3 class="mt-4 text-xl font-display text-primary">Landing de servicios</h3>
+        <p class="mt-3 text-sm leading-relaxed text-slate-600">
+          Página enfocada en claridad de oferta, confianza y reducción de fricción para contacto calificado.
+        </p>
+        <div class="mt-4">
+          <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+          <ul class="mt-2 space-y-1 text-sm text-slate-700">
+            <li>• Microcopy + señales de confianza</li>
+            <li>• Form + rutas de intención</li>
+          </ul>
+        </div>
+        <a href="/casos/landing-servicios/" class="mt-5 inline-flex text-sm font-medium hero-link-tech text-primary">
+          Ver caso
+        </a>
+      </article>
+    </div>
+
+    <div class="mt-10 flex flex-col items-start gap-4">
+      <a href="/proyectos/" class="hero-link-tech text-primary">
+        Ver demostraciones técnicas (Proyectos en construcción)
+      </a>
+      <a href="/contacto/" class="hero-link-tech text-primary">Solicitar diagnóstico</a>
+    </div>
+  </div>
+</section>
+
+<!-- Áreas clave de transformación (4 cards) -->
+<section class="py-24 bg-slate-50" id="areas">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="mb-14">
+      <h2 class="font-display text-4xl text-primary mb-4">Áreas clave de transformación digital</h2>
+      <p class="text-slate-600 max-w-2xl leading-relaxed">
+        Intervenimos donde la tecnología impacta operación, experiencia y evolución.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <article class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all">
+        <span class="material-icons text-primary mb-4">speed</span>
+        <h3 class="font-display text-2xl mb-3 text-primary">Modernización y performance</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Optimización de carga y experiencia fluida para preparar plataformas que evolucionan con menos fricción.
+        </p>
+        <a
+          class="text-sm font-medium text-primary inline-flex items-center gap-2 hover:opacity-80 transition"
+          href="/servicios/performance/">
+          Ver enfoque
+          <span class="material-icons text-base">arrow_forward</span>
+        </a>
+      </article>
+
+      <article class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all">
+        <span class="material-icons text-primary mb-4">account_tree</span>
+        <h3 class="font-display text-2xl mb-3 text-primary">Claridad arquitectónica</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Estructuras técnicas comprensibles que reducen complejidad, deuda y costos de cambio.
+        </p>
+        <a
+          class="text-sm font-medium text-primary inline-flex items-center gap-2 hover:opacity-80 transition"
+          href="/servicios/modernizacion-web/">
+          Ver enfoque
+          <span class="material-icons text-base">arrow_forward</span>
+        </a>
+      </article>
+
+      <article class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all">
+        <span class="material-icons text-primary mb-4">security</span>
+        <h3 class="font-display text-2xl mb-3 text-primary">Buenas prácticas de seguridad</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Configuración segura y prevención de errores comunes para reducir riesgos operativos.
+        </p>
+        <a
+          class="text-sm font-medium text-primary inline-flex items-center gap-2 hover:opacity-80 transition"
+          href="/metodo/">
+          Ver método
+          <span class="material-icons text-base">arrow_forward</span>
+        </a>
+      </article>
+
+      <article class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all">
+        <span class="material-icons text-primary mb-4">developer_mode</span>
+        <h3 class="font-display text-2xl mb-3 text-primary">Desarrollo de sistemas web</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Construcción de soluciones funcionales: portales, dashboards y flujos internos listos para escalar.
+        </p>
+        <a
+          class="text-sm font-medium text-primary inline-flex items-center gap-2 hover:opacity-80 transition"
+          href="/servicios/sistemas-web/">
+          Ver enfoque
+          <span class="material-icons text-base">arrow_forward</span>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Casos (3 reales, sin métricas: vendemos entregables) -->
+<section class="py-24" id="casos-accion">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14">
+      <div>
+        <h2 class="font-display text-4xl text-primary mb-4">Transformación digital en acción</h2>
+        <p class="text-slate-600 max-w-2xl leading-relaxed">
+          Ejemplos de intervenciones reales donde modernizamos experiencias y fortalecimos capacidades digitales.
+        </p>
+      </div>
+      <a class="inline-flex items-center gap-2 text-primary font-medium hover:opacity-80 transition" href="/casos/">
+        Ver todos los casos
+        <span class="material-icons text-base">arrow_forward</span>
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="border border-slate-200 bg-white/70 p-8">
+        <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-3">Caso 01</p>
+        <h3 class="font-display text-2xl text-primary mb-3">Modernización progresiva a PWA</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Migración de implementación web a arquitectura PWA para mejorar experiencia, disponibilidad y preparación para
+          evolución.
+        </p>
+        <div class="text-xs uppercase tracking-widest opacity-70 space-y-2">
+          <div>• Entregables: estructura PWA + revisión técnica</div>
+          <div>• Enfoque: experiencia consistente + base evolutiva</div>
+        </div>
+      </article>
+
+      <article class="border border-slate-200 bg-white/70 p-8">
+        <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-3">Caso 02</p>
+        <h3 class="font-display text-2xl text-primary mb-3">Canal digital de captación</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Desarrollo de landing page orientada a claridad de propuesta y estructura lista para crecimiento.
+        </p>
+        <div class="text-xs uppercase tracking-widest opacity-70 space-y-2">
+          <div>• Entregables: implementación + estructura de secciones</div>
+          <div>• Enfoque: velocidad percibida + claridad</div>
+        </div>
+      </article>
+
+      <article class="border border-slate-200 bg-white/70 p-8">
+        <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-3">Caso 03</p>
+        <h3 class="font-display text-2xl text-primary mb-3">Experiencia web funcional</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+          Landing page implementada como base de presencia digital, con estructura preparada para evolución a sitio
+          corporativo.
+        </p>
+        <div class="text-xs uppercase tracking-widest opacity-70 space-y-2">
+          <div>• Entregables: layout + componentes reutilizables</div>
+          <div>• Enfoque: consistencia + mantenibilidad</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios (resumen + links a páginas profundas) -->
+<section class="py-24 bg-slate-50" id="servicios">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="mb-14">
+      <h2 class="font-display text-4xl text-primary mb-4">Servicios</h2>
+      <p class="text-slate-600 max-w-2xl leading-relaxed">
+        Un catálogo claro: diagnóstico, modernización, performance y construcción de sistemas web.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <a
+        class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
+        href="/servicios/diagnostico-tecnico/">
+        <h3 class="font-display text-2xl text-primary mb-3">Diagnóstico técnico</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Claridad, riesgos y próximos pasos. Te entregamos un panorama defendible antes de construir.
+        </p>
+      </a>
+
+      <a
+        class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
+        href="/servicios/modernizacion-web/">
+        <h3 class="font-display text-2xl text-primary mb-3">Modernización web</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Evolución progresiva: de “sitio” a plataforma sostenible, con bases para crecer.
+        </p>
+      </a>
+
+      <a
+        class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
+        href="/servicios/performance/">
+        <h3 class="font-display text-2xl text-primary mb-3">Performance</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Optimización priorizada por impacto: velocidad percibida, estabilidad visual y experiencia fluida.
+        </p>
+      </a>
+
+      <a
+        class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
+        href="/servicios/sistemas-web/">
+        <h3 class="font-display text-2xl text-primary mb-3">Sistemas web</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Portales, dashboards e integraciones orientadas a operación real.
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Método (resumen en home; profundo en /metodo) -->
+<section class="py-32 bg-background-light overflow-hidden" id="metodo">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-20">
+      <h2 class="font-display text-5xl text-primary mb-6">Método de ingeniería</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto uppercase tracking-widest text-sm">
+        Proceso estructurado para avanzar con claridad y control
+      </p>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <div class="flex flex-col gap-12" aria-label="Fases del método de ingeniería">
+        <!-- Discovery -->
+        <div class="relative pl-16 sm:pl-24">
+          <div
+            class="absolute left-0 sm:left-8 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-200 node-glow">
+            <span class="material-icons text-primary">travel_explore</span>
+          </div>
+          <div class="bg-white/70 border border-slate-200 p-6">
+            <p class="font-display text-xl tracking-[0.2em] uppercase text-primary">Discovery</p>
+            <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+              Contexto, objetivos y riesgos. Definimos lo que importa.
+            </p>
+          </div>
+        </div>
+
+        <!-- Architecture -->
+        <div class="relative pl-16 sm:pl-24">
+          <div
+            class="absolute left-0 sm:left-8 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-200 node-glow">
+            <span class="material-icons text-primary">schema</span>
+          </div>
+          <div class="bg-white/70 border border-slate-200 p-6">
+            <p class="font-display text-xl tracking-[0.2em] uppercase text-primary">Architecture</p>
+            <p class="text-sm text-slate-600 mt-3 leading-relaxed">Diseñamos estructura y decisiones defendibles.</p>
+          </div>
+        </div>
+
+        <!-- Development -->
+        <div class="relative pl-16 sm:pl-24">
+          <div
+            class="absolute left-0 sm:left-8 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-200 node-glow">
+            <span class="material-icons text-primary">code</span>
+          </div>
+          <div class="bg-white/70 border border-slate-200 p-6">
+            <p class="font-display text-xl tracking-[0.2em] uppercase text-primary">Implementation</p>
+            <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+              Construcción controlada: calidad, performance y mantenibilidad.
+            </p>
+          </div>
+        </div>
+
+        <!-- Evolution -->
+        <div class="relative pl-16 sm:pl-24">
+          <div
+            class="absolute left-0 sm:left-8 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-200 node-glow">
+            <span class="material-icons text-primary">autorenew</span>
+          </div>
+          <div class="bg-white/70 border border-slate-200 p-6">
+            <p class="font-display text-xl tracking-[0.2em] uppercase text-primary">Evolution</p>
+            <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+              Optimización continua y preparación para el siguiente nivel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14 text-center">
+      <a href="/metodo/" class="btn btn-outline">
+        Ver método completo
+        <span class="material-icons">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Proyectos teaser -->
+<section class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="border border-slate-200 bg-white/70 p-12 md:p-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Proyectos</p>
+      <h2 class="font-display text-4xl text-primary mb-6">Ingeniería aplicada + exploración técnica</h2>
+      <p class="text-slate-600 leading-relaxed max-w-3xl mb-6">
+        Estamos rediseñando la vitrina de proyectos técnicos para documentar patrones, prototipos y herramientas
+        propias.
+      </p>
+      <a class="btn btn-primary" href="/proyectos/">
+        Ver proyectos
+        <span class="material-icons">arrow_forward</span>
+      </a>
+      <p class="text-sm text-slate-500 uppercase tracking-[0.3em] mt-6">Proyectos en construcción</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA final -->
+<section class="py-24" id="cta-final">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-primary text-white p-12 md:p-16">
+      <h2 class="font-display text-5xl mb-6 leading-tight">Conversemos sobre tu evolución digital</h2>
+      <p class="text-white/80 text-lg mb-10 max-w-2xl">
+        Inicia con un diagnóstico técnico para identificar oportunidades, riesgos y próximos pasos claros.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a class="btn btn-white" href="/contacto/">Solicitar diagnóstico</a>
+        <a class="btn btn-ghost" href="/servicios/diagnostico-tecnico/">Ver qué incluye</a>
+      </div>
+
+      <p class="text-xs opacity-70 mt-4">Respuesta en menos de 24 horas. Confidencialidad por defecto.</p>
+    </div>
+  </div>
+</section>

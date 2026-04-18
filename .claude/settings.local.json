@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(mkdir -p \"c:/Users/Mauricio Vergara M/MauroMiranda/ingenieriawebmiranda.com/ingenieriawebmiranda.com/_includes/layouts\")",
+      "Bash(mkdir -p \"c:/Users/Mauricio Vergara M/MauroMiranda/ingenieriawebmiranda.com/ingenieriawebmiranda.com/_includes/partials\")",
+      "Bash(node _migrate.js)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(grep -E '\\\\.\\(toml|yml|yaml|json\\)$|netlify|vercel|github')",
+      "Bash(node _update-og.js)"
+    ]
+  }
+}
