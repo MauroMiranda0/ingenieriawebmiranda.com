@@ -237,4 +237,4 @@ Presentes en las 18 páginas vía `_includes/layouts/base.njk`.
 | Función | Selector | Descripción |
 |---------|----------|-------------|
 | Año de copyright | `#copyright-year` | Rellena con `new Date().getFullYear()` |
-| Toggle menú móvil | `#nav-toggle` / `#mobile-menu` | Alterna `hidden`, `aria-expanded` y el ícono |
+| Toggle menú móvil | `#menu-toggle` / `#mobile-menu` | Alterna `hidden`, `aria-expanded` y el ícono |
