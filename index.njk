@@ -52,7 +52,7 @@ jsonld: |
       <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
         <a class="btn btn-primary" href="/contacto/">Solicitar diagnóstico</a>
 
-        <a class="hero-link-tech text-primary hover:text-primary" href="/casos/">Ver casos</a>
+        <a class="btn btn-outline" href="/casos/">Ver casos</a>
       </div>
     </div>
 
@@ -66,14 +66,7 @@ jsonld: |
         <div
           class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background-light/70 via-background-light/15 to-transparent"></div>
 
-        <div
-          class="pointer-events-none absolute inset-0 text-primary/15"
-          style="
-            background-image:
-              linear-gradient(to right, currentColor 1px, transparent 1px),
-              linear-gradient(to bottom, currentColor 1px, transparent 1px);
-            background-size: 28px 28px;
-          "></div>
+        <div class="pointer-events-none absolute inset-0 text-primary/15 hero-grid-overlay"></div>
       </div>
 
       <div class="absolute -bottom-6 -left-6 bg-white border border-slate-200 p-6 shadow-xl">
@@ -128,7 +121,7 @@ jsonld: |
     </div>
 
     <div class="mt-10">
-      <a href="/contacto/" class="hero-link-tech text-primary">Solicitar diagnóstico</a>
+      <a href="/contacto/" class="btn btn-primary">Solicitar diagnóstico</a>
     </div>
   </div>
 </section>
@@ -216,11 +209,9 @@ jsonld: |
       </article>
     </div>
 
-    <div class="mt-10 flex flex-col items-start gap-4">
-      <a href="/proyectos/" class="hero-link-tech text-primary">
-        Ver demostraciones técnicas (Proyectos en construcción)
-      </a>
-      <a href="/contacto/" class="hero-link-tech text-primary">Solicitar diagnóstico</a>
+    <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      <a href="/contacto/" class="btn btn-primary">Solicitar diagnóstico</a>
+      <a href="/proyectos/" class="btn btn-outline">Ver demostraciones técnicas</a>
     </div>
   </div>
 </section>
@@ -305,9 +296,9 @@ jsonld: |
           Ejemplos de intervenciones reales donde modernizamos experiencias y fortalecimos capacidades digitales.
         </p>
       </div>
-      <a class="inline-flex items-center gap-2 text-primary font-medium hover:opacity-80 transition" href="/casos/">
+      <a class="btn btn-outline" href="/casos/">
         Ver todos los casos
-        <span class="material-icons text-base">arrow_forward</span>
+        <span class="material-icons">arrow_forward</span>
       </a>
     </div>
 

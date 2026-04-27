@@ -18,11 +18,11 @@
   </div>
   <div class="md:hidden border-t border-slate-200 bg-background-light/95 backdrop-blur" id="mobile-menu" hidden>
     <nav class="flex flex-col gap-4 px-6 py-6 text-sm font-medium tracking-widest uppercase">
-      <a class="hover:text-primary transition-colors nav-link-tech" href="/servicios/">Servicios</a>
-      <a class="hover:text-primary transition-colors nav-link-tech" href="/casos/">Casos</a>
-      <a class="hover:text-primary transition-colors nav-link-tech" href="/metodo/">Método</a>
-      <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/">Recursos</a>
-      <a class="hover:text-primary transition-colors nav-link-tech" href="/proyectos/">Proyectos</a>
+      <a class="hover:text-primary transition-colors nav-link-tech" href="/servicios/"{% if '/servicios/' in page.url %} aria-current="page"{% endif %}>Servicios</a>
+      <a class="hover:text-primary transition-colors nav-link-tech" href="/casos/"{% if '/casos/' in page.url %} aria-current="page"{% endif %}>Casos</a>
+      <a class="hover:text-primary transition-colors nav-link-tech" href="/metodo/"{% if '/metodo/' in page.url %} aria-current="page"{% endif %}>Método</a>
+      <a class="hover:text-primary transition-colors nav-link-tech" href="/recursos/"{% if '/recursos/' in page.url %} aria-current="page"{% endif %}>Recursos</a>
+      <a class="hover:text-primary transition-colors nav-link-tech" href="/proyectos/"{% if '/proyectos/' in page.url %} aria-current="page"{% endif %}>Proyectos</a>
       <a class="btn btn-primary nav-link-tech" href="/contacto/">Solicitar diagnóstico</a>
     </nav>
   </div>

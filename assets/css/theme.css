@@ -97,9 +97,24 @@
   transform: scaleX(1);
 }
 
+.nav-link-tech:not(.btn-primary)[aria-current="page"] {
+  color: #0d2b45;
+}
+
+.nav-link-tech:not(.btn-primary)[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
 .nav-link-tech:focus-visible {
   outline: 1px solid currentColor;
   outline-offset: 3px;
+}
+
+.hero-grid-overlay {
+  background-image:
+    linear-gradient(to right, currentColor 1px, transparent 1px),
+    linear-gradient(to bottom, currentColor 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
 .hero-blueprint {

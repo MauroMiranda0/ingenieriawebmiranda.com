@@ -65,7 +65,7 @@ Front matter de páginas legales: `navStyle: "legal"`.
   <div class="md:hidden border-t border-slate-200 bg-background-light/95 backdrop-blur"
        id="mobile-menu" hidden>
     <nav class="flex flex-col gap-4 px-6 py-6 text-sm font-medium tracking-widest uppercase">
-      <!-- mismos links sin aria-current -->
+      <!-- mismos links con aria-current idéntico al desktop -->
     </nav>
   </div>
 </header>
@@ -99,6 +99,7 @@ Controlado por `assets/js/ui.js`:
 ## Clases CSS propias usadas
 
 - `.nav-link-tech` — underline animado en hover/focus. Excluye `.btn-primary` via `:not()`.
+- `.nav-link-tech[aria-current="page"]` — estado activo: `color: primary` + underline permanente (`scaleX(1)`). Definido en `theme.css`.
 - `.btn.btn-primary` — CTA de contacto.
 
 ---
