@@ -8,68 +8,68 @@ Cada tarea es atómica y ejecutable. El orden es obligatorio — no se avanza si
 ## Módulo 1 — Backend + Base de Datos
 
 ### 1.1 Inicialización del proyecto
-- [ ] Crear carpeta `sistema-digital/backend/`
-- [ ] Inicializar `package.json` con `npm init`
-- [ ] Instalar dependencias base: `express`, `pg`, `dotenv`, `helmet`, `cors`, `express-rate-limit`, `jsonwebtoken`, `bcrypt`, `zod`, `winston`
-- [ ] Crear `.env` con variables de entorno (usar `.env.example` como plantilla)
-- [ ] Configurar `ESLint` y `Prettier`
-- [ ] Crear `src/server.js` y `src/app.js`
+- [x] Crear carpeta `sistema-digital/backend/`
+- [x] Inicializar `package.json` con `npm init`
+- [x] Instalar dependencias base: `express`, `pg`, `dotenv`, `helmet`, `cors`, `express-rate-limit`, `jsonwebtoken`, `bcrypt`, `zod`, `winston`
+- [x] Crear `.env` con variables de entorno (usar `.env.example` como plantilla)
+- [x] Configurar `ESLint` y `Prettier`
+- [x] Crear `src/server.js` y `src/app.js`
 
 ### 1.2 Base de datos
-- [ ] Crear base de datos `iwm_db` en PostgreSQL
-- [ ] Crear `src/db/connection.js` con pool de conexiones usando `pg`
-- [ ] Escribir `src/db/schema.sql` con las tablas: `users`, `cases`, `case_history`, `events`
-- [ ] Escribir `src/db/seed.sql` con usuario admin de prueba y casos de ejemplo
-- [ ] Ejecutar schema y seed en la base de datos local
-- [ ] Verificar conexión con un script de prueba
+- [x] Crear base de datos `iwm_db` en PostgreSQL
+- [x] Crear `src/db/connection.js` con pool de conexiones usando `pg`
+- [x] Escribir `src/db/schema.sql` con las tablas: `users`, `cases`, `case_history`, `events`
+- [x] Escribir `src/db/seed.sql` con usuario admin de prueba y casos de ejemplo
+- [x] Ejecutar schema y seed en la base de datos local
+- [x] Verificar conexión con un script de prueba
 
 ### 1.3 Constantes y esquemas
-- [ ] Crear `constants/status.constants.js` con los 4 estados del caso
-- [ ] Crear `constants/priority.constants.js` con los niveles de prioridad
-- [ ] Crear `constants/roles.constants.js` con el rol `admin`
-- [ ] Crear `schemas/case.schema.js` con validación Zod del formulario
-- [ ] Crear `schemas/auth.schema.js` con validación Zod del login
-- [ ] Crear `schemas/status.schema.js` con validación de cambio de estado
-- [ ] Crear `schemas/event.schema.js` con validación de eventos de tracking
+- [x] Crear `constants/status.constants.js` con los 4 estados del caso
+- [x] Crear `constants/priority.constants.js` con los niveles de prioridad
+- [x] Crear `constants/roles.constants.js` con el rol `admin`
+- [x] Crear `schemas/case.schema.js` con validación Zod del formulario
+- [x] Crear `schemas/auth.schema.js` con validación Zod del login
+- [x] Crear `schemas/status.schema.js` con validación de cambio de estado
+- [x] Crear `schemas/event.schema.js` con validación de eventos de tracking
 
 ### 1.4 Utilidades
-- [ ] Crear `utils/id.js` — generación de UUIDs
-- [ ] Crear `utils/time.js` — formateo de fechas y timestamps
-- [ ] Crear `utils/logger.js` — configuración de Winston
-- [ ] Crear `utils/sanitize.js` — limpieza de inputs de texto
+- [x] Crear `utils/id.js` — generación de UUIDs
+- [x] Crear `utils/time.js` — formateo de fechas y timestamps
+- [x] Crear `utils/logger.js` — configuración de Winston
+- [x] Crear `utils/sanitize.js` — limpieza de inputs de texto
 
 ### 1.5 Health check
-- [ ] Crear `routes/health.routes.js`
-- [ ] Verificar que `GET /api/health` responde `{ status: 'ok' }` con código 200
+- [x] Crear `routes/health.routes.js`
+- [x] Verificar que `GET /api/health` responde `{ status: 'ok' }` con código 200
 
 ---
 
 ## Módulo 2 — Login y Autenticación
 
 ### 2.1 Repositorio y servicio de usuarios
-- [ ] Crear `repositories/user.repository.js` — buscar usuario por email
-- [ ] Crear `services/auth.service.js` — verificar contraseña con bcrypt, generar JWT
+- [x] Crear `repositories/user.repository.js` — buscar usuario por email
+- [x] Crear `services/auth.service.js` — verificar contraseña con bcrypt, generar JWT
 
 ### 2.2 Middleware de autenticación
-- [ ] Crear `middleware/auth.middleware.js` — verificar JWT en headers de rutas privadas
-- [ ] Crear `middleware/validate.middleware.js` — ejecutar esquemas Zod antes del controller
-- [ ] Crear `middleware/error.middleware.js` — manejo centralizado de errores
-- [ ] Crear `middleware/rate-limit.middleware.js` — límite de requests por IP
-- [ ] Crear `middleware/security.middleware.js` — helmet + CORS configurado
+- [x] Crear `middleware/auth.middleware.js` — verificar JWT en headers de rutas privadas
+- [x] Crear `middleware/validate.middleware.js` — ejecutar esquemas Zod antes del controller
+- [x] Crear `middleware/error.middleware.js` — manejo centralizado de errores
+- [x] Crear `middleware/rate-limit.middleware.js` — límite de requests por IP
+- [x] Crear `middleware/security.middleware.js` — helmet + CORS configurado
 
 ### 2.3 Rutas y controlador de auth
-- [ ] Crear `controllers/auth.controller.js` — login, logout, me
-- [ ] Crear `routes/auth.routes.js` — POST /login, POST /logout, GET /me
-- [ ] Probar login con usuario del seed: respuesta con JWT válido
-- [ ] Probar acceso a ruta privada sin token: respuesta 401
-- [ ] Probar acceso a ruta privada con token válido: respuesta 200
+- [x] Crear `controllers/auth.controller.js` — login, logout, me
+- [x] Crear `routes/auth.routes.js` — POST /login, POST /logout, GET /me
+- [x] Probar login con usuario del seed: respuesta con JWT válido
+- [x] Probar acceso a ruta privada sin token: respuesta 401
+- [x] Probar acceso a ruta privada con token válido: respuesta 200
 
 ### 2.4 Frontend login
-- [ ] Crear `frontend-admin/login.html` con formulario de email + contraseña
-- [ ] Crear `frontend-admin/modules/auth.js` — POST al endpoint, guardar JWT en localStorage
-- [ ] Redirigir al dashboard si el login es exitoso
-- [ ] Mostrar mensaje de error si las credenciales son inválidas
-- [ ] Agregar verificación de token al cargar cualquier página del admin
+- [x] Crear `frontend-admin/login.html` con formulario de email + contraseña
+- [x] Crear `frontend-admin/modules/auth.js` — POST al endpoint, guardar JWT en localStorage
+- [x] Redirigir al dashboard si el login es exitoso
+- [x] Mostrar mensaje de error si las credenciales son inválidas
+- [x] Agregar verificación de token al cargar cualquier página del admin
 
 ---
 
