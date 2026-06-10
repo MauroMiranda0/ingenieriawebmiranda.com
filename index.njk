@@ -96,11 +96,17 @@ jsonld: |
     <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
       <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
         <div class="h-px w-full bg-[#0099ff]"></div>
-        <div class="overflow-hidden">
-          <img
-            src="/assets/img/optimization.png"
-            alt="Visual de optimización y flujo de datos"
-            class="blog-card-post-image h-64 w-full object-cover" />
+        <div class="zoomimg">
+          <div class="zoom-wrap">
+            <a href="" class="fixico" data-dialog-target="entregables-performance" aria-label="Ver detalle de entregables de performance">
+              <span class="material-icons" aria-hidden="true">search</span>
+            </a>
+            <img
+              src="/assets/img/optimization.png"
+              alt="Visual de optimización y flujo de datos"
+              class="blog-card-post-image h-64 w-full object-cover" />
+            <span class="fadef"></span>
+          </div>
         </div>
         <div class="p-8 flex flex-col flex-1">
           <div class="grid grid-cols-2 gap-4 text-[12px] text-slate-700">
@@ -123,8 +129,14 @@ jsonld: |
 
       <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
         <div class="h-px w-full bg-[#0099ff]"></div>
-        <div class="overflow-hidden">
-          <img src="/assets/img/debt.png" alt="Visual de reconstrucción arquitectónica" class="blog-card-post-image h-64 w-full object-cover" />
+        <div class="zoomimg">
+          <div class="zoom-wrap">
+            <a href="" class="fixico" data-dialog-target="entregables-arquitectura" aria-label="Ver detalle de entregables de arquitectura">
+              <span class="material-icons" aria-hidden="true">search</span>
+            </a>
+            <img src="/assets/img/debt.png" alt="Visual de reconstrucción arquitectónica" class="blog-card-post-image h-64 w-full object-cover" />
+            <span class="fadef"></span>
+          </div>
         </div>
         <div class="p-8 flex flex-col flex-1">
           <div class="grid grid-cols-2 gap-4 text-[12px] text-slate-700">
@@ -147,8 +159,14 @@ jsonld: |
 
       <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
         <div class="h-px w-full bg-[#0099ff]"></div>
-        <div class="overflow-hidden">
-          <img src="/assets/img/security.png" alt="Visual de capas de seguridad y protección" class="blog-card-post-image h-64 w-full object-cover" />
+        <div class="zoomimg">
+          <div class="zoom-wrap">
+            <a href="" class="fixico" data-dialog-target="entregables-seguridad" aria-label="Ver detalle de entregables de seguridad">
+              <span class="material-icons" aria-hidden="true">search</span>
+            </a>
+            <img src="/assets/img/security.png" alt="Visual de capas de seguridad y protección" class="blog-card-post-image h-64 w-full object-cover" />
+            <span class="fadef"></span>
+          </div>
         </div>
         <div class="p-8 flex flex-col flex-1">
           <div class="grid grid-cols-2 gap-4 text-[12px] text-slate-700">
@@ -173,6 +191,87 @@ jsonld: |
     <div class="mt-10">
       <a href="/contacto/" class="btn btn-primary">Solicitar diagnóstico</a>
     </div>
+
+    <dialog id="entregables-performance" class="blog-card-dialog">
+      <div class="blog-card-dialog-body">
+        <p class="blog-card-dialog-kicker">Performance</p>
+        <h3 class="blog-card-dialog-title">Detalle de entregables</h3>
+        <p class="blog-card-dialog-copy">
+          Aplicamos performance budget, optimización crítica y medición continua para sostener mejoras.
+        </p>
+        <div class="blog-card-dialog-list">
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Audit</p>
+            <p class="blog-card-dialog-value">Diagnóstico técnico de carga, render, recursos críticos y puntos de fricción que afectan CWV.</p>
+          </div>
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Budget</p>
+            <p class="blog-card-dialog-value">Definición de límites operativos para peso, scripts, imágenes y rutas críticas antes de degradar la experiencia.</p>
+          </div>
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Plan</p>
+            <p class="blog-card-dialog-value">Roadmap priorizado con acciones de implementación, validación y monitoreo para sostener la mejora.</p>
+          </div>
+        </div>
+        <div class="blog-card-dialog-actions">
+          <button type="button" class="blog-card-dialog-close" data-dialog-close>Cerrar</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="entregables-arquitectura" class="blog-card-dialog">
+      <div class="blog-card-dialog-body">
+        <p class="blog-card-dialog-kicker">Arquitectura</p>
+        <h3 class="blog-card-dialog-title">Detalle de entregables</h3>
+        <p class="blog-card-dialog-copy">
+          Partimos de diagnóstico, documentamos decisiones y entregamos artefactos accionables para ejecución.
+        </p>
+        <div class="blog-card-dialog-list">
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Mapa</p>
+            <p class="blog-card-dialog-value">Lectura estructurada del estado actual: dependencias, cuellos de botella, riesgos y puntos de acoplamiento.</p>
+          </div>
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Arquitectura</p>
+            <p class="blog-card-dialog-value">Diseño objetivo con decisiones técnicas documentadas, criterios de separación y enfoque de modernización progresiva.</p>
+          </div>
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Roadmap</p>
+            <p class="blog-card-dialog-value">Secuencia defendible de refactor, migración o reordenamiento técnico con prioridades y dependencias claras.</p>
+          </div>
+        </div>
+        <div class="blog-card-dialog-actions">
+          <button type="button" class="blog-card-dialog-close" data-dialog-close>Cerrar</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="entregables-seguridad" class="blog-card-dialog">
+      <div class="blog-card-dialog-body">
+        <p class="blog-card-dialog-kicker">Seguridad</p>
+        <h3 class="blog-card-dialog-title">Detalle de entregables</h3>
+        <p class="blog-card-dialog-copy">
+          Implementamos headers, revisión de dependencias y controles básicos integrados al ciclo de entrega.
+        </p>
+        <div class="blog-card-dialog-list">
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Baseline</p>
+            <p class="blog-card-dialog-value">Línea base de seguridad con revisión de exposición, dependencias y configuración inicial del entorno web.</p>
+          </div>
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Hardening</p>
+            <p class="blog-card-dialog-value">Aplicación de headers, restricciones de superficie, ajustes de servidor y refuerzo de prácticas de entrega.</p>
+          </div>
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Checklist</p>
+            <p class="blog-card-dialog-value">Lista operativa para validación recurrente antes de publicar cambios y mantener el estándar en el tiempo.</p>
+          </div>
+        </div>
+        <div class="blog-card-dialog-actions">
+          <button type="button" class="blog-card-dialog-close" data-dialog-close>Cerrar</button>
+        </div>
+      </div>
+    </dialog>
   </div>
 </section>
 

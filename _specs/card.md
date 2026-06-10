@@ -48,13 +48,19 @@ Card completa navegable. Usa `<a>` en lugar de `<article>`.
 ---
 
 ### Card Blog Post
-Inspirada en diseño `card-blog-post-lorem.html`. Usa barra de acento superior, imagen destacada con hover sutil, fila meta de dos columnas, título más grande con peso ligero, extracto y CTA alineado al fondo. Todas las cards del mismo grid comparten altura gracias a `flex flex-col`.
+Inspirada en diseño `card-blog-post-lorem.html`. Reutiliza el patrón `zoomimg` / `zoom-wrap` / `fixico` / `fadef` para replicar el mismo hover visual de la imagen, con la diferencia funcional de que la lupa abre un modal con el detalle de entregables en lugar de agrandar la imagen.
 
 ```html
 <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
   <div class="h-px w-full bg-[#0099ff]"></div>
-  <div class="overflow-hidden">
-    <img src="/assets/img/example.png" alt="Descripción" class="blog-card-post-image h-64 w-full object-cover" />
+  <div class="zoomimg">
+    <div class="zoom-wrap">
+      <a href="" class="fixico" data-dialog-target="entregables-performance" aria-label="Ver detalle de entregables">
+        <span class="material-icons" aria-hidden="true">search</span>
+      </a>
+      <img src="/assets/img/example.png" alt="Descripción" class="blog-card-post-image h-64 w-full object-cover" />
+      <span class="fadef"></span>
+    </div>
   </div>
   <div class="p-8 flex flex-col flex-1">
     <div class="grid grid-cols-2 gap-4 text-[12px] text-slate-700">
@@ -71,6 +77,10 @@ Inspirada en diseño `card-blog-post-lorem.html`. Usa barra de acento superior, 
     </div>
   </div>
 </article>
+
+<dialog id="entregables-performance" class="blog-card-dialog">
+  <!-- detalle de entregables -->
+</dialog>
 ```
 
 **Uso:** Secciones de problema/solución en home (`#que-resolvemos`).
