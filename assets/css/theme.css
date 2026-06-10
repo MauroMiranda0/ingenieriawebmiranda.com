@@ -118,18 +118,7 @@
 }
 
 .hero-blueprint {
-  animation: blueprintDrift 18s ease-in-out infinite;
-  transform-origin: center center;
-}
-
-@keyframes blueprintDrift {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-6px) scale(1.02);
-  }
+  /* Selector semántico reservado — la animación CSS fue reemplazada por video hero */
 }
 
 .hero-link-tech {
