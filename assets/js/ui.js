@@ -76,3 +76,31 @@
     });
   });
 })();
+
+(() => {
+  const cardLinks = document.querySelectorAll(".fix-btn-blog .trigger[href]");
+  if (!cardLinks.length) return;
+
+  cardLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href");
+      if (!href || href === "#") return;
+
+      event.preventDefault();
+
+      const wrapper = link.closest(".fix-btn-blog");
+      if (!wrapper) {
+        window.location.href = href;
+        return;
+      }
+
+      link.classList.add("active");
+      wrapper.querySelector(".istria-over")?.classList.add("active");
+      wrapper.querySelectorAll(".istria-line").forEach((line) => line.classList.add("active"));
+
+      window.setTimeout(() => {
+        window.location.href = href;
+      }, 180);
+    });
+  });
+})();

@@ -48,7 +48,7 @@ Card completa navegable. Usa `<a>` en lugar de `<article>`.
 ---
 
 ### Card Blog Post
-Inspirada en diseño `card-blog-post-lorem.html`. Reutiliza el patrón `zoomimg` / `zoom-wrap` / `fixico` / `fadef` para replicar el mismo hover visual de la imagen, con la diferencia funcional de que la lupa abre un modal con el detalle de entregables en lugar de agrandar la imagen.
+Inspirada en diseño `card-blog-post-lorem.html`. Reutiliza el patrón `zoomimg` / `zoom-wrap` / `fixico` / `fadef` para la imagen y `fix-btn-blog` / `istria-btn` / `istria-over` / `istria-line` para el CTA. La lupa abre un modal con el detalle de entregables en lugar de agrandar la imagen.
 
 ```html
 <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
@@ -69,11 +69,15 @@ Inspirada en diseño `card-blog-post-lorem.html`. Reutiliza el patrón `zoomimg`
     </div>
     <h3 class="blog-card-post-title">Título</h3>
     <p class="blog-card-post-excerpt">Descripción del contenido.</p>
-    <div class="mt-auto pt-10 relative min-h-[88px]">
-      <a href="/ruta/" class="blog-card-post-cta">Saber más</a>
-      <span class="blog-card-post-cta-overlay"></span>
-      <span class="blog-card-post-cta-line-left"><span class="blog-card-post-cta-line-inner"></span></span>
-      <span class="blog-card-post-cta-line-right"><span class="blog-card-post-cta-line-inner"></span></span>
+    <div class="fix-btn-blog">
+      <a href="/ruta/" class="istria-btn trigger">Saber más</a>
+      <div class="istria-over"></div>
+      <div class="istria-line left">
+        <div class="inner"></div>
+      </div>
+      <div class="istria-line right">
+        <div class="inner"></div>
+      </div>
     </div>
   </div>
 </article>
