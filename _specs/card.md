@@ -47,6 +47,36 @@ Card completa navegable. Usa `<a>` en lugar de `<article>`.
 
 ---
 
+### Card Blog Post
+Inspirada en diseño `card-blog-post-lorem.html`. Usa barra de acento superior, imagen destacada con hover sutil, fila meta de dos columnas, título más grande con peso ligero, extracto y CTA alineado al fondo. Todas las cards del mismo grid comparten altura gracias a `flex flex-col`.
+
+```html
+<article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
+  <div class="h-px w-full bg-[#0099ff]"></div>
+  <div class="overflow-hidden">
+    <img src="/assets/img/example.png" alt="Descripción" class="blog-card-post-image h-64 w-full object-cover" />
+  </div>
+  <div class="p-8 flex flex-col flex-1">
+    <div class="grid grid-cols-2 gap-4 text-[12px] text-slate-700">
+      <p class="italic">Servicio</p>
+      <p class="text-right">Entregables: ...</p>
+    </div>
+    <h3 class="blog-card-post-title">Título</h3>
+    <p class="blog-card-post-excerpt">Descripción del contenido.</p>
+    <div class="mt-auto pt-10 relative min-h-[88px]">
+      <a href="/ruta/" class="blog-card-post-cta">Saber más</a>
+      <span class="blog-card-post-cta-overlay"></span>
+      <span class="blog-card-post-cta-line-left"><span class="blog-card-post-cta-line-inner"></span></span>
+      <span class="blog-card-post-cta-line-right"><span class="blog-card-post-cta-line-inner"></span></span>
+    </div>
+  </div>
+</article>
+```
+
+**Uso:** Secciones de problema/solución en home (`#que-resolvemos`).
+
+---
+
 ### Card Static
 Sin hover. Para contenido informativo sin acción directa.
 
