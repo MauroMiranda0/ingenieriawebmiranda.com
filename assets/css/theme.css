@@ -171,41 +171,55 @@
   position: relative;
 }
 
+.areas-carousel::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1.75rem 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(13, 43, 69, 0.2), transparent);
+}
+
 .areas-carousel-viewport {
   overflow: hidden;
-  padding-inline: 0.75rem;
+  padding-inline: 0.375rem;
 }
 
 .areas-carousel-track {
   display: flex;
   gap: 1.5rem;
-  transition: transform 800ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.22, 0.8, 0.2, 1);
   will-change: transform;
 }
 
 .areas-carousel-slide {
-  flex: 0 0 calc(100% - 1.5rem);
-  min-height: 12.5rem;
+  flex: 0 0 calc(100% - 0.75rem);
+  min-height: 21rem;
+  max-width: 22rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
+  opacity: 0.3;
+  transform: scale(0.9);
+  text-align: center;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.95) 100%),
     linear-gradient(135deg, rgba(13, 43, 69, 0.06) 0%, rgba(13, 43, 69, 0.12) 100%);
+  transition: transform 1000ms cubic-bezier(0.22, 0.8, 0.2, 1), opacity 1000ms ease, box-shadow 1000ms ease;
 }
 
 .areas-carousel-slide::before {
   content: "";
   position: absolute;
-  inset: -18% auto auto 58%;
-  width: 7rem;
-  height: 7rem;
+  inset: 8% auto auto 50%;
+  width: 8rem;
+  height: 8rem;
   background: rgba(13, 43, 69, 0.06);
   border-radius: 50%;
   transform: translateX(-50%) scale(0.85);
-  transition: transform 800ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 800ms ease;
+  transition: transform 1000ms cubic-bezier(0.22, 0.8, 0.2, 1), opacity 1000ms ease;
   opacity: 0.6;
 }
 
@@ -216,34 +230,39 @@
   position: relative;
   z-index: 1;
   transform: translateY(2rem);
-  opacity: 0.35;
-  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 600ms ease;
+  opacity: 0.22;
+  transition: transform 720ms cubic-bezier(0.22, 0.8, 0.2, 1), opacity 720ms ease;
 }
 
 .areas-carousel-slide .material-icons {
-  font-size: 2.5rem;
-  margin-bottom: 1.25rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
   transition-delay: 80ms;
 }
 
 .areas-carousel-slide h3 {
   font-size: 1.375rem;
   line-height: 1.2;
+  max-width: 13ch;
   transition-delay: 140ms;
 }
 
 .areas-carousel-slide p {
   font-size: 0.8125rem;
   line-height: 1.55;
+  max-width: 24ch;
   transition-delay: 220ms;
 }
 
 .areas-carousel-slide a {
+  justify-content: center;
   font-size: 0.75rem;
   transition-delay: 300ms;
 }
 
 .areas-carousel-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
 }
 
@@ -263,7 +282,7 @@
 .areas-carousel-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
 }
@@ -275,19 +294,25 @@
   min-width: 5.5rem;
   padding: 0.75rem 1rem;
   border: 1px solid rgba(13, 43, 69, 0.25);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
   color: #64748b;
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  transition: color 240ms ease, border-color 240ms ease, background-color 240ms ease, transform 240ms ease,
+    box-shadow 240ms ease;
 }
 
 .areas-carousel-button:hover,
 .areas-carousel-button:focus-visible {
   color: #0d2b45;
   border-color: #0d2b45;
+  background: rgba(255, 255, 255, 0.92);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
 }
 
 .areas-carousel-button:focus-visible {
@@ -297,11 +322,11 @@
 
 @media (min-width: 768px) {
   .areas-carousel-viewport {
-    padding-inline: 2.5rem;
+    padding-inline: 1.5rem;
   }
 
   .areas-carousel-slide {
-    flex-basis: calc(50% - 3.25rem);
+    flex-basis: min(20rem, calc(50% - 2rem));
     margin-right: 0;
   }
 }

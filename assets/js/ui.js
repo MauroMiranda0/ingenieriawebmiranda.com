@@ -106,6 +106,8 @@
 })();
 
 (() => {
+  const transitionValue = "transform 1000ms cubic-bezier(0.22, 0.8, 0.2, 1)";
+  const autoPlayDelay = 4800;
   const carousel = document.getElementById("areas-carousel");
   const viewport = document.getElementById("areas-carousel-viewport");
   const track = document.getElementById("areas-carousel-track");
@@ -117,16 +119,34 @@
   const originalSlides = Array.from(track.querySelectorAll(".areas-carousel-slide"));
   if (!originalSlides.length) return;
 
-  const firstClone = originalSlides[0].cloneNode(true);
-  const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
-  firstClone.setAttribute("data-clone", "first");
-  lastClone.setAttribute("data-clone", "last");
-  track.insertBefore(lastClone, track.firstChild);
-  track.appendChild(firstClone);
+  const makeSlideSet = (label) =>
+    originalSlides.map((slide) => {
+      const clone = slide.cloneNode(true);
+      clone.setAttribute("data-slide-set", label);
+      return clone;
+    });
+
+  track.replaceChildren(
+    ...makeSlideSet("far-prepend"),
+    ...makeSlideSet("prepend"),
+    ...originalSlides,
+    ...makeSlideSet("append"),
+    ...makeSlideSet("far-append"),
+  );
 
   let slides = Array.from(track.querySelectorAll(".areas-carousel-slide"));
-  let currentIndex = 1;
+  let currentIndex = originalSlides.length * 2;
   let isTransitioning = false;
+  let autoPlayId = 0;
+  const centralStartIndex = originalSlides.length * 2;
+  const centralEndIndex = centralStartIndex + originalSlides.length - 1;
+
+  const getLogicalIndex = (index) => {
+    const total = originalSlides.length;
+    return ((index % total) + total) % total;
+  };
+
+  const normalizeToCentralRange = (index) => centralStartIndex + getLogicalIndex(index);
 
   const setTrackPosition = (index, animate = true) => {
     const activeSlide = slides[index];
@@ -136,7 +156,7 @@
     const viewportCenter = viewport.clientWidth / 2;
     const offset = Math.max(0, slideCenter - viewportCenter);
 
-    track.style.transition = animate ? "transform 800ms cubic-bezier(0.2, 0.8, 0.2, 1)" : "none";
+    track.style.transition = animate ? transitionValue : "none";
     track.style.transform = `translateX(-${offset}px)`;
   };
 
@@ -153,6 +173,13 @@
     updateActiveState();
   };
 
+  const recenterIfNeeded = () => {
+    if (currentIndex >= centralStartIndex - 1 && currentIndex <= centralEndIndex + 1) return;
+
+    currentIndex = normalizeToCentralRange(currentIndex);
+    update(false);
+  };
+
   const goTo = (index) => {
     if (isTransitioning) return;
     isTransitioning = true;
@@ -160,32 +187,61 @@
     update(true);
   };
 
+  const stopAutoPlay = () => {
+    if (!autoPlayId) return;
+    window.clearInterval(autoPlayId);
+    autoPlayId = 0;
+  };
+
+  const startAutoPlay = () => {
+    stopAutoPlay();
+    autoPlayId = window.setInterval(() => {
+      if (!document.hidden && !isTransitioning) {
+        goTo(currentIndex + 1);
+      }
+    }, autoPlayDelay);
+  };
+
   prevButton.addEventListener("click", () => goTo(currentIndex - 1));
   nextButton.addEventListener("click", () => goTo(currentIndex + 1));
+  prevButton.addEventListener("click", startAutoPlay);
+  nextButton.addEventListener("click", startAutoPlay);
 
   carousel.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
       event.preventDefault();
       goTo(currentIndex - 1);
+      startAutoPlay();
     }
 
     if (event.key === "ArrowRight") {
       event.preventDefault();
       goTo(currentIndex + 1);
+      startAutoPlay();
+    }
+  });
+
+  carousel.addEventListener("mouseenter", stopAutoPlay);
+  carousel.addEventListener("mouseleave", startAutoPlay);
+  carousel.addEventListener("focusin", stopAutoPlay);
+  carousel.addEventListener("focusout", (event) => {
+    if (!carousel.contains(event.relatedTarget)) {
+      startAutoPlay();
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoPlay();
+    } else {
+      startAutoPlay();
     }
   });
 
   track.addEventListener("transitionend", () => {
-    if (currentIndex === 0) {
-      currentIndex = originalSlides.length;
-      update(false);
-    } else if (currentIndex === slides.length - 1) {
-      currentIndex = 1;
-      update(false);
-    }
-
     window.requestAnimationFrame(() => {
-      track.style.transition = "transform 800ms cubic-bezier(0.2, 0.8, 0.2, 1)";
+      recenterIfNeeded();
+      track.style.transition = transitionValue;
       isTransitioning = false;
       updateActiveState();
     });
@@ -195,4 +251,5 @@
 
   carousel.setAttribute("tabindex", "0");
   update(false);
+  startAutoPlay();
 })();
