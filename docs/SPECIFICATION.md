@@ -70,7 +70,7 @@ Presentes en las 18 páginas vía `_includes/layouts/base.njk`.
 | — | Hero | `.hero-blueprint`, `.network-pattern`, `.gradient-blur`, `.btn-primary`, `.hero-link-tech` |
 | `#que-resolvemos` | Qué resolvemos | SectionHeader, 3× Card Blog Post con imagen, lupa interactiva, modal de entregables y CTA estilo Istria |
 | `#casos` | Casos (featured) | SectionHeader, 3× Card Default centrada con ícono, lista breve y `.hero-link-tech` |
-| `#areas` | Áreas clave | SectionHeader, 4× Card Feature con Material Icons |
+| `#areas` | Áreas clave | SectionHeader, carrusel nativo de 4× Card Feature con Material Icons y navegación previa/siguiente |
 | `#casos-accion` | Transformación digital en acción | SectionHeader split, 3× Card Static |
 | `#servicios` | Servicios | SectionHeader, 4× Card Link |
 | `#metodo` | Método de ingeniería | SectionHeader centrado, diagrama de fases con `.node-glow`, `.btn-outline` |
