@@ -332,7 +332,24 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  justify-content: flex-start;
   transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.case-reveal-card-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.5rem;
+  min-height: 15rem;
+  justify-content: flex-end;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.case-reveal-card-expanded {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .case-reveal-card-media {
@@ -361,16 +378,13 @@
 }
 
 .case-reveal-card-badge {
-  position: absolute;
-  left: 1.25rem;
-  top: 1.25rem;
-  z-index: 1;
   display: inline-flex;
   align-items: center;
+  width: fit-content;
   padding: 0.45rem 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(10, 25, 47, 0.38);
-  color: #fff;
+  border: 1px solid rgba(13, 43, 69, 0.18);
+  background: rgba(13, 43, 69, 0.04);
+  color: #0d2b45;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -422,50 +436,55 @@
 
 @media (hover: hover) and (min-width: 768px) {
   .case-reveal-card {
-    min-height: 37rem;
+    min-height: 19rem;
+    height: 19rem;
+    transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease, height 420ms cubic-bezier(0.22, 0.8, 0.2, 1);
+  }
+
+  .case-reveal-card-intro {
+    min-height: 19rem;
+    transition: transform 420ms cubic-bezier(0.22, 0.8, 0.2, 1), opacity 320ms ease;
+  }
+
+  .case-reveal-card-expanded {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1.5rem);
+    transition: transform 420ms cubic-bezier(0.22, 0.8, 0.2, 1), opacity 320ms ease, visibility 0s linear 320ms;
   }
 
   .case-reveal-card-media {
-    min-height: 23.5rem;
-  }
-
-  .case-reveal-card-body {
-    min-height: 12rem;
-    transform: translateY(5.1rem);
-    transition: transform 420ms cubic-bezier(0.22, 0.8, 0.2, 1), background-color 280ms ease;
-  }
-
-  .case-reveal-card-copy,
-  .case-reveal-card-details {
-    opacity: 0;
-    transform: translateY(1rem);
-    transition: transform 320ms ease, opacity 320ms ease;
+    min-height: 18.5rem;
   }
 
   .case-reveal-card:hover,
   .case-reveal-card:focus-within {
+    height: 37rem;
     transform: translateY(-4px);
     border-color: rgba(13, 43, 69, 0.24);
     box-shadow: 0 20px 44px rgba(15, 23, 42, 0.14);
+  }
+
+  .case-reveal-card:hover .case-reveal-card-intro,
+  .case-reveal-card:focus-within .case-reveal-card-intro {
+    opacity: 0;
+    transform: translateY(-1.25rem);
+  }
+
+  .case-reveal-card:hover .case-reveal-card-expanded,
+  .case-reveal-card:focus-within .case-reveal-card-expanded {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 40ms;
   }
 
   .case-reveal-card:hover .case-reveal-card-image,
   .case-reveal-card:focus-within .case-reveal-card-image {
     transform: scale(1.04) translateY(-6px);
     filter: saturate(1.08);
-  }
-
-  .case-reveal-card:hover .case-reveal-card-body,
-  .case-reveal-card:focus-within .case-reveal-card-body {
-    transform: translateY(0);
-  }
-
-  .case-reveal-card:hover .case-reveal-card-copy,
-  .case-reveal-card:hover .case-reveal-card-details,
-  .case-reveal-card:focus-within .case-reveal-card-copy,
-  .case-reveal-card:focus-within .case-reveal-card-details {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
