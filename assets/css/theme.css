@@ -117,9 +117,9 @@
   left: 50%;
   top: 0;
   z-index: 4;
-  width: clamp(9.5rem, 26vw, 14.5rem);
+  width: 17.6rem;
   height: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(calc(-50% - 7px), calc(-50% - 7px));
   filter: drop-shadow(0 18px 24px rgba(2, 6, 23, 0.28));
 }
 
@@ -186,6 +186,10 @@
     top: -10.25rem;
     width: 20.5rem;
     height: 20.5rem;
+  }
+
+  .cta-evolution-sphere {
+    width: 20.5rem;
   }
 
 }
