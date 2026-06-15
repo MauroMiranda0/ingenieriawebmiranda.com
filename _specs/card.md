@@ -1,6 +1,6 @@
 # Card
 
-**Archivo fuente:** Tailwind utilitarios (sin clase CSS custom)
+**Archivo fuente:** Tailwind utilitarios + `assets/css/theme.css` para variantes con interacción custom
 
 Contenedor de contenido estructurado. Siempre `<article>` semántico cuando representa una unidad de contenido independiente (caso, servicio, área). Puede ser `<a>` cuando la card completa es navegable.
 
@@ -88,6 +88,42 @@ Inspirada en diseño `card-blog-post-lorem.html`. Reutiliza el patrón `zoomimg`
 ```
 
 **Uso:** Secciones de problema/solución en home (`#que-resolvemos`). Las últimas 3 cards usan la misma estructura visual pero con `<span class="istria-btn">` sin enlace (modal como única interacción). También admite variante sin imagen (solo ícono Material + badge) para mostrar casos destacados, usando la misma estructura pero reemplazando `.zoomimg` por un ícono centrado y la lista de decisiones clave en lugar del detalle de entregables.
+
+---
+
+### Card Interactiva Animated Product
+
+Inspirada en `animated product card.html`: estado inicial compacto con ícono central, transición horizontal en hover/focus, contenido revelado y una ilustración técnica que emerge desde el costado. La adaptación conserva la identidad blueprint: esquinas rectas, paleta primaria y sin fuentes externas adicionales.
+
+```html
+<article class="case-animated-card">
+  <div class="case-animated-card-mark" aria-hidden="true">
+    <span class="material-icons">install_mobile</span>
+  </div>
+
+  <div class="case-animated-card-content">
+    <span class="case-animated-card-kicker">PWA</span>
+    <h3>Migración a PWA</h3>
+    <p>Implementación desde código HTML/CSS existente para habilitar instalación y experiencia app-like.</p>
+    <ul>
+      <li>Service Worker + estrategia de caché</li>
+      <li>Web App Manifest + criterios de instalación</li>
+    </ul>
+    <a href="/casos/migracion-pwa/">Ver caso</a>
+  </div>
+
+  <img src="/assets/img/casos/pwa.png" alt="Interfaz técnica de PWA" class="case-animated-card-image" />
+</article>
+```
+
+**Uso:** Casos destacados en home (`#casos-accion`). Requiere contenedor `.case-animated-list` para permitir expansión horizontal coordinada entre las 3 cards.
+
+**Reglas específicas:**
+
+- No usar `border-radius`: la forma inicial es cuadrada/rectangular, no circular.
+- En desktop, la card activa crece horizontalmente y revela contenido + imagen.
+- En mobile, las cards se apilan y muestran el contenido sin depender de hover.
+- La imagen cumple el rol de "producto" del ejemplo original, pero con ilustraciones técnicas del proyecto.
 
 ---
 
