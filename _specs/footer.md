@@ -4,13 +4,14 @@
 
 Footer corporativo global. Presente en las 18 páginas a través del layout `_includes/layouts/base.njk`.
 No tiene variantes — es un componente único y estático.
+Usa `.site-footer` como capa CSS propia para asegurar render estable aunque Tailwind CDN tarde en aplicar utilidades.
 
 ---
 
 ## Estructura HTML
 
 ```html
-<footer class="bg-primary text-white pt-16 pb-10">
+<footer class="site-footer bg-primary text-white pt-16 pb-10">
   <div class="max-w-7xl mx-auto px-6">
 
     <!-- Grid principal: 5 columnas en desktop -->
@@ -126,6 +127,7 @@ Sin dependencias de fuentes de iconos externas.
 ## Reglas de uso
 
 - No agregar `border-radius` al footer ni a ningún contenedor interno — estética de bordes rectos.
+- Mantener `.site-footer`; define fallback de fondo, color y visibilidad independiente de Tailwind runtime.
 - Los iconos sociales van siempre en la columna 5, en fila horizontal (`flex gap-4`).
 - Para añadir una red social: agregar un `<a>` con SVG en la columna 5 y una fila en la tabla de iconos de esta spec.
 - Los `href="#"` de redes sociales deben reemplazarse con las URLs reales cuando estén disponibles.

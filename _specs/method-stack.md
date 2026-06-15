@@ -2,7 +2,7 @@
 
 **Archivo fuente:** `assets/css/theme.css`
 
-Componente interactivo para presentar las fases del método como capas apiladas que se despliegan en cascada. Adaptado de `menuDesplegableAleatorio.html` a la identidad blueprint del sitio.
+Componente interactivo para presentar las fases del método como capas apiladas que se despliegan en cascada, adaptado a la identidad blueprint del sitio.
 
 ---
 

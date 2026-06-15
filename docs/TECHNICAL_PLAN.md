@@ -113,8 +113,8 @@ jsonld: |                       # solo en home y contacto
 
 | Item | Severidad | Descripción |
 |------|-----------|-------------|
-| `title` con typo | Baja | `metodo/index.njk` tiene `"Metodo"` sin acento en el front matter |
-| Skip link | Baja | `.skip-link` está definido en `theme.css` pero no implementado en `base.njk` |
+| ~~`title` con typo~~ | ~~Baja~~ | ~~`metodo/index.njk` tenía `"Metodo"` sin acento en el front matter~~ ✅ |
+| ~~Skip link~~ | ~~Baja~~ | ~~`.skip-link` estaba definido en `theme.css` pero no implementado en `base.njk`~~ ✅ |
 | ~~Home: secciones de casos duplicadas~~ | ~~Media~~ | ~~Consolidado: contenido de `#casos` migrado a `#que-resolvemos` + fusionado en `#casos-accion`~~ ✅ |
 | `tailwind.config.js` en raíz | Baja | Formato Node.js inactivo (sin build process); puede confundir. Eliminar o migrar |
 | Formspree endpoint visible | Info | `xpqjevwp` visible en el HTML del formulario. Aceptable para Formspree (es público por diseño) |
@@ -126,8 +126,8 @@ jsonld: |                       # solo en home y contacto
 
 ### Próximo (alta prioridad)
 
-- [ ] Corregir typo `"Metodo"` → `"Método"` en front matter de `metodo/index.njk`
-- [ ] Implementar `.skip-link` en `_includes/layouts/base.njk`
+- [x] Corregir typo `"Metodo"` → `"Método"` en front matter de `metodo/index.njk`
+- [x] Implementar `.skip-link` en `_includes/layouts/base.njk`
 - [ ] Configurar secrets de FTP en GitHub y hacer primer deploy automatizado
 - [ ] Revisar y consolidar las dos secciones de casos en el home
 
