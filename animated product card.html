@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Product Card - Sprite</title>
+    <style>
+        /* Importamos una fuente similar a la del video */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1e1e1e; /* Fondo oscuro para resaltar la tarjeta */
+            overflow: hidden;
+        }
+
+        /* --- Estructura principal de la tarjeta --- */
+        .card {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            background: #000;
+            border-radius: 50%;
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.4); /* Resplandor verde */
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Animación al hacer Hover en la tarjeta */
+        .card:hover {
+            width: 600px;
+            height: 300px;
+            border-radius: 20px;
+            /* Degradado verde de Sprite */
+            background: linear-gradient(135deg, #24b24c, #52d869);
+            box-shadow: 0 0 30px rgba(36, 178, 76, 0.5);
+        }
+
+        /* --- Logo inicial en el círculo --- */
+        .card .logo {
+            position: absolute;
+            width: 150px;
+            transition: 0.5s;
+            z-index: 10;
+        }
+
+        .card:hover .logo {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        /* --- Imagen de la botella (Oculta al inicio) --- */
+        .card .bottle {
+            position: absolute;
+            right: 20px;
+            width: 220px; 
+            bottom: 0;
+            opacity: 0;
+            transition: 0.5s;
+            transform: scale(0) translateY(50px);
+            z-index: 10;
+        }
+
+        .card:hover .bottle {
+            opacity: 1;
+            transform: scale(1) translateY(-50px); /* Hace que la botella sobresalga hacia arriba */
+            right: 40px;
+            bottom: 20px;
+            transition-delay: 0.5s; /* Espera a que la tarjeta se expanda */
+        }
+
+        /* =========================================
+           CÓDIGO EXACTO MOSTRADO EN EL VIDEO
+           ========================================= */
+
+        .card .content {
+            position: absolute;
+            width: 50%;
+            left: 20%;
+            padding: 20px 20px 20px 20px;
+            opacity: 0;
+            transition: 0.5s;
+            visibility: hidden;
+        }
+
+        .card:hover .content {
+            transition-delay: 0.75s;
+            opacity: 1;
+            visibility: visible;
+            left: 20px;
+        }
+
+        .card .content h2 {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 2.5em;
+            line-height: 1em;
+            margin-bottom: 15px; /* Pequeño ajuste para separación */
+        }
+
+        .card .content p {
+            color: #fff;
+            font-size: 0.9em;
+        }
+
+        .card .content a {
+            position: relative;
+            color: black;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Sprite_logo_2022.svg/1024px-Sprite_logo_2022.svg.png" alt="Sprite Logo" class="logo">
+        
+        <div class="content">
+            <h2>Sprite</h2>
+            <p>Sprite is a crisp, refreshing drink that quenches your thirst and delights your taste buds. Our secret blend of flavors.</p>
+            <a href="#">Shop Now</a>
+        </div>
+        
+        <img src="https://freepngimg.com/thumb/sprite/28169-2-sprite-bottle-transparent-image.png" alt="Sprite Bottle" class="bottle">
+    </div>
+
+</body>
+</html>

@@ -115,7 +115,7 @@ jsonld: |                       # solo en home y contacto
 |------|-----------|-------------|
 | `title` con typo | Baja | `metodo/index.njk` tiene `"Metodo"` sin acento en el front matter |
 | Skip link | Baja | `.skip-link` está definido en `theme.css` pero no implementado en `base.njk` |
-| Home: secciones de casos duplicadas | Media | `#casos` y `#casos-accion` presentan contenido solapado — candidato a consolidar |
+| ~~Home: secciones de casos duplicadas~~ | ~~Media~~ | ~~Consolidado: contenido de `#casos` migrado a `#que-resolvemos` + fusionado en `#casos-accion`~~ ✅ |
 | `tailwind.config.js` en raíz | Baja | Formato Node.js inactivo (sin build process); puede confundir. Eliminar o migrar |
 | Formspree endpoint visible | Info | `xpqjevwp` visible en el HTML del formulario. Aceptable para Formspree (es público por diseño) |
 | OG images genéricas | Media | 16 páginas usan `og-cover.png`. Ideal: imágenes específicas por sección |

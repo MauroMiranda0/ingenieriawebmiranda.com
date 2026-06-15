@@ -87,7 +87,7 @@ Inspirada en diseño `card-blog-post-lorem.html`. Reutiliza el patrón `zoomimg`
 </dialog>
 ```
 
-**Uso:** Secciones de problema/solución en home (`#que-resolvemos`).
+**Uso:** Secciones de problema/solución en home (`#que-resolvemos`). También admite variante sin imagen (solo ícono Material + badge) para mostrar casos destacados, usando la misma estructura pero reemplazando `.zoomimg` por un ícono centrado y la lista de decisiones clave en lugar del detalle de entregables.
 
 ---
 

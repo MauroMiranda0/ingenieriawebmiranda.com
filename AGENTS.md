@@ -69,3 +69,8 @@ jsonld: |                                    # only for home and contacto
 - No CI/CD pipeline configured yet
 - Formspree endpoint `xpqjevwp` for contact form (public by design)
 - `.github/workflows/` does not exist yet (mentioned in TECHNICAL_PLAN.md but not set up)
+
+<!-- SPECKIT START -->
+For additional context about technologies to be used, project structure,
+shell commands, and other important information, read the current plan
+<!-- SPECKIT END -->

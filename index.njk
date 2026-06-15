@@ -198,11 +198,191 @@ jsonld: |
           </div>
         </div>
       </article>
+
+      <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
+        <div class="h-px w-full bg-[#0099ff]"></div>
+        <div class="zoomimg">
+          <div class="zoom-wrap">
+            <a href="" class="fixico" data-dialog-target="entregables-pwa" aria-label="Ver detalle del caso PWA">
+              <span class="material-icons" aria-hidden="true">search</span>
+            </a>
+            <img
+              src="/assets/img/casos/pwa.png"
+              alt="Ilustracion tecnica de migracion a PWA"
+              class="blog-card-post-image h-64 w-full object-cover" />
+            <span class="fadef"></span>
+          </div>
+        </div>
+        <div class="p-8 flex flex-col flex-1">
+          <div class="grid grid-cols-2 gap-4 text-[12px] text-slate-700">
+            <p class="italic">PWA</p>
+            <p class="text-right">Entregables: SW · Manifest · offline</p>
+          </div>
+          <h3 class="blog-card-post-title">Migración a PWA</h3>
+          <p class="font-medium text-slate-800">Implementación desde código HTML/CSS existente</p>
+          <p class="blog-card-post-excerpt mt-2">
+            Habilitamos instalación, offline baseline y experiencia app-like mediante Service Worker y Web App Manifest.
+          </p>
+          <div class="fix-btn-blog">
+            <a href="/casos/migracion-pwa/" class="istria-btn trigger">Ver caso</a>
+            <div class="istria-over"></div>
+            <div class="istria-line left">
+              <div class="inner"></div>
+            </div>
+            <div class="istria-line right">
+              <div class="inner"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
+        <div class="h-px w-full bg-[#0099ff]"></div>
+        <div class="zoomimg">
+          <div class="zoom-wrap">
+            <a href="" class="fixico" data-dialog-target="entregables-captacion" aria-label="Ver detalle del caso landing de captacion">
+              <span class="material-icons" aria-hidden="true">search</span>
+            </a>
+            <img
+              src="/assets/img/casos/landingCaptacion.png"
+              alt="Ilustracion tecnica de landing de captacion"
+              class="blog-card-post-image h-64 w-full object-cover" />
+            <span class="fadef"></span>
+          </div>
+        </div>
+        <div class="p-8 flex flex-col flex-1">
+          <div class="grid grid-cols-2 gap-4 text-[12px] text-slate-700">
+            <p class="italic">Landing</p>
+            <p class="text-right">Entregables: layout · secciones · SEO</p>
+          </div>
+          <h3 class="blog-card-post-title">Landing de captación</h3>
+          <p class="font-medium text-slate-800">Estructura orientada a conversión</p>
+          <p class="blog-card-post-excerpt mt-2">
+            Jerarquía clara, performance-first y analítica lista para iterar con base SEO on-page.
+          </p>
+          <div class="fix-btn-blog">
+            <a href="/casos/landing-captacion/" class="istria-btn trigger">Ver caso</a>
+            <div class="istria-over"></div>
+            <div class="istria-line left">
+              <div class="inner"></div>
+            </div>
+            <div class="istria-line right">
+              <div class="inner"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
+        <div class="h-px w-full bg-[#0099ff]"></div>
+        <div class="zoomimg">
+          <div class="zoom-wrap">
+            <a href="" class="fixico" data-dialog-target="entregables-servicios" aria-label="Ver detalle del caso landing de servicios">
+              <span class="material-icons" aria-hidden="true">search</span>
+            </a>
+            <img
+              src="/assets/img/casos/landingServicios.png"
+              alt="Ilustracion tecnica de landing de servicios"
+              class="blog-card-post-image h-64 w-full object-cover" />
+            <span class="fadef"></span>
+          </div>
+        </div>
+        <div class="p-8 flex flex-col flex-1">
+          <div class="grid grid-cols-2 gap-4 text-[12px] text-slate-700">
+            <p class="italic">Landing</p>
+            <p class="text-right">Entregables: componentes · microcopy · formulario</p>
+          </div>
+          <h3 class="blog-card-post-title">Landing de servicios</h3>
+          <p class="font-medium text-slate-800">Claridad de oferta y reducción de fricción</p>
+          <p class="blog-card-post-excerpt mt-2">
+            Página enfocada en confianza y contacto calificado con señales de confianza y rutas de intención.
+          </p>
+          <div class="fix-btn-blog">
+            <a href="/casos/landing-servicios/" class="istria-btn trigger">Ver caso</a>
+            <div class="istria-over"></div>
+            <div class="istria-line left">
+              <div class="inner"></div>
+            </div>
+            <div class="istria-line right">
+              <div class="inner"></div>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
 
     <div class="mt-10">
       <a href="/contacto/" class="btn btn-primary">Solicitar diagnóstico</a>
     </div>
+
+    <dialog id="entregables-pwa" class="blog-card-dialog">
+      <div class="blog-card-dialog-body">
+        <p class="blog-card-dialog-kicker">PWA</p>
+        <h3 class="blog-card-dialog-title">Detalle del caso</h3>
+        <p class="blog-card-dialog-copy">
+          Migración de implementación web a arquitectura PWA para mejorar experiencia, disponibilidad y preparación para evolución.
+        </p>
+        <div class="blog-card-dialog-list">
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Service Worker</p>
+            <p class="blog-card-dialog-value">Estrategia de caché para funcionamiento offline y carga instantánea en visitas recurrentes.</p>
+          </div>
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Web Manifest</p>
+            <p class="blog-card-dialog-value">Configuración de manifiesto y criterios de instalación para experiencia app-like en el dispositivo.</p>
+          </div>
+        </div>
+        <div class="blog-card-dialog-actions">
+          <button type="button" class="blog-card-dialog-close" data-dialog-close>Cerrar</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="entregables-captacion" class="blog-card-dialog">
+      <div class="blog-card-dialog-body">
+        <p class="blog-card-dialog-kicker">Landing</p>
+        <h3 class="blog-card-dialog-title">Detalle del caso</h3>
+        <p class="blog-card-dialog-copy">
+          Desarrollo de landing page orientada a claridad de propuesta y estructura lista para crecimiento.
+        </p>
+        <div class="blog-card-dialog-list">
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Arquitectura</p>
+            <p class="blog-card-dialog-value">Secciones con jerarquía clara de contenido y CTAs posicionados estratégicamente para maximizar conversión.</p>
+          </div>
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">SEO On-page</p>
+            <p class="blog-card-dialog-value">Base técnica con meta tags, estructura semántica y datos estructurados para visibilidad en buscadores.</p>
+          </div>
+        </div>
+        <div class="blog-card-dialog-actions">
+          <button type="button" class="blog-card-dialog-close" data-dialog-close>Cerrar</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="entregables-servicios" class="blog-card-dialog">
+      <div class="blog-card-dialog-body">
+        <p class="blog-card-dialog-kicker">Landing</p>
+        <h3 class="blog-card-dialog-title">Detalle del caso</h3>
+        <p class="blog-card-dialog-copy">
+          Landing page implementada como base de presencia digital, con estructura preparada para evolución a sitio corporativo.
+        </p>
+        <div class="blog-card-dialog-list">
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Microcopy</p>
+            <p class="blog-card-dialog-value">Señales de confianza y redacción orientada a reducir fricción en el contacto calificado.</p>
+          </div>
+          <div class="blog-card-dialog-item">
+            <p class="blog-card-dialog-label">Formulario</p>
+            <p class="blog-card-dialog-value">Rutas de intención claras y formulario optimizado para conversión con mínima fricción.</p>
+          </div>
+        </div>
+        <div class="blog-card-dialog-actions">
+          <button type="button" class="blog-card-dialog-close" data-dialog-close>Cerrar</button>
+        </div>
+      </div>
+    </dialog>
 
     <dialog id="entregables-performance" class="blog-card-dialog">
       <div class="blog-card-dialog-body">
@@ -284,111 +464,6 @@ jsonld: |
         </div>
       </div>
     </dialog>
-  </div>
-</section>
-
-<section id="casos" class="bg-background-light">
-  <div class="max-w-7xl mx-auto px-6 py-20">
-    <div class="max-w-3xl">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Casos</p>
-      <h2 class="mt-3 font-display text-3xl md:text-4xl text-primary">
-        Implementaciones reales. Enfoque de ingeniería.
-      </h2>
-      <p class="mt-4 text-base text-slate-600">
-        Tres entregas con objetivos claros y decisiones técnicas documentadas. Más demostraciones en
-        <a class="underline decoration-dotted underline-offset-4 hover:text-primary" href="/proyectos/">Proyectos</a>
-        .
-      </p>
-    </div>
-
-    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
-      <article
-        class="border border-slate-200 bg-white px-6 py-8 text-center transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-        <div class="flex justify-center">
-          <span class="material-icons text-5xl text-primary" aria-hidden="true">install_mobile</span>
-        </div>
-        <span
-          class="mt-5 inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
-          PWA
-        </span>
-        <h3 class="mt-4 text-xl font-display text-primary">Migración a PWA</h3>
-        <p class="mt-3 text-sm leading-relaxed text-slate-600">
-          Implementación desde código HTML/CSS existente para habilitar instalación, offline baseline y experiencia
-          app-like.
-        </p>
-        <div class="mt-5 border-t border-slate-200 pt-4">
-          <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
-          <ul class="mt-2 space-y-1 text-sm text-slate-700">
-            <li>• Service Worker + estrategia de caché</li>
-            <li>• Web App Manifest + criterios de instalación</li>
-          </ul>
-        </div>
-        <a
-          href="/casos/migracion-pwa/"
-          class="mt-6 inline-flex justify-center text-sm font-medium hero-link-tech text-primary">
-          Ver caso
-        </a>
-      </article>
-
-      <article
-        class="border border-slate-200 bg-white px-6 py-8 text-center transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-        <div class="flex justify-center">
-          <span class="material-icons text-5xl text-primary" aria-hidden="true">ads_click</span>
-        </div>
-        <span
-          class="mt-5 inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
-          Landing
-        </span>
-        <h3 class="mt-4 text-xl font-display text-primary">Landing de captación</h3>
-        <p class="mt-3 text-sm leading-relaxed text-slate-600">
-          Estructura orientada a conversión con jerarquía clara, performance-first y analítica lista para iterar.
-        </p>
-        <div class="mt-5 border-t border-slate-200 pt-4">
-          <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
-          <ul class="mt-2 space-y-1 text-sm text-slate-700">
-            <li>• Arquitectura de secciones + CTA</li>
-            <li>• Base SEO técnico on-page</li>
-          </ul>
-        </div>
-        <a
-          href="/casos/landing-captacion/"
-          class="mt-6 inline-flex justify-center text-sm font-medium hero-link-tech text-primary">
-          Ver caso
-        </a>
-      </article>
-
-      <article
-        class="border border-slate-200 bg-white px-6 py-8 text-center transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-        <div class="flex justify-center">
-          <span class="material-icons text-5xl text-primary" aria-hidden="true">web</span>
-        </div>
-        <span
-          class="mt-5 inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
-          Landing
-        </span>
-        <h3 class="mt-4 text-xl font-display text-primary">Landing de servicios</h3>
-        <p class="mt-3 text-sm leading-relaxed text-slate-600">
-          Página enfocada en claridad de oferta, confianza y reducción de fricción para contacto calificado.
-        </p>
-        <div class="mt-5 border-t border-slate-200 pt-4">
-          <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
-          <ul class="mt-2 space-y-1 text-sm text-slate-700">
-            <li>• Microcopy + señales de confianza</li>
-            <li>• Form + rutas de intención</li>
-          </ul>
-        </div>
-        <a
-          href="/casos/landing-servicios/"
-          class="mt-6 inline-flex justify-center text-sm font-medium hero-link-tech text-primary">
-          Ver caso
-        </a>
-      </article>
-    </div>
-
-    <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-      <a href="/contacto/" class="btn btn-primary">Solicitar diagnóstico</a>
-      <a href="/proyectos/" class="btn btn-outline">Ver demostraciones técnicas</a>
-    </div>
   </div>
 </section>
 
@@ -492,85 +567,112 @@ jsonld: |
     </div>
 
     <div class="grid md:grid-cols-3 gap-6">
-      <article class="case-reveal-card border border-slate-200 bg-white/80">
-        <div class="case-reveal-card-intro">
-          <div class="case-reveal-card-badge">Caso 01</div>
-          <p class="case-reveal-card-label">Migración</p>
-          <h3 class="case-reveal-card-title">Modernización progresiva a PWA</h3>
+      <!-- Caso: Migración a PWA -->
+      <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
+        <div class="h-px w-full bg-[#0099ff]"></div>
+        <div class="flex justify-center pt-8 pb-4">
+          <span class="material-icons text-5xl text-primary" aria-hidden="true">install_mobile</span>
         </div>
-        <div class="case-reveal-card-expanded">
-          <div class="case-reveal-card-media">
-            <img src="/assets/img/casos/pwa.png" alt="Ilustracion tecnica de migracion a PWA" class="case-reveal-card-image">
+        <div class="px-8 pb-8 flex flex-col flex-1">
+          <span class="inline-flex items-center self-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
+            PWA
+          </span>
+          <h3 class="mt-4 text-xl font-display text-primary">Migración a PWA</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600">
+            Implementación desde código HTML/CSS existente para habilitar instalación, offline baseline y experiencia app-like.
+          </p>
+          <div class="mt-5 border-t border-slate-200 pt-4">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+            <ul class="mt-2 space-y-1 text-sm text-slate-700">
+              <li>• Service Worker + estrategia de caché</li>
+              <li>• Web App Manifest + criterios de instalación</li>
+            </ul>
           </div>
-          <div class="case-reveal-card-body">
-            <p class="case-reveal-card-label">Migración</p>
-            <h3 class="case-reveal-card-title">Modernización progresiva a PWA</h3>
-            <p class="case-reveal-card-copy">
-              Migración de implementación web a arquitectura PWA para mejorar experiencia, disponibilidad y preparación
-              para evolución.
-            </p>
-            <div class="case-reveal-card-details">
-              <div>Entregables: estructura PWA + revisión técnica</div>
-              <div>Enfoque: experiencia consistente + base evolutiva</div>
+          <div class="fix-btn-blog mt-auto pt-6">
+            <a href="/casos/migracion-pwa/" class="istria-btn trigger">Ver caso</a>
+            <div class="istria-over"></div>
+            <div class="istria-line left">
+              <div class="inner"></div>
+            </div>
+            <div class="istria-line right">
+              <div class="inner"></div>
             </div>
           </div>
         </div>
       </article>
 
-      <article class="case-reveal-card border border-slate-200 bg-white/80">
-        <div class="case-reveal-card-intro">
-          <div class="case-reveal-card-badge">Caso 02</div>
-          <p class="case-reveal-card-label">Captación</p>
-          <h3 class="case-reveal-card-title">Canal digital de captación</h3>
+      <!-- Caso: Landing de captación -->
+      <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
+        <div class="h-px w-full bg-[#0099ff]"></div>
+        <div class="flex justify-center pt-8 pb-4">
+          <span class="material-icons text-5xl text-primary" aria-hidden="true">ads_click</span>
         </div>
-        <div class="case-reveal-card-expanded">
-          <div class="case-reveal-card-media">
-            <img
-              src="/assets/img/casos/landingCaptacion.png"
-              alt="Ilustracion tecnica de landing de captacion"
-              class="case-reveal-card-image">
+        <div class="px-8 pb-8 flex flex-col flex-1">
+          <span class="inline-flex items-center self-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
+            Landing
+          </span>
+          <h3 class="mt-4 text-xl font-display text-primary">Landing de captación</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600">
+            Estructura orientada a conversión con jerarquía clara, performance-first y analítica lista para iterar.
+          </p>
+          <div class="mt-5 border-t border-slate-200 pt-4">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+            <ul class="mt-2 space-y-1 text-sm text-slate-700">
+              <li>• Arquitectura de secciones + CTA</li>
+              <li>• Base SEO técnico on-page</li>
+            </ul>
           </div>
-          <div class="case-reveal-card-body">
-            <p class="case-reveal-card-label">Captación</p>
-            <h3 class="case-reveal-card-title">Canal digital de captación</h3>
-            <p class="case-reveal-card-copy">
-              Desarrollo de landing page orientada a claridad de propuesta y estructura lista para crecimiento.
-            </p>
-            <div class="case-reveal-card-details">
-              <div>Entregables: implementación + estructura de secciones</div>
-              <div>Enfoque: velocidad percibida + claridad</div>
+          <div class="fix-btn-blog mt-auto pt-6">
+            <a href="/casos/landing-captacion/" class="istria-btn trigger">Ver caso</a>
+            <div class="istria-over"></div>
+            <div class="istria-line left">
+              <div class="inner"></div>
+            </div>
+            <div class="istria-line right">
+              <div class="inner"></div>
             </div>
           </div>
         </div>
       </article>
 
-      <article class="case-reveal-card border border-slate-200 bg-white/80">
-        <div class="case-reveal-card-intro">
-          <div class="case-reveal-card-badge">Caso 03</div>
-          <p class="case-reveal-card-label">Servicios</p>
-          <h3 class="case-reveal-card-title">Experiencia web funcional</h3>
+      <!-- Caso: Landing de servicios -->
+      <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
+        <div class="h-px w-full bg-[#0099ff]"></div>
+        <div class="flex justify-center pt-8 pb-4">
+          <span class="material-icons text-5xl text-primary" aria-hidden="true">web</span>
         </div>
-        <div class="case-reveal-card-expanded">
-          <div class="case-reveal-card-media">
-            <img
-              src="/assets/img/casos/landingServicios.png"
-              alt="Ilustracion tecnica de landing de servicios"
-              class="case-reveal-card-image">
+        <div class="px-8 pb-8 flex flex-col flex-1">
+          <span class="inline-flex items-center self-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
+            Landing
+          </span>
+          <h3 class="mt-4 text-xl font-display text-primary">Landing de servicios</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600">
+            Página enfocada en claridad de oferta, confianza y reducción de fricción para contacto calificado.
+          </p>
+          <div class="mt-5 border-t border-slate-200 pt-4">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-slate-500">Decisiones clave</p>
+            <ul class="mt-2 space-y-1 text-sm text-slate-700">
+              <li>• Microcopy + señales de confianza</li>
+              <li>• Form + rutas de intención</li>
+            </ul>
           </div>
-          <div class="case-reveal-card-body">
-            <p class="case-reveal-card-label">Servicios</p>
-            <h3 class="case-reveal-card-title">Experiencia web funcional</h3>
-            <p class="case-reveal-card-copy">
-              Landing page implementada como base de presencia digital, con estructura preparada para evolución a sitio
-              corporativo.
-            </p>
-            <div class="case-reveal-card-details">
-              <div>Entregables: layout + componentes reutilizables</div>
-              <div>Enfoque: consistencia + mantenibilidad</div>
+          <div class="fix-btn-blog mt-auto pt-6">
+            <a href="/casos/landing-servicios/" class="istria-btn trigger">Ver caso</a>
+            <div class="istria-over"></div>
+            <div class="istria-line left">
+              <div class="inner"></div>
+            </div>
+            <div class="istria-line right">
+              <div class="inner"></div>
             </div>
           </div>
         </div>
-      </article>
+      </article>     
+    </div>
+
+    <div class="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      <a href="/contacto/" class="btn btn-primary">Solicitar diagnóstico</a>
+      <a href="/proyectos/" class="btn btn-outline">Ver demostraciones técnicas</a>
     </div>
   </div>
 </section>
