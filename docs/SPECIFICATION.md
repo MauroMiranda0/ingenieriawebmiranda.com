@@ -68,7 +68,7 @@ Presentes en las 18 páginas vía `_includes/layouts/base.njk`.
 | ID | Título | Componentes usados |
 |----|--------|--------------------|
 | — | Hero | `.hero-blueprint`, `.network-pattern`, `.gradient-blur`, `.btn-primary`, `.hero-link-tech` |
-| `#que-resolvemos` | Qué resolvemos | SectionHeader, 3× Card Blog Post con imagen, lupa interactiva, modal de entregables y CTA estilo Istria + 3× Card Default centrada con ícono, lista breve e `.istria-btn` |
+| `#que-resolvemos` | Qué resolvemos | SectionHeader, 6× Card Blog Post con imagen, lupa interactiva, modal de entregables. Las 3 primeras con CTA estilo Istria con enlace a servicio; las 3 últimas con CTA sin enlace (modal como única interacción) |
 | `#areas` | Áreas clave | SectionHeader, carrusel nativo de 4× Card Feature con Material Icons y navegación previa/siguiente |
 | `#casos-accion` | Transformación digital en acción | SectionHeader split, 3× Card interactiva con ícono Material, intro mínima, ilustración técnica, decisiones clave, enlace "Ver caso" y CTAs al pie |
 | `#servicios` | Servicios | SectionHeader, 4× Card Link |
