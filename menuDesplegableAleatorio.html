@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú de Navegación Animado con Capas</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+  /* --- Estilos Globales y de Reinicio --- */
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6e6e6; /* Fondo gris claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* --- Contenedor Principal (Wrapper) --- */
+  /* Usamos la clase "wrapper" para que el código del video conceptualmente coincida */
+  .main-wrapper.wrapper {
+    perspective: 1000px; /* Crea el espacio 3D para el efecto de profundidad */
+    width: 260px; /* Ancho ajustable */
+  }
+
+  /* --- Lista de Navegación (Contenedor de Capas) --- */
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 50px; /* Altura de un solo elemento (colapsado) */
+    background-color: #fff; /* Fondo blanco inicial */
+    border-radius: 12px; /* Esquinas redondeadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: height 0.5s ease-in-out; /* Transición suave para expandir la altura */
+    overflow: visible; /* Asegurar que los elementos absolutos sean visibles */
+  }
+
+  /* --- Expandir la lista al pasar el ratón por encima del wrapper --- */
+  .main-wrapper.wrapper:hover .nav-list {
+    height: 350px; /* Altura total (7 elementos * 50px) */
+  }
+
+  /* --- Elementos de Lista Individuales (Capas) --- */
+  .nav-item {
+    position: absolute; /* Posicionamiento absoluto para el apilamiento de capas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 1px solid #eee; /* Línea divisoria suave */
+    cursor: pointer;
+    /* Transiciones para la animación de cascada y los efectos de hover */
+    transition: transform 0.5s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Ajustes de bordes para el primer y último elemento */
+  .nav-item:last-child {
+    border-bottom: none;
+    border-radius: 0 0 12px 12px; /* Redondear esquinas inferiores */
+  }
+
+  .nav-item:first-child {
+    border-radius: 12px 12px 0 0; /* Redondear esquinas superiores */
+  }
+
+  /* --- Estilos para Icono y Nombre --- */
+  .nav-item .icon {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* Ancho fijo para alineación */
+    color: #333; /* Color predeterminado */
+  }
+
+  .nav-item .platform-name {
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  /* ----------------------------------------------------------- */
+  /* --- APILAMIENTO DE CAPAS (ESTADO INICIAL COLAPSADO) --- */
+  /* El primer elemento está arriba. Los otros están apilados debajo y detrás,
+     mintiéndolos ocultos detrás del primer elemento. Usamos translateZ para la profundidad. */
+  /* ----------------------------------------------------------- */
+  .nav-item:nth-child(1) { z-index: 10; --index: 1; transform: translateY(0px) translateZ(0px); transition-delay: 0s; }
+  .nav-item:nth-child(2) { z-index: 9;  --index: 2; transform: translateY(5px) translateZ(-10px); transition-delay: 0.05s; }
+  .nav-item:nth-child(3) { z-index: 8;  --index: 3; transform: translateY(10px) translateZ(-20px); transition-delay: 0.10s; }
+  .nav-item:nth-child(4) { z-index: 7;  --index: 4; transform: translateY(15px) translateZ(-30px); transition-delay: 0.15s; }
+  .nav-item:nth-child(5) { z-index: 6;  --index: 5; transform: translateY(20px) translateZ(-40px); transition-delay: 0.20s; }
+  .nav-item:nth-child(6) { z-index: 5;  --index: 6; transform: translateY(25px) translateZ(-50px); transition-delay: 0.25s; }
+  .nav-item:nth-child(7) { z-index: 4;  --index: 7; transform: translateY(30px) translateZ(-60px); transition-delay: 0.30s; }
+
+  /* --- ANIMACIÓN DE EXPANSIÓN AL PASAR EL RATÓN --- */
+  /* Al pasar el ratón por encima de `.main-wrapper.wrapper`, cada elemento se mueve a su posición final.
+     Se añaden tiempos de retardo escalonados para el efecto de cascada. */
+  .main-wrapper.wrapper:hover .nav-item {
+    transform: translateY(calc(50px * (var(--index) - 1))) translateZ(0px);
+  }
+
+  /* ----------------------------------------------------------- */
+  /* --- EFECTO DE HOVER INDIVIDUAL (DEL CÓDIGO DEL VIDEO) --- */
+  /* El fragmento de código exacto del video (adaptado para que sea visible en un menú blanco)
+     Para que el texto blanco sea visible, cambiamos el fondo del elemento individual al pasar el ratón. */
+  /* ----------------------------------------------------------- */
+
+  /* El fragmento de código del video se aplicaría así conceptualmente en mi estructura HTML:
+     .wrapper .icon:hover span -> .nav-item:hover .platform-name */
+
+  /* Aplicación del efecto al pasar el ratón sobre el elemento individual `.nav-item` */
+  .nav-item:hover {
+    background-color: #333; /* Cambiar a fondo oscuro para que el texto blanco sea visible */
+    border-bottom-color: #444; /* Ajustar borde */
+  }
+
+  /* --- El fragmento exacto del video aplicado --- */
+  .nav-item:hover .platform-name {
+    color: #fff; /* Texto blanco */
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4); /* Sombra de texto */
+  }
+
+  /* Los iconos cambian a blanco al pasar el ratón sobre el elemento */
+  .nav-item:hover .icon {
+    color: #fff;
+  }
+
+  /* Colores de iconos específicos por defecto (opcional, para realismo) */
+  /*
+  .fa-instagram { color: #e4405f; }
+  .fa-twitter { color: #1da1f2; }
+  .fa-youtube { color: #cd201f; }
+  .fa-globe { color: #444; }
+  .fa-linkedin-in { color: #0077b5; }
+  .fa-telegram-plane { color: #0088cc; }
+  .fa-coffee { color: #cd6133; }
+  */
+</style>
+</head>
+<body>
+
+  <div class="main-wrapper wrapper">
+    <div class="menu-container">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <i class="icon fab fa-instagram"></i>
+          <span class="platform-name">Instagram</span>
+        </li>
+        <li class="nav-item">
+          <i class="icon fab fa-twitter"></i>
+          <span class="platform-name">Twitter</span>
+        </li>
+        <li class="nav-item">
+          <i class="icon fab fa-youtube"></i>
+          <span class="platform-name">YouTube</span>
+        </li>
+        <li class="nav-item">
+          <i class="icon fas fa-globe"></i>
+          <span class="platform-name">Website</span>
+        </li>
+        <li class="nav-item">
+          <i class="icon fab fa-linkedin-in"></i>
+          <span class="platform-name">LinkedIn</span>
+        </li>
+        <li class="nav-item">
+          <i class="icon fab fa-telegram-plane"></i>
+          <span class="platform-name">Telegram</span>
+        </li>
+        <li class="nav-item">
+          <i class="icon fas fa-coffee"></i>
+          <span class="platform-name">Buy me a Coffee</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

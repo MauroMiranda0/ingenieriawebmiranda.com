@@ -81,26 +81,30 @@ background: linear-gradient(90deg, transparent, rgba(13, 43, 69, 0.2), transpare
 
 ## `.hero-blueprint`
 
-Animación sutil de flotación para la imagen hero del home.
+*(Clase reservada — anteriormente usada para animación de flotación en imagen PNG. Reemplazada por video de fondo.)*
 
-```css
-animation: blueprintDrift 18s ease-in-out infinite;
-transform-origin: center center;
+**Contexto:** Solo en el hero del home. Actualmente es un selector semántico (sin animación CSS) aplicado al contenedor del video.
 
-@keyframes blueprintDrift {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50%       { transform: translateY(-6px) scale(1.02); }
-}
-```
+---
+
+## Hero video (`<video>`)
+
+Video de fondo animado para la sección hero del home. Reemplaza la imagen PNG estática + animación CSS.
 
 **Uso:**
 ```html
-<img class="hero-blueprint w-full h-full object-cover"
-     src="/assets/img/hero-blueprint.png"
-     alt="Blueprint técnico de arquitectura web" />
+<video
+  class="w-full h-full object-cover"
+  src="/assets/animacionIWM.mp4"
+  autoplay
+  muted
+  loop
+  playsinline
+  aria-hidden="true">
+</video>
 ```
 
-**Contexto:** Solo en la imagen hero del home. La animación es lenta (18s) para no distraer.
+**Contexto:** Solo en el hero del home. El video se reproduce en bucle, sin sonido, y no requiere interacción del usuario. Se usa `aria-hidden="true"` por ser puramente decorativo. Compatible con los overlays `.hero-grid-overlay` y `gradient-blur` existentes.
 
 ---
 
