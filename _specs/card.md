@@ -9,10 +9,12 @@ Contenedor de contenido estructurado. Siempre `<article>` semántico cuando repr
 ## Variantes
 
 ### Card Default
+
 Sobre fondos blancos. Hover con lift sutil.
 
 ```html
-<article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+<article
+  class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
   <!-- contenido -->
 </article>
 ```
@@ -22,6 +24,7 @@ Sobre fondos blancos. Hover con lift sutil.
 ---
 
 ### Card Feature
+
 Sobre fondos ligeramente coloreados (`bg-slate-50`). Fondo semitransparente. Hover con sombra.
 
 ```html
@@ -35,10 +38,13 @@ Sobre fondos ligeramente coloreados (`bg-slate-50`). Fondo semitransparente. Hov
 ---
 
 ### Card Link
+
 Card completa navegable. Usa `<a>` en lugar de `<article>`.
 
 ```html
-<a class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block" href="/servicios/diagnostico-tecnico/">
+<a
+  class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
+  href="/servicios/diagnostico-tecnico/">
   <!-- contenido -->
 </a>
 ```
@@ -47,7 +53,33 @@ Card completa navegable. Usa `<a>` en lugar de `<article>`.
 
 ---
 
+### Card Link Dark Banner
+
+Variante agrupada para directorios cortos de 4 elementos dentro de un único panel oscuro. Inspirada en referencias de banner horizontal con íconos blancos y columnas, adaptada a la identidad blueprint: esquinas rectas, fondo `primary`, capas técnicas sutiles y contraste alto.
+
+```html
+<div class="services-tech-banner">
+  <a class="services-tech-item" href="/servicios/diagnostico-tecnico/">
+    <span class="material-icons" aria-hidden="true">travel_explore</span>
+    <h3>Diagnóstico técnico</h3>
+    <p>Claridad, riesgos y próximos pasos antes de construir.</p>
+  </a>
+</div>
+```
+
+**Uso:** Resumen de servicios en home (`#servicios`).
+
+**Reglas específicas:**
+
+- El panel completo no usa `border-radius`, aunque la referencia visual tenga esquinas redondeadas.
+- Cada ítem mantiene semántica de enlace porque navega a una página profunda.
+- Los íconos y textos se muestran en blanco sobre fondo oscuro.
+- El fondo puede usar pseudo-elementos para crear capas visuales, sin imágenes externas ni estilos inline.
+
+---
+
 ### Card Blog Post
+
 Inspirada en diseño `card-blog-post-lorem.html`. Reutiliza el patrón `zoomimg` / `zoom-wrap` / `fixico` / `fadef` para la imagen y `fix-btn-blog` / `istria-btn` / `istria-over` / `istria-line` para el CTA. La lupa abre un modal con el detalle de entregables en lugar de agrandar la imagen.
 
 ```html
@@ -128,6 +160,7 @@ Inspirada en `animated product card.html`: estado inicial compacto con ícono ce
 ---
 
 ### Card Static
+
 Sin hover. Para contenido informativo sin acción directa.
 
 ```html
@@ -143,9 +176,11 @@ Sin hover. Para contenido informativo sin acción directa.
 ## Estructura interna habitual
 
 ```html
-<article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+<article
+  class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
   <!-- Badge / eyebrow (opcional) -->
-  <span class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
+  <span
+    class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
     Categoría
   </span>
 
@@ -173,11 +208,11 @@ Sin hover. Para contenido informativo sin acción directa.
 
 ## Tokens de diseño usados
 
-| Token | Aplicación |
-|-------|-----------|
-| `primary` | `text-primary` en títulos, `hover:border-primary/40` |
-| `background-light` / `white` | `bg-white`, `bg-white/70` |
-| `border-slate-200` | borde base (accent) |
+| Token                        | Aplicación                                           |
+| ---------------------------- | ---------------------------------------------------- |
+| `primary`                    | `text-primary` en títulos, `hover:border-primary/40` |
+| `background-light` / `white` | `bg-white`, `bg-white/70`                            |
+| `border-slate-200`           | borde base (accent)                                  |
 
 ---
 
