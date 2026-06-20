@@ -5,6 +5,7 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
+    "preview": "node scripts/preview-site.mjs",
     "watch": "eleventy --watch",
     "format": "prettier --write \"**/*.{njk,css,js}\"",
     "format:check": "prettier --check \"**/*.{njk,css,js}\""

@@ -80,7 +80,7 @@ Variante agrupada para directorios cortos de 4 elementos dentro de un único pan
 
 ### Card Blog Post
 
-Inspirada en diseño `card-blog-post-lorem.html`. Reutiliza el patrón `zoomimg` / `zoom-wrap` / `fixico` / `fadef` para la imagen y `fix-btn-blog` / `istria-btn` / `istria-over` / `istria-line` para el CTA. La lupa abre un modal con el detalle de entregables en lugar de agrandar la imagen.
+Card de contenido con imagen, acción secundaria y modal de entregables. Reutiliza el patrón `zoomimg` / `zoom-wrap` / `fixico` / `fadef` para la imagen y `fix-btn-blog` / `istria-btn` / `istria-over` / `istria-line` para el CTA. La lupa abre un modal con el detalle de entregables en lugar de agrandar la imagen.
 
 ```html
 <article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
@@ -125,7 +125,7 @@ Inspirada en diseño `card-blog-post-lorem.html`. Reutiliza el patrón `zoomimg`
 
 ### Card Interactiva Animated Product
 
-Inspirada en `animated product card.html`: estado inicial compacto con ícono central, transición horizontal en hover/focus, contenido revelado y una ilustración técnica que emerge desde el costado. La adaptación conserva la identidad blueprint: esquinas rectas, paleta primaria y sin fuentes externas adicionales.
+Card interactiva para casos destacados: estado inicial compacto con ícono central, transición horizontal en hover/focus, contenido revelado y una ilustración técnica que emerge desde el costado. La adaptación conserva la identidad blueprint: esquinas rectas, paleta primaria y sin fuentes externas adicionales.
 
 ```html
 <article class="case-animated-card">
