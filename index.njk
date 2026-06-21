@@ -741,28 +741,6 @@ jsonld: |
     </div>
   </section>
 
-  <!-- Servicios (resumen + links a páginas profundas) -->
-  <section class="py-24 bg-slate-50" id="servicios">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="mb-14">
-        <h2 class="font-display text-4xl text-primary mb-4">Servicios</h2>
-        <p class="text-slate-600 max-w-2xl leading-relaxed">
-          Diagnóstico, modernización, performance, arquitectura, seguridad y sistemas web con entregables defendibles.
-        </p>
-      </div>
-
-      <div class="services-tech-banner" aria-label="Servicios principales">
-        {% for service in services %}
-        <a class="services-tech-item" href="{{ service.route }}">
-          <span class="material-icons" aria-hidden="true">{{ service.icon }}</span>
-          <h3>{{ service.name }}</h3>
-          <p>{{ service.homeDescription }}</p>
-        </a>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
   <!-- Método (resumen en home; profundo en /metodo) -->
   <section class="py-32 bg-background-light overflow-hidden" id="metodo">
     <div class="max-w-7xl mx-auto px-6">

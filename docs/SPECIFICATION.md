@@ -68,10 +68,9 @@ Presentes en las 18 páginas vía `_includes/layouts/base.njk`.
 | ID | Título | Componentes usados |
 |----|--------|--------------------|
 | — | Hero | `.hero-blueprint`, `.network-pattern`, `.gradient-blur`, `.btn-primary`, `.hero-link-tech` |
-| `#que-resolvemos` | Qué resolvemos | SectionHeader, 6× Card Blog Post con imagen, lupa interactiva, modal de entregables. Las 3 primeras con CTA estilo Istria con enlace a servicio; las 3 últimas con CTA sin enlace (modal como única interacción) |
+| `#que-resolvemos` | Qué resolvemos | SectionHeader, 6× Card Blog Post con imagen, lupa interactiva, modal de entregables y CTA "Saber más" con enlace al servicio |
 | `#areas` | Áreas clave | SectionHeader, carrusel nativo de 4× Card Feature con Material Icons y navegación previa/siguiente |
 | `#casos-accion` | Transformación digital en acción | SectionHeader split, 3× Card interactiva con ícono Material, intro mínima, ilustración técnica, decisiones clave, enlace "Ver caso" y CTAs al pie |
-| `#servicios` | Servicios | SectionHeader, 4× Card Link |
 | `#metodo` | Método de ingeniería | SectionHeader centrado, diagrama de fases con `.node-glow`, `.btn-outline` |
 | — | Proyectos teaser | Card estático ancho, `.btn-primary` |
 | `#cta-final` | CTA final | H2 grande, `.btn-white`, `.btn-ghost` sobre `bg-primary` |
@@ -222,7 +221,7 @@ Presentes en las 18 páginas vía `_includes/layouts/base.njk`.
 
 | Requisito | Estado |
 |-----------|--------|
-| Skip link (`.skip-link`) | Definido en `theme.css`, pendiente de implementar en layout |
+| Skip link (`.skip-link`) | ✅ implementado en layout (`base.njk:8`) y CSS (`theme.css:307`) |
 | `aria-current="page"` en nav activo | ✅ implementado dinámicamente |
 | `aria-label` en botón hamburguesa | ✅ |
 | `aria-expanded` en menú móvil | ✅ gestionado por `ui.js` |

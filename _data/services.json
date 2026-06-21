@@ -4,47 +4,41 @@
     "name": "Diagnóstico técnico",
     "route": "/servicios/diagnostico-tecnico/",
     "icon": "travel_explore",
-    "listingDescription": "Claridad, riesgos y próximos pasos. Te entregamos un panorama defendible antes de construir.",
-    "homeDescription": "Claridad, riesgos y próximos pasos. Un panorama defendible antes de construir."
+    "listingDescription": "Claridad, riesgos y próximos pasos. Te entregamos un panorama defendible antes de construir."
   },
   {
     "eyebrow": "Modernización",
     "name": "Modernización web",
     "route": "/servicios/modernizacion-web/",
     "icon": "architecture",
-    "listingDescription": "Evolución progresiva: de \"sitio\" a plataforma sostenible, con bases para crecer.",
-    "homeDescription": "Evolución progresiva: de sitio limitado a plataforma sostenible y lista para crecer."
+    "listingDescription": "Evolución progresiva: de \"sitio\" a plataforma sostenible, con bases para crecer."
   },
   {
     "eyebrow": "Performance",
     "name": "Performance",
     "route": "/servicios/performance/",
     "icon": "speed",
-    "listingDescription": "Optimización priorizada por impacto: velocidad percibida, estabilidad visual y experiencia fluida.",
-    "homeDescription": "Optimización priorizada por impacto: velocidad percibida, estabilidad y fluidez."
+    "listingDescription": "Optimización priorizada por impacto: velocidad percibida, estabilidad visual y experiencia fluida."
   },
   {
     "eyebrow": "Sistemas",
     "name": "Sistemas web",
     "route": "/servicios/sistemas-web/",
     "icon": "hub",
-    "listingDescription": "Portales, dashboards e integraciones orientadas a operación real.",
-    "homeDescription": "Portales, dashboards e integraciones orientadas a operación digital real."
+    "listingDescription": "Portales, dashboards e integraciones orientadas a operación real."
   },
   {
     "eyebrow": "Arquitectura",
     "name": "Arquitectura & Modernización",
     "route": "/servicios/arquitectura/",
     "icon": "account_tree",
-    "listingDescription": "Reducción de deuda técnica con roadmap defendible y ejecución controlada por fases.",
-    "homeDescription": "Deuda técnica, roadmap y arquitectura clara para escalar sin detener operación."
+    "listingDescription": "Reducción de deuda técnica con roadmap defendible y ejecución controlada por fases."
   },
   {
     "eyebrow": "Seguridad",
     "name": "Seguridad & DevSecOps",
     "route": "/servicios/seguridad/",
     "icon": "security",
-    "listingDescription": "Hardening, OWASP y controles DevSecOps para reducir superficie de ataque.",
-    "homeDescription": "Hardening y controles en el ciclo de entrega para reducir riesgos reales."
+    "listingDescription": "Hardening, OWASP y controles DevSecOps para reducir superficie de ataque."
   }
 ]

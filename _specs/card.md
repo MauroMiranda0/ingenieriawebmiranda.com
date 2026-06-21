@@ -37,47 +37,6 @@ Sobre fondos ligeramente coloreados (`bg-slate-50`). Fondo semitransparente. Hov
 
 ---
 
-### Card Link
-
-Card completa navegable. Usa `<a>` en lugar de `<article>`.
-
-```html
-<a
-  class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
-  href="/servicios/diagnostico-tecnico/">
-  <!-- contenido -->
-</a>
-```
-
-**Uso:** Directorio de servicios en home (`/`).
-
----
-
-### Card Link Dark Banner
-
-Variante agrupada para directorios cortos de 4 elementos dentro de un único panel oscuro. Inspirada en referencias de banner horizontal con íconos blancos y columnas, adaptada a la identidad blueprint: esquinas rectas, fondo `primary`, capas técnicas sutiles y contraste alto.
-
-```html
-<div class="services-tech-banner">
-  <a class="services-tech-item" href="/servicios/diagnostico-tecnico/">
-    <span class="material-icons" aria-hidden="true">travel_explore</span>
-    <h3>Diagnóstico técnico</h3>
-    <p>Claridad, riesgos y próximos pasos antes de construir.</p>
-  </a>
-</div>
-```
-
-**Uso:** Resumen de servicios en home (`#servicios`).
-
-**Reglas específicas:**
-
-- El panel completo no usa `border-radius`, aunque la referencia visual tenga esquinas redondeadas.
-- Cada ítem mantiene semántica de enlace porque navega a una página profunda.
-- Los íconos y textos se muestran en blanco sobre fondo oscuro.
-- El fondo puede usar pseudo-elementos para crear capas visuales, sin imágenes externas ni estilos inline.
-
----
-
 ### Card Blog Post
 
 Card de contenido con imagen, acción secundaria y modal de entregables. Reutiliza el patrón `zoomimg` / `zoom-wrap` / `fixico` / `fadef` para la imagen y `fix-btn-blog` / `istria-btn` / `istria-over` / `istria-line` para el CTA. La lupa abre un modal con el detalle de entregables en lugar de agrandar la imagen.
