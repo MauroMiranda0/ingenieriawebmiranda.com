@@ -247,7 +247,7 @@ jsonld: |
               siguiente paso realista.
             </p>
             <div class="fix-btn-blog">
-              <span class="istria-btn">Saber más</span>
+              <a href="/servicios/diagnostico-tecnico/" class="istria-btn trigger">Saber más</a>
               <div class="istria-over"></div>
               <div class="istria-line left">
                 <div class="inner"></div>
@@ -289,7 +289,7 @@ jsonld: |
               claridad y evolución.
             </p>
             <div class="fix-btn-blog">
-              <span class="istria-btn">Saber más</span>
+              <a href="/servicios/modernizacion-web/" class="istria-btn trigger">Saber más</a>
               <div class="istria-over"></div>
               <div class="istria-line left">
                 <div class="inner"></div>
@@ -331,7 +331,7 @@ jsonld: |
               catálogos e integraciones.
             </p>
             <div class="fix-btn-blog">
-              <span class="istria-btn">Saber más</span>
+              <a href="/servicios/sistemas-web/" class="istria-btn trigger">Saber más</a>
               <div class="istria-over"></div>
               <div class="istria-line left">
                 <div class="inner"></div>
@@ -747,34 +747,18 @@ jsonld: |
       <div class="mb-14">
         <h2 class="font-display text-4xl text-primary mb-4">Servicios</h2>
         <p class="text-slate-600 max-w-2xl leading-relaxed">
-          Un catálogo claro: diagnóstico, modernización, performance y construcción de sistemas web.
+          Diagnóstico, modernización, performance, arquitectura, seguridad y sistemas web con entregables defendibles.
         </p>
       </div>
 
       <div class="services-tech-banner" aria-label="Servicios principales">
-        <a class="services-tech-item" href="/servicios/diagnostico-tecnico/">
-          <span class="material-icons" aria-hidden="true">travel_explore</span>
-          <h3>Diagnóstico técnico</h3>
-          <p>Claridad, riesgos y próximos pasos. Un panorama defendible antes de construir.</p>
+        {% for service in services %}
+        <a class="services-tech-item" href="{{ service.route }}">
+          <span class="material-icons" aria-hidden="true">{{ service.icon }}</span>
+          <h3>{{ service.name }}</h3>
+          <p>{{ service.homeDescription }}</p>
         </a>
-
-        <a class="services-tech-item" href="/servicios/modernizacion-web/">
-          <span class="material-icons" aria-hidden="true">architecture</span>
-          <h3>Modernización web</h3>
-          <p>Evolución progresiva: de sitio limitado a plataforma sostenible y lista para crecer.</p>
-        </a>
-
-        <a class="services-tech-item" href="/servicios/performance/">
-          <span class="material-icons" aria-hidden="true">speed</span>
-          <h3>Performance</h3>
-          <p>Optimización priorizada por impacto: velocidad percibida, estabilidad y fluidez.</p>
-        </a>
-
-        <a class="services-tech-item" href="/servicios/sistemas-web/">
-          <span class="material-icons" aria-hidden="true">hub</span>
-          <h3>Sistemas web</h3>
-          <p>Portales, dashboards e integraciones orientadas a operación digital real.</p>
-        </a>
+        {% endfor %}
       </div>
     </div>
   </section>

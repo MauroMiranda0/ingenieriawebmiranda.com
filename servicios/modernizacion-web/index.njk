@@ -32,14 +32,6 @@ twitterDescription: "De sitio a plataforma sostenible. Estructura técnica clara
     </div>
   </section>
 
-  <section class="border border-slate-200 bg-primary text-white p-10">
-    <h3 class="font-display text-4xl mb-4">Empieza por diagnóstico</h3>
-    <p class="text-white/80 mb-8 max-w-2xl">
-      Modernizar sin diagnóstico es rediseñar a ciegas. Primero claridad; después ejecución.
-    </p>
-    <a class="btn btn-white" href="/contacto/">
-      Solicitar diagnóstico
-      <span class="material-icons">arrow_forward</span>
-    </a>
-  </section>
+  {% from "partials/cta-banner.njk" import ctaBanner %} {{ ctaBanner({ variant: "simple", heading: "Empieza por
+  diagnóstico", subtext: "Modernizar sin diagnóstico es rediseñar a ciegas. Primero claridad; después ejecución." }) }}
 </main>

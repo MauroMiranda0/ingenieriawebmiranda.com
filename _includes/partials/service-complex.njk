@@ -1,0 +1,121 @@
+<main id="contenido-principal" class="pt-24">
+  <section class="py-16 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">{{ heroEyebrow }}</p>
+      <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary">{{ heroTitle }}</h1>
+      <p class="mt-4 text-lg text-slate-600 max-w-3xl">{{ heroDescription }}</p>
+      <div class="mt-6 flex flex-wrap gap-3 text-xs">
+        {% for tag in heroTags %}
+        <span class="px-3 py-1 border border-slate-200 bg-white text-slate-700">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+        <a class="btn btn-primary" href="/contacto/">Solicitar diagnóstico</a>
+        <a class="btn btn-outline" href="/casos/">Ver casos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl text-primary mb-8">{{ sectionProblemasHeading }}</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        {% for item in problemas %}
+        <article
+          class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+          <h3 class="text-xl font-display text-primary">{{ item.heading }}</h3>
+          <p class="mt-3 font-medium text-slate-800">{{ item.subheading }}</p>
+          <p class="mt-2 text-sm text-slate-600">{{ item.content }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 border-t border-b border-slate-200 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl text-primary mb-8">{{ sectionEntregablesHeading }}</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <article class="border border-slate-200 bg-white p-8">
+          <h3 class="font-display text-2xl text-primary mb-4">{{ entregablesTitle }}</h3>
+          <ul class="space-y-2 text-slate-600">
+            {% for item in entregablesItems %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+        <article class="border border-slate-200 bg-white p-8">
+          <h3 class="font-display text-2xl text-primary mb-4">{{ noHacemosTitle }}</h3>
+          <ul class="space-y-2 text-slate-600">
+            {% for item in noHacemosItems %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl text-primary mb-8">{{ sectionGrid6Heading }}</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        {% for item in grid6 %}
+        <article class="border border-slate-200 bg-white p-6">
+          <h3 class="font-display text-2xl text-primary mb-2">{{ item.heading }}</h3>
+          <p class="text-sm text-slate-600">{{ item.content }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 border-t border-b border-slate-200 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl text-primary mb-8">{{ sectionProcesoHeading }}</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        {% for item in proceso %}
+        <article class="border border-slate-200 bg-white p-6">
+          <h3 class="font-display text-2xl text-primary mb-2">{{ item.heading }}</h3>
+          <p class="text-sm text-slate-600">{{ item.content }}</p>
+        </article>
+        {% endfor %}
+      </div>
+      <p class="mt-6 text-xs text-slate-500">{{ phrases.instrumentacionMinima }}</p>
+    </div>
+  </section>
+
+  {% if extraSection %}
+  <section class="py-16{{ ' border-t border-b border-slate-200 bg-slate-50' if extraSectionBg }}">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl text-primary mb-8">{{ extraSection.heading }}</h2>
+      <article class="border border-slate-200 bg-white p-8">
+        {% if extraSection.type == "list" %}
+        <ul class="space-y-2 text-slate-600">
+          {% for item in extraSection.items %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="text-slate-600 leading-relaxed">{{ extraSection.content }}</p>
+        {% endif %}
+      </article>
+    </div>
+  </section>
+  {% endif %} {% if faq %}
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl text-primary mb-8">FAQ</h2>
+      <div class="space-y-4">
+        {% for item in faq %}
+        <article class="border border-slate-200 bg-white p-6">
+          <h3 class="font-medium text-slate-900">{{ item.question }}</h3>
+          <p class="mt-2 text-sm text-slate-600">{{ item.answer }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %} {% from "partials/cta-banner.njk" import ctaBanner %} {{ ctaBanner({ heading: ctaHeading, subtext:
+  ctaSubtext, secondaryLabel: "Volver a Servicios", secondaryLink: "/servicios/" }) }}
+</main>

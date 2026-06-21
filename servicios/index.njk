@@ -1,12 +1,12 @@
 ---
 layout: layouts/base.njk
 title: "Servicios | Ingeniería Web Miranda"
-description: "Servicios de ingeniería web para transformación digital: diagnóstico técnico, modernización web, performance y sistemas web."
+description: "Servicios de ingeniería web para transformación digital: diagnóstico técnico, modernización web, performance, seguridad, arquitectura y sistemas web."
 ogTitle: "Servicios de ingeniería web | Ingeniería Web Miranda"
-ogDescription: "Diagnóstico técnico, modernización web, performance y sistemas. Entregables claros, decisiones documentadas."
+ogDescription: "Diagnóstico técnico, modernización web, performance, seguridad, arquitectura y sistemas. Entregables claros, decisiones documentadas."
 ogImage: "og-cover.png"
 twitterTitle: "Servicios de ingeniería web | Ingeniería Web Miranda"
-twitterDescription: "Diagnóstico técnico, modernización web, performance y sistemas. Entregables claros, decisiones documentadas."
+twitterDescription: "Diagnóstico técnico, modernización web, performance, seguridad, arquitectura y sistemas. Entregables claros, decisiones documentadas."
 ---
 
 <main id="contenido-principal" class="pt-24">
@@ -18,9 +18,8 @@ twitterDescription: "Diagnóstico técnico, modernización web, performance y si
         Soluciones digitales desde la ingeniería: claridad de alcance, decisiones defendibles y ejecución.
       </p>
       <p class="mt-2 text-sm text-slate-500 max-w-3xl">
-        Si necesitas “una web”, hacemos diagnóstico primero. Si necesitas un sistema, diseñamos la ruta.
+        Si necesitas "una web", hacemos diagnóstico primero. Si necesitas un sistema, diseñamos la ruta.
       </p>
-
       <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
         <a class="btn btn-primary" href="/contacto/">Solicitar diagnóstico</a>
         <a class="btn btn-outline" href="/casos/">Ver casos</a>
@@ -31,55 +30,17 @@ twitterDescription: "Diagnóstico técnico, modernización web, performance y si
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-5">
+        {% for service in services %}
         <article
           class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-          <p class="text-[11px] tracking-[0.12em] uppercase text-slate-500">Diagnóstico</p>
-          <h3 class="mt-3 text-xl font-display text-primary">Diagnóstico técnico</h3>
-          <p class="mt-3 text-sm text-slate-600">
-            Claridad, riesgos y próximos pasos. Te entregamos un panorama defendible antes de construir.
-          </p>
-          <a
-            class="mt-5 inline-flex hero-link-tech text-sm font-medium text-primary"
-            href="/servicios/diagnostico-tecnico/">
+          <p class="text-[11px] tracking-[0.12em] uppercase text-slate-500">{{ service.eyebrow }}</p>
+          <h3 class="mt-3 text-xl font-display text-primary">{{ service.name }}</h3>
+          <p class="mt-3 text-sm text-slate-600">{{ service.listingDescription }}</p>
+          <a class="mt-5 inline-flex hero-link-tech text-sm font-medium text-primary" href="{{ service.route }}">
             Ver servicio
           </a>
         </article>
-
-        <article
-          class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-          <p class="text-[11px] tracking-[0.12em] uppercase text-slate-500">Modernización</p>
-          <h3 class="mt-3 text-xl font-display text-primary">Modernización web</h3>
-          <p class="mt-3 text-sm text-slate-600">
-            Evolución progresiva: de “sitio” a plataforma sostenible, con bases para crecer.
-          </p>
-          <a
-            class="mt-5 inline-flex hero-link-tech text-sm font-medium text-primary"
-            href="/servicios/modernizacion-web/">
-            Ver servicio
-          </a>
-        </article>
-
-        <article
-          class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-          <p class="text-[11px] tracking-[0.12em] uppercase text-slate-500">Performance</p>
-          <h3 class="mt-3 text-xl font-display text-primary">Performance</h3>
-          <p class="mt-3 text-sm text-slate-600">
-            Optimización priorizada por impacto: velocidad percibida, estabilidad visual y experiencia fluida.
-          </p>
-          <a class="mt-5 inline-flex hero-link-tech text-sm font-medium text-primary" href="/servicios/performance/">
-            Ver servicio
-          </a>
-        </article>
-
-        <article
-          class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-          <p class="text-[11px] tracking-[0.12em] uppercase text-slate-500">Sistemas</p>
-          <h3 class="mt-3 text-xl font-display text-primary">Sistemas web</h3>
-          <p class="mt-3 text-sm text-slate-600">Portales, dashboards e integraciones orientadas a operación real.</p>
-          <a class="mt-5 inline-flex hero-link-tech text-sm font-medium text-primary" href="/servicios/sistemas-web/">
-            Ver servicio
-          </a>
-        </article>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -106,18 +67,6 @@ twitterDescription: "Diagnóstico técnico, modernización web, performance y si
     </div>
   </section>
 
-  <section class="py-20">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="bg-primary text-white p-10">
-        <h2 class="font-display text-4xl mb-4">¿Quieres claridad antes de construir?</h2>
-        <p class="text-white/80 text-lg mb-8 max-w-2xl">
-          Definimos baseline, riesgos y un plan de ejecución defendible.
-        </p>
-        <a class="btn btn-white" href="/contacto/">
-          Solicitar diagnóstico
-          <span class="material-icons">arrow_forward</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  {% from "partials/cta-banner.njk" import ctaBanner %} {{ ctaBanner({ heading: "¿Quieres claridad antes de construir?",
+  subtext: phrases.baselineDefendible }) }}
 </main>

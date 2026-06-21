@@ -39,15 +39,7 @@ twitterDescription: "Claridad antes de construir: riesgos, oportunidades y próx
     </div>
   </section>
 
-  <section class="border border-slate-200 bg-primary text-white p-10">
-    <h3 class="font-display text-4xl mb-4">¿Listo para empezar con claridad?</h3>
-    <p class="text-white/80 mb-8 max-w-2xl">
-      Un diagnóstico técnico evita decisiones caras y acelera la ejecución correcta.
-    </p>
-    <a class="btn btn-white" href="/contacto/">
-      Solicitar diagnóstico
-      <span class="material-icons">arrow_forward</span>
-    </a>
-    <p class="text-xs opacity-70 mt-3">Respuesta en menos de 48 horas.</p>
-  </section>
+  {% from "partials/cta-banner.njk" import ctaBanner %} {{ ctaBanner({ variant: "simple", heading: "¿Listo para empezar
+  con claridad?", subtext: "Un diagnóstico técnico evita decisiones caras y acelera la ejecución correcta.", extraText:
+  "Respuesta en menos de 48 horas." }) }}
 </main>

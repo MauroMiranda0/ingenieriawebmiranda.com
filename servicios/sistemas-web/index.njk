@@ -32,12 +32,6 @@ twitterDescription: "Portales, dashboards e integraciones listos para operar y e
     </div>
   </section>
 
-  <section class="border border-slate-200 bg-primary text-white p-10">
-    <h3 class="font-display text-4xl mb-4">Reduce riesgo antes de construir</h3>
-    <p class="text-white/80 mb-8 max-w-2xl">Empieza por diagnóstico: te evita retrabajos y define el alcance real.</p>
-    <a class="btn btn-white" href="/contacto/">
-      Solicitar diagnóstico
-      <span class="material-icons">arrow_forward</span>
-    </a>
-  </section>
+  {% from "partials/cta-banner.njk" import ctaBanner %} {{ ctaBanner({ variant: "simple", heading: "Reduce riesgo antes
+  de construir", subtext: "Empieza por diagnóstico: te evita retrabajos y define el alcance real." }) }}
 </main>

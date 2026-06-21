@@ -1,0 +1,30 @@
+{% macro ctaBanner(params) %} {% if params.variant == "simple" %}
+<section class="border border-slate-200 bg-primary text-white p-10">
+  <h3 class="font-display text-4xl mb-4">{{ params.heading }}</h3>
+  <p class="text-white/80 mb-8 max-w-2xl">{{ params.subtext }}</p>
+  <a class="btn btn-white" href="{{ params.primaryLink or '/contacto/' }}">
+    {{ params.primaryLabel or 'Solicitar diagnóstico' }}
+    <span class="material-icons">arrow_forward</span>
+  </a>
+  {% if params.extraText %}
+  <p class="text-xs opacity-70 mt-3">{{ params.extraText }}</p>
+  {% endif %}
+</section>
+{% else %}
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-primary text-white p-10">
+      <h2 class="font-display text-4xl mb-4">{{ params.heading }}</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-2xl">{{ params.subtext }}</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a class="btn btn-white" href="{{ params.primaryLink or '/contacto/' }}">
+          {{ params.primaryLabel or 'Solicitar diagnóstico' }}
+        </a>
+        {% if params.secondaryLabel %}
+        <a class="btn btn-ghost" href="{{ params.secondaryLink }}">{{ params.secondaryLabel }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %} {% endmacro %}
