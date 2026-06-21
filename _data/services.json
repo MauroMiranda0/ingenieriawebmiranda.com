@@ -4,6 +4,7 @@
     "name": "Diagnóstico técnico",
     "route": "/servicios/diagnostico-tecnico/",
     "icon": "travel_explore",
+    "image": "/assets/img/diagnostico.png",
     "listingDescription": "Claridad, riesgos y próximos pasos. Te entregamos un panorama defendible antes de construir."
   },
   {
@@ -11,6 +12,7 @@
     "name": "Modernización web",
     "route": "/servicios/modernizacion-web/",
     "icon": "architecture",
+    "image": "/assets/img/modernizacion.png",
     "listingDescription": "Evolución progresiva: de \"sitio\" a plataforma sostenible, con bases para crecer."
   },
   {
@@ -18,6 +20,7 @@
     "name": "Performance",
     "route": "/servicios/performance/",
     "icon": "speed",
+    "image": "/assets/img/optimization.png",
     "listingDescription": "Optimización priorizada por impacto: velocidad percibida, estabilidad visual y experiencia fluida."
   },
   {
@@ -25,6 +28,7 @@
     "name": "Sistemas web",
     "route": "/servicios/sistemas-web/",
     "icon": "hub",
+    "image": "/assets/img/sistemas.png",
     "listingDescription": "Portales, dashboards e integraciones orientadas a operación real."
   },
   {
@@ -32,6 +36,7 @@
     "name": "Arquitectura & Modernización",
     "route": "/servicios/arquitectura/",
     "icon": "account_tree",
+    "image": "/assets/img/debt.png",
     "listingDescription": "Reducción de deuda técnica con roadmap defendible y ejecución controlada por fases."
   },
   {
@@ -39,6 +44,7 @@
     "name": "Seguridad & DevSecOps",
     "route": "/servicios/seguridad/",
     "icon": "security",
+    "image": "/assets/img/security.png",
     "listingDescription": "Hardening, OWASP y controles DevSecOps para reducir superficie de ataque."
   }
 ]
