@@ -9,29 +9,31 @@ twitterTitle: "Modernización web progresiva | Ingeniería Web Miranda"
 twitterDescription: "De sitio a plataforma sostenible. Estructura técnica clara, reducción de deuda y base preparada para escalar."
 ---
 
-<main id="contenido-principal" class="max-w-7xl mx-auto px-6 py-16">
-  <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Servicio</p>
-  <h1 class="font-display text-5xl md:text-6xl text-primary mb-6">Modernización web</h1>
-  <p class="text-lg text-slate-600 max-w-3xl leading-relaxed mb-12">
-    Modernización progresiva para pasar de un sitio estático o una implementación limitada a una base sostenible:
-    estructura, claridad y evolución.
-  </p>
-
-  <section class="grid md:grid-cols-3 gap-6 mb-12">
-    <div class="border border-slate-200 bg-white/70 p-8">
-      <h2 class="font-display text-2xl text-primary mb-3">Para quién</h2>
-      <p class="text-slate-600 leading-relaxed">Equipos que necesitan evolucionar sin rehacer todo cada 6 meses.</p>
-    </div>
-    <div class="border border-slate-200 bg-white/70 p-8">
-      <h2 class="font-display text-2xl text-primary mb-3">Qué atacamos</h2>
-      <p class="text-slate-600 leading-relaxed">Estructura, mantenibilidad, claridad de secciones y bases técnicas.</p>
-    </div>
-    <div class="border border-slate-200 bg-white/70 p-8">
-      <h2 class="font-display text-2xl text-primary mb-3">Resultado</h2>
-      <p class="text-slate-600 leading-relaxed">Una plataforma lista para crecer con control y menos deuda.</p>
-    </div>
-  </section>
-
-  {% from "partials/cta-banner.njk" import ctaBanner %} {{ ctaBanner({ variant: "simple", heading: "Empieza por
-  diagnóstico", subtext: "Modernizar sin diagnóstico es rediseñar a ciegas. Primero claridad; después ejecución." }) }}
-</main>
+{% set heroEyebrow = "Servicio" %} {% set heroTitle = "Modernización web" %} {% set heroDescription = "De sitio a
+plataforma sostenible. Sin reescribir todo, sin perder lo que funciona." %} {% set heroTags = ["Enfoque: progresivo",
+"Base: estructura + claridad", "Resultado: plataforma evolucionable"] %} {% set sectionProblemasHeading = "Qué
+resolvemos" %} {% set problemas = [ { heading: "Sitio sin estructura clara", subheading: "Código legacy, sin separación
+de conceptos.", content: "Organizamos base técnica para que sea mantenible y preparada para crecer." }, { heading:
+"Deuda técnica acumulada", subheading: "Parches que frenan evolución.", content: "Identificamos y reducimos deuda
+priorizando lo que realmente bloquea avance." }, { heading: "Dificultad para escalar", subheading: "Lo que funcionaba ya
+no alcanza.", content: "Preparamos la arquitectura para soportar más tráfico, más contenido y más funcionalidad." } ] %}
+{% set sectionEntregablesHeading = "Entregables típicos" %} {% set entregablesTitle = "Entregables" %} {% set
+entregablesItems = [ "• Diagnóstico de estructura actual y deuda técnica", "• Plan de modernización progresiva por
+fases", "• Reestructuración de base técnica (sin romper operación)", "• Migración controlada de contenidos y
+funcionalidades", "• Documentación de arquitectura resultante" ] %} {% set noHacemosTitle = "Qué NO hacemos" %} {% set
+noHacemosItems = [ "• Reescribir todo desde cero como primera opción", "• Migrar a tecnología X sin justificación
+técnica", "• Modernizar sin plan de contingencia", "• Dejar el sitio en peor estado del que lo encontramos" ] %} {% set
+sectionGrid6Heading = "Áreas que transformamos" %} {% set grid6 = [ { heading: "Estructura", content: "Organización de
+código, componentes y dependencias." }, { heading: "Rendimiento", content: "Carga, renderizado y experiencia de
+usuario." }, { heading: "Mantenibilidad", content: "Claridad para que un equipo pueda trabajar sin fricción." }, {
+heading: "Contenido", content: "Estructura de datos, gestión y publicación." }, { heading: "Integraciones", content:
+"Conexiones existentes y nuevas sin duplicación." }, { heading: "Despliegue", content: "Pipeline, automatización y
+control de calidad." } ] %} {% set sectionProcesoHeading = "Proceso" %} {% set proceso = [ { heading: "Diagnosticamos",
+content: "Evaluamos el estado actual y definimos prioridades." }, { heading: "Planificamos", content: "Ruta progresiva
+con fases y criterios de éxito." }, { heading: "Ejecutamos", content: "Modernización controlada con entregables por
+etapa." } ] %} {% set faq = [ { question: "¿Van a reescribir todo mi sitio?", answer: "No. Modernizamos progresivamente,
+preservando lo que funciona y reemplazando solo lo que justifica cambio." }, { question: "¿Mi sitio puede seguir
+operando durante la modernización?", answer: "Sí. Trabajamos por capas para no interrumpir operación." }, { question:
+"¿Esto aplica a sitios hechos en WordPress?", answer: "Sí. Evaluamos si migrar, evolucionar o mantener según el caso." }
+] %} {% set ctaHeading = "¿Tu sitio ya no da abasto?" %} {% set ctaSubtext = "Modernizar sin diagnóstico es rediseñar a
+ciegas. Primero claridad; después ejecución." %} {% include "partials/service-complex.njk" %}

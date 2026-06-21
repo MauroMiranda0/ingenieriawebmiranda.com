@@ -9,29 +9,31 @@ twitterTitle: "Desarrollo de sistemas web | Ingeniería Web Miranda"
 twitterDescription: "Portales, dashboards e integraciones listos para operar y escalar. Arquitectura orientada a operación real."
 ---
 
-<main id="contenido-principal" class="max-w-7xl mx-auto px-6 py-16">
-  <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Servicio</p>
-  <h1 class="font-display text-5xl md:text-6xl text-primary mb-6">Sistemas web</h1>
-  <p class="text-lg text-slate-600 max-w-3xl leading-relaxed mb-12">
-    Construimos soluciones web funcionales: portales, dashboards, catálogos e integraciones. Enfoque en mantenibilidad y
-    evolución.
-  </p>
-
-  <section class="grid md:grid-cols-3 gap-6 mb-12">
-    <div class="border border-slate-200 bg-white/70 p-8">
-      <h2 class="font-display text-2xl text-primary mb-3">Qué construimos</h2>
-      <p class="text-slate-600 leading-relaxed">Flujos internos, paneles, catálogos y operaciones digitales.</p>
-    </div>
-    <div class="border border-slate-200 bg-white/70 p-8">
-      <h2 class="font-display text-2xl text-primary mb-3">Cómo trabajamos</h2>
-      <p class="text-slate-600 leading-relaxed">Iteración controlada + entregables claros + decisiones documentadas.</p>
-    </div>
-    <div class="border border-slate-200 bg-white/70 p-8">
-      <h2 class="font-display text-2xl text-primary mb-3">Resultado</h2>
-      <p class="text-slate-600 leading-relaxed">Sistema usable hoy y listo para crecer mañana.</p>
-    </div>
-  </section>
-
-  {% from "partials/cta-banner.njk" import ctaBanner %} {{ ctaBanner({ variant: "simple", heading: "Reduce riesgo antes
-  de construir", subtext: "Empieza por diagnóstico: te evita retrabajos y define el alcance real." }) }}
-</main>
+{% set heroEyebrow = "Servicio" %} {% set heroTitle = "Sistemas web" %} {% set heroDescription = "Portales, dashboards e
+integraciones listos para operar y evolucionar." %} {% set heroTags = ["Enfoque: mantenibilidad", "Salida: sistema
+operativo", "Base: decisiones documentadas"] %} {% set sectionProblemasHeading = "Qué resolvemos" %} {% set problemas =
+[ { heading: "Sistemas frágiles", subheading: "Cualquier cambio rompe algo.", content: "Construimos con arquitectura
+clara y componentes desacoplados para que el sistema soporte evolución." }, { heading: "Integraciones sin control",
+subheading: "Conexiones sin trazabilidad.", content: "Diseñamos integraciones explícitas, documentadas y con manejo de
+errores predecible." }, { heading: "Operación manual", subheading: "Procesos que dependen de una persona.", content:
+"Automatizamos flujos críticos y dejamos el sistema listo para operar sin supervisión constante." } ] %} {% set
+sectionEntregablesHeading = "Entregables típicos" %} {% set entregablesTitle = "Entregables" %} {% set entregablesItems
+= [ "• Sistema web funcional (portal, dashboard, catálogo, etc.)", "• Documentación técnica de arquitectura y
+decisiones", "• Integraciones con servicios existentes documentadas", "• Despliegue automatizado (CI/CD básico)", "•
+Guía operativa para el equipo" ] %} {% set noHacemosTitle = "Qué NO hacemos" %} {% set noHacemosItems = [ "• Construir
+sin documentar decisiones técnicas", "• Sistemas que dependen de una sola persona para operar", "• Tecnología por moda
+en lugar de la adecuada al caso", "• Entregar sin plan de evolución" ] %} {% set sectionGrid6Heading = "Componentes del
+sistema" %} {% set grid6 = [ { heading: "Frontend", content: "Interfaz funcional, responsive y preparada para crecer."
+}, { heading: "Backend", content: "API, lógica de negocio y manejo de datos." }, { heading: "Base de datos", content:
+"Esquema, consultas y migraciones controladas." }, { heading: "Autenticación", content: "Login, roles, sesiones y
+permisos." }, { heading: "Integraciones", content: "Conexiones con servicios externos documentadas." }, { heading:
+"Despliegue", content: "Pipeline, entorno y estrategia de publicación." } ] %} {% set sectionProcesoHeading = "Proceso"
+%} {% set proceso = [ { heading: "Definimos", content: "Alcance, arquitectura y criterios de éxito." }, { heading:
+"Construimos", content: "Iteración controlada con entregables por ciclo." }, { heading: "Entregamos", content: "Sistema
+operativo, documentado y listo para evolucionar." } ] %} {% set faq = [ { question: "¿Qué tipo de sistemas construyen?",
+answer: "Portales, dashboards, catálogos, intranets y flujos operativos a medida." }, { question: "¿Usan tecnologías
+específicas?", answer: "Usamos la combinación adecuada al problema del cliente, no una tecnología fija. Preferimos
+stacks de mantenimiento predecible." }, { question: "¿Y si ya tengo un sistema desarrollado?", answer: "Primero
+diagnosticamos. Si el sistema actual es rescatable, evolucionamos; si no, diseñamos reemplazo progresivo." } ] %} {% set
+ctaHeading = "¿Necesitas un sistema que realmente funcione?" %} {% set ctaSubtext = "Empieza por diagnóstico: te evita
+retrabajos y define el alcance real antes de construir." %} {% include "partials/service-complex.njk" %}

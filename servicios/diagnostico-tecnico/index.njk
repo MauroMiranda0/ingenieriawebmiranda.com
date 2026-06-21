@@ -9,37 +9,32 @@ twitterTitle: "Diagnóstico técnico web | Ingeniería Web Miranda"
 twitterDescription: "Claridad antes de construir: riesgos, oportunidades y próximos pasos documentados para tu evolución digital."
 ---
 
-<main id="contenido-principal" class="max-w-7xl mx-auto px-6 py-16">
-  <p class="text-xs tracking-[0.3em] uppercase opacity-60 mb-4">Servicio</p>
-  <h1 class="font-display text-5xl md:text-6xl text-primary mb-6">Diagnóstico técnico</h1>
-  <p class="text-lg text-slate-600 max-w-3xl leading-relaxed mb-12">
-    Un diagnóstico defendible para tomar decisiones: qué atacar primero, qué riesgos existen y cuál es el siguiente paso
-    realista.
-  </p>
-
-  <section class="grid md:grid-cols-2 gap-8 mb-12">
-    <div class="border border-slate-200 bg-white/70 p-8">
-      <h2 class="font-display text-3xl text-primary mb-4">Qué incluye</h2>
-      <ul class="space-y-3 text-slate-600 leading-relaxed">
-        <li>• Revisión técnica del estado actual (sitio o requerimiento).</li>
-        <li>• Identificación de riesgos y cuellos de botella.</li>
-        <li>• Prioridades y quick wins (defendibles).</li>
-        <li>• Próximos pasos recomendados (roadmap inicial).</li>
-      </ul>
-    </div>
-
-    <div class="border border-slate-200 bg-white/70 p-8">
-      <h2 class="font-display text-3xl text-primary mb-4">Entregables</h2>
-      <ul class="space-y-3 text-slate-600 leading-relaxed">
-        <li>• Resumen ejecutivo (1–2 páginas).</li>
-        <li>• Lista priorizada de acciones (backlog inicial).</li>
-        <li>• Recomendación de ruta (modernizar / optimizar / construir).</li>
-        <li>• Alineación de expectativas de alcance.</li>
-      </ul>
-    </div>
-  </section>
-
-  {% from "partials/cta-banner.njk" import ctaBanner %} {{ ctaBanner({ variant: "simple", heading: "¿Listo para empezar
-  con claridad?", subtext: "Un diagnóstico técnico evita decisiones caras y acelera la ejecución correcta.", extraText:
-  "Respuesta en menos de 48 horas." }) }}
-</main>
+{% set heroEyebrow = "Servicio" %} {% set heroTitle = "Diagnóstico técnico" %} {% set heroDescription = "Claridad antes
+de construir. Riesgos, oportunidades y próximos pasos documentados." %} {% set heroTags = ["Enfoque: baseline técnico",
+"Salida: backlog priorizado", "Formato: ejecutivo + detalle"] %} {% set sectionProblemasHeading = "Qué resolvemos" %} {%
+set problemas = [ { heading: "Falta de claridad técnica", subheading: "No sabes por dónde empezar.", content: "Evaluamos
+el estado real del sistema o requerimiento para identificar qué atacar primero y qué evitar." }, { heading: "Riesgos no
+documentados", subheading: "Dependencias ocultas y deuda acumulada.", content: "Documentamos riesgos técnicos, cuellos
+de botella y decisiones pendientes que bloquean evolución." }, { heading: "Incertidumbre de alcance", subheading:
+"Estimaciones sin base real.", content: "Traducimos incertidumbre en backlog priorizado con impacto y esfuerzo
+estimado." } ] %} {% set sectionEntregablesHeading = "Entregables típicos" %} {% set entregablesTitle = "Entregables" %}
+{% set entregablesItems = [ "• Resumen ejecutivo (1–2 páginas) con hallazgos clave", "• Baseline técnico del estado
+actual", "• Lista priorizada de riesgos y oportunidades", "• Backlog inicial con estimaciones de impacto/esfuerzo", "•
+Roadmap recomendado con próximos pasos" ] %} {% set noHacemosTitle = "Qué NO hacemos" %} {% set noHacemosItems = [ "•
+Diagnosticar sin entregar un plan accionable", "• Prometer resultados sin conocer el contexto", "• Recomendar
+tecnologías por moda", "• Hacer diagnóstico sin compromiso de documentación" ] %} {% set sectionGrid6Heading = "Áreas
+que cubrimos" %} {% set grid6 = [ { heading: "Arquitectura", content: "Estructura, componentes, dependencias y
+decisiones técnicas vigentes." }, { heading: "Performance", content: "Tiempos de carga, cuellos de botella y
+oportunidades de optimización." }, { heading: "Seguridad", content: "Superficie de ataque, configuración y riesgos
+críticos." }, { heading: "Código", content: "Calidad, mantenibilidad y deuda técnica acumulada." }, { heading:
+"Infraestructura", content: "Hosting, despliegue, escalabilidad y costos operativos." }, { heading: "Procesos", content:
+"Flujo de trabajo, revisión y barreras de entrega." } ] %} {% set sectionProcesoHeading = "Proceso" %} {% set proceso =
+[ { heading: "Recopilamos", content: "Información del sistema, objetivos y contexto de negocio." }, { heading:
+"Evaluamos", content: "Análisis técnico estructurado por áreas clave." }, { heading: "Entregamos", content: "Documento
+con hallazgos, riesgos y backlog priorizado." } ] %} {% set faq = [ { question: "¿Qué necesito para empezar un
+diagnóstico?", answer: "Acceso al sistema actual o especificación del requerimiento. Una llamada inicial de 30 minutos
+alinea expectativas." }, { question: "¿Cuánto tiempo toma?", answer: "Depende de la complejidad. Un diagnóstico típico
+toma de 3 a 7 días hábiles." }, { question: "¿Sirve si aún no tengo sistema?", answer: "Sí. Analizamos el requerimiento,
+identificamos riesgos tempranos y definimos la ruta antes de escribir código." } ] %} {% set ctaHeading = "¿Decisiones
+sin datos técnicos?" %} {% set ctaSubtext = "Un diagnóstico evita retrabajos, alinea expectativas y acelera la ejecución
+correcta." %} {% include "partials/service-complex.njk" %}
