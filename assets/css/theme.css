@@ -861,68 +861,6 @@
   color: rgba(255, 255, 255, 0.78);
 }
 
-@media (hover: hover) and (min-width: 768px) {
-  .method-stack-list {
-    height: 6.5rem;
-    transition: height 500ms ease-in-out;
-  }
-
-  .method-stack:hover .method-stack-list,
-  .method-stack:focus-within .method-stack-list {
-    height: 27rem;
-  }
-
-  .method-stack-item {
-    position: absolute;
-    inset: 0 0 auto;
-    min-height: 6.5rem;
-  }
-
-  .method-stack-item:nth-child(1) {
-    z-index: 4;
-    transform: translateY(0) translateZ(0);
-    transition-delay: 0ms;
-  }
-
-  .method-stack-item:nth-child(2) {
-    z-index: 3;
-    transform: translateY(0.45rem) translateZ(-12px);
-    transition-delay: 50ms;
-  }
-
-  .method-stack-item:nth-child(3) {
-    z-index: 2;
-    transform: translateY(0.9rem) translateZ(-24px);
-    transition-delay: 100ms;
-  }
-
-  .method-stack-item:nth-child(4) {
-    z-index: 1;
-    transform: translateY(1.35rem) translateZ(-36px);
-    transition-delay: 150ms;
-  }
-
-  .method-stack:hover .method-stack-item:nth-child(1),
-  .method-stack:focus-within .method-stack-item:nth-child(1) {
-    transform: translateY(0) translateZ(0);
-  }
-
-  .method-stack:hover .method-stack-item:nth-child(2),
-  .method-stack:focus-within .method-stack-item:nth-child(2) {
-    transform: translateY(6.5rem) translateZ(0);
-  }
-
-  .method-stack:hover .method-stack-item:nth-child(3),
-  .method-stack:focus-within .method-stack-item:nth-child(3) {
-    transform: translateY(13rem) translateZ(0);
-  }
-
-  .method-stack:hover .method-stack-item:nth-child(4),
-  .method-stack:focus-within .method-stack-item:nth-child(4) {
-    transform: translateY(19.5rem) translateZ(0);
-  }
-}
-
 /* Blog-post card */
 .blog-card-post {
   transition:

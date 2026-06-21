@@ -19,7 +19,7 @@ Es la referencia para evaluar si el sitio está completo y correcto.
 ├── /casos/                     Catálogo de casos
 │   ├── /migracion-pwa/         Caso: Migración a PWA
 │   ├── /landing-captacion/     Caso: Landing de captación
-│   └── /landing-servicios/     Caso: Landing de servicios
+│   └── /sitio-de-servicios/    Caso: Sitio de servicios
 ├── /metodo/                    Método de trabajo
 ├── /recursos/                  Recursos técnicos
 ├── /proyectos/                 Proyectos técnicos (en construcción)
@@ -147,11 +147,11 @@ Presentes en las 18 páginas vía `_includes/layouts/base.njk`.
 
 ---
 
-### 3.12 Caso: Landing de servicios (`/casos/landing-servicios/`)
+### 3.12 Caso: Sitio de servicios (`/casos/sitio-de-servicios/`)
 
-**Propósito:** Documentar microcopy, señales de confianza y rutas de intención.
+**Propósito:** Documentar estructura de sitio de servicios con microcopy, señales de confianza y rutas de intención.
 
-**Entregables documentados:** Microcopy, formulario con rutas de intención.
+**Entregables documentados:** Estructura completa de sitio, microcopy, checklist de confianza, formulario con rutas de intención.
 
 ---
 
