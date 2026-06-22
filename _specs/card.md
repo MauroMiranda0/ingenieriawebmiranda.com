@@ -179,7 +179,7 @@ Sin hover. Para contenido informativo sin acción directa.
 
 ### Service Grid Card (hexagonal)
 
-Variante para los 6 servicios en `/servicios/`. Cards con forma de hexágono vertical (`clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)`), grid uniforme 3 columnas en `lg+`, 2 en `md`, 1 en `sm`. Contenido centrado, sin imágenes, sin bordes.
+Variante para los 6 servicios en `/servicios/`. Cards con forma de hexágono vertical regular (`clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)` con `aspect-ratio: 0.866`), grid uniforme 3 columnas en `lg+`, 2 en `md`, 1 en `sm`. Contenido centrado, sin imágenes.
 
 ```html
 <article class="service-card">

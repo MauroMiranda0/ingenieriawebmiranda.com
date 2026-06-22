@@ -33,14 +33,12 @@ twitterDescription: "Diagnóstico técnico, modernización web, performance, seg
     <div class="max-w-7xl mx-auto px-6 relative">
       <div class="services-grid">
         {% for service in services %}
-        <article class="service-card-border">
-          <div class="service-card">
-            <span class="material-icons service-card-icon" aria-hidden="true">{{ service.icon }}</span>
-            <p class="service-card-eyebrow">{{ service.eyebrow }}</p>
-            <h3 class="service-card-title">{{ service.name }}</h3>
-            <p class="service-card-desc">{{ service.listingDescription }}</p>
-            <a class="service-card-link" href="{{ service.route }}">Ver servicio</a>
-          </div>
+        <article class="service-card" style="--card-bg: url({{ service.image }})">
+          <span class="material-icons service-card-icon" aria-hidden="true">{{ service.icon }}</span>
+          <p class="service-card-eyebrow">{{ service.eyebrow }}</p>
+          <h3 class="service-card-title">{{ service.name }}</h3>
+          <p class="service-card-desc">{{ service.listingDescription }}</p>
+          <a class="service-card-btn" href="{{ service.route }}">Ver servicio</a>
         </article>
         {% endfor %}
       </div>
