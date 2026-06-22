@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Cards Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f2f3f5;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Contenedor de la cuadrícula para 6 tarjetas */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        @media (min-width: 960px) {
+            .card-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Estilos principales de la tarjeta */
+        .card {
+            position: relative;
+            height: 480px;
+            border-radius: 36px;
+            overflow: hidden;
+            background-image: url('https://images.unsplash.com/photo-1553279768-865429fd8158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Etiqueta superior derecha (Descuento) */
+        .badge-top {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(4px);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            z-index: 2;
+        }
+
+        /* Capa de degradado inferior para dar legibilidad al texto */
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70%;
+            background: linear-gradient(to top, 
+                rgba(215, 125, 0, 1) 0%, 
+                rgba(225, 145, 10, 0.95) 40%, 
+                rgba(235, 165, 20, 0.6) 70%, 
+                transparent 100%);
+            z-index: 1;
+        }
+
+        /* Contenedor del contenido (Texto y botones) */
+        .card-content {
+            position: relative;
+            z-index: 2;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Puntos del carrusel */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        /* Título y precio */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h2 {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .price {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* Descripción */
+        .description {
+            font-size: 14px;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        /* Etiquetas (Best Seller, Stock) */
+        .tags {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tag {
+            background: rgba(0, 0, 0, 0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* Botón de añadir al carrito */
+        .add-to-cart {
+            background-color: white;
+            color: #1a1a1a;
+            border: none;
+            padding: 16px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-grid">
+        <div class="card">
+            <div class="badge-top">20% off</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="header">
+                    <h2>Alphonso</h2>
+                    <span class="price">₹270</span>
+                </div>
+                <p class="description">Loved worldwide for their sweetness our Alphonso mangoes are a delicious delight wherever you are.</p>
+                <div class="tags">
+                    <span class="tag">Best Seller</span>
+                    <span class="tag">9 left</span>
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="badge-top">20% off</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="header">
+                    <h2>Alphonso</h2>
+                    <span class="price">₹270</span>
+                </div>
+                <p class="description">Loved worldwide for their sweetness our Alphonso mangoes are a delicious delight wherever you are.</p>
+                <div class="tags">
+                    <span class="tag">Best Seller</span>
+                    <span class="tag">9 left</span>
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="badge-top">15% off</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="header">
+                    <h2>Alphonso</h2>
+                    <span class="price">₹270</span>
+                </div>
+                <p class="description">Loved worldwide for their sweetness our Alphonso mangoes are a delicious delight wherever you are.</p>
+                <div class="tags">
+                    <span class="tag">Best Seller</span>
+                    <span class="tag">3 left</span>
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="badge-top">10% off</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="header">
+                    <h2>Alphonso</h2>
+                    <span class="price">₹270</span>
+                </div>
+                <p class="description">Loved worldwide for their sweetness our Alphonso mangoes are a delicious delight wherever you are.</p>
+                <div class="tags">
+                    <span class="tag">Best Seller</span>
+                    <span class="tag">12 left</span>
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="badge-top">5% off</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="header">
+                    <h2>Alphonso</h2>
+                    <span class="price">₹270</span>
+                </div>
+                <p class="description">Loved worldwide for their sweetness our Alphonso mangoes are a delicious delight wherever you are.</p>
+                <div class="tags">
+                    <span class="tag">Top Rated</span>
+                    <span class="tag">5 left</span>
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="badge-top">25% off</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="header">
+                    <h2>Alphonso</h2>
+                    <span class="price">₹270</span>
+                </div>
+                <p class="description">Loved worldwide for their sweetness our Alphonso mangoes are a delicious delight wherever you are.</p>
+                <div class="tags">
+                    <span class="tag">Flash Sale</span>
+                    <span class="tag">2 left</span>
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

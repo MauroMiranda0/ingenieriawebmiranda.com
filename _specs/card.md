@@ -177,26 +177,32 @@ Sin hover. Para contenido informativo sin acción directa.
 
 ---
 
-### Service Grid Card (hexagonal)
+### Service Grid Card (hero image with gradient overlay)
 
-Variante para los 6 servicios en `/servicios/`. Cards con forma de hexágono vertical regular (`clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)` con `aspect-ratio: 0.866`), grid uniforme 3 columnas en `lg+`, 2 en `md`, 1 en `sm`. Contenido centrado, sin imágenes.
+Variante para los 6 servicios en `/servicios/`. Cards con imagen de fondo, overlay degradado del color primario en la parte inferior, y contenido alineado abajo. Inspirado en diseño de tarjetas de producto con imagen de portada.
 
 ```html
-<article class="service-card">
-  <span class="material-icons service-card-icon" aria-hidden="true">travel_explore</span>
-  <p class="service-card-eyebrow">Diagnóstico</p>
-  <h3 class="service-card-title">Diagnóstico técnico</h3>
-  <p class="service-card-desc">Claridad, riesgos y próximos pasos.</p>
-  <a class="service-card-link" href="/servicios/diagnostico-tecnico/">Ver servicio</a>
+<article class="service-card" style="--card-bg: url(/assets/img/servicio.png)">
+  <div class="service-card-overlay"></div>
+  <div class="service-card-badge">Diagnóstico</div>
+  <div class="service-card-content">
+    <span class="material-icons service-card-icon" aria-hidden="true">travel_explore</span>
+    <h3 class="service-card-title">Diagnóstico técnico</h3>
+    <p class="service-card-desc">Claridad, riesgos y próximos pasos.</p>
+    <a class="service-card-btn" href="/servicios/diagnostico-tecnico/">Ver servicio</a>
+  </div>
 </article>
 ```
 
 **Reglas específicas:**
 - Sin `border-radius` en ningún elemento.
 - Sin bordes ni contornos en la card.
-- Contenido centrado (text-align: center + align-items: center).
-- Clip-path hexagonal: `polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)`.
-- En `lg+` grid de 3 columnas uniformes; no hay posicionamiento por índice.
+- La imagen de fondo se setea via `--card-bg` con `background-size: cover`.
+- Overlay degradado inferior: `linear-gradient(to top, rgba(11,42,74,1) 0%, rgba(11,42,74,0.9) 40%, rgba(11,42,74,0.4) 70%, transparent 100%)` con `height: 70%`.
+- Badge en esquina superior derecha con fondo semitransparente.
+- Contenido alineado abajo (flex column, justify-content: flex-end).
+- Color de texto blanco sobre el overlay.
+- En `lg+` grid de 3 columnas uniformes.
 
 ---
 

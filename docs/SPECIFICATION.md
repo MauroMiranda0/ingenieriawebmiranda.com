@@ -8,14 +8,10 @@ Es la referencia para evaluar si el sitio está completo y correcto.
 ## 1. Mapa del sitio
 
 ```
-/                               Home
-├── /servicios/                 Catálogo de servicios
-│   ├── /diagnostico-tecnico/   Servicio: Diagnóstico técnico
-│   ├── /modernizacion-web/     Servicio: Modernización web
-│   ├── /performance/           Servicio: Performance (Core Web Vitals)
-│   ├── /seguridad/             Servicio: Seguridad & DevSecOps
-│   ├── /sistemas-web/          Servicio: Desarrollo de sistemas web
-│   └── /arquitectura/          Servicio: Arquitectura & Modernización
+/                               Home (vitrina con 6 cards → anclas a /servicios/)
+├── /servicios/                 Página única con 6 bloques completos + índice
+│                               (Diagnóstico, Modernización, Performance,
+│                                Sistemas, Arquitectura, Seguridad)
 ├── /casos/                     Catálogo de casos
 │   ├── /migracion-pwa/         Caso: Migración a PWA
 │   ├── /landing-captacion/     Caso: Landing de captación
@@ -29,7 +25,7 @@ Es la referencia para evaluar si el sitio está completo y correcto.
     └── /terminos/              Términos y condiciones
 ```
 
-**Total: 18 páginas**
+**Total: 12 páginas** (6 páginas de servicio individual consolidadas en `/servicios/`)
 
 ---
 
@@ -68,7 +64,7 @@ Presentes en las 18 páginas vía `_includes/layouts/base.njk`.
 | ID | Título | Componentes usados |
 |----|--------|--------------------|
 | — | Hero | `.hero-blueprint`, `.network-pattern`, `.gradient-blur`, `.btn-primary`, `.hero-link-tech` |
-| `#que-resolvemos` | Qué resolvemos | SectionHeader, 6× Card Blog Post con imagen, lupa interactiva, modal de entregables y CTA "Saber más" con enlace al servicio |
+| `#que-resolvemos` | Qué resolvemos | SectionHeader, 6× Card Blog Post con imagen, CTA "Saber más" con enlace a `/servicios/#servicio-{slug}`. Sin modal de entregables |
 | `#areas` | Áreas clave | SectionHeader, carrusel nativo de 4× Card Feature con Material Icons y navegación previa/siguiente |
 | `#casos-accion` | Transformación digital en acción | SectionHeader split, 3× Card interactiva con ícono Material, intro mínima, ilustración técnica, decisiones clave, enlace "Ver caso" y CTAs al pie |
 | `#metodo` | Método de ingeniería | SectionHeader centrado, diagrama de fases con `.node-glow`, `.btn-outline` |
@@ -81,47 +77,23 @@ Presentes en las 18 páginas vía `_includes/layouts/base.njk`.
 
 ### 3.2 Servicios (`/servicios/`)
 
-**Propósito:** Catálogo de los 6 servicios con descripción y link a página profunda.
+**Propósito:** Página única que contiene el desarrollo completo de los 6 servicios. Sin cards de preview. Cada servicio es un módulo narrativo completo con índice de navegación rápida via anchors.
 
-**Secciones:** Hero de sección, grid de 6 cards con link a cada servicio.
+**Secciones:**
+| Bloque | Anchor ID | Componentes |
+|--------|-----------|-------------|
+| Hero de sección | — | PageHero con título, descripción y CTAs |
+| Índice de navegación | `#servicios-indice` | Lista horizontal/vertical de 6 anchors con scroll suave |
+| Diagnóstico técnico | `#servicio-diagnostico-tecnico` | ServiceBlock (eyebrow + H2 + desc + entregables + beneficios + señales + áreas + CTA) |
+| Modernización web | `#servicio-modernizacion-web` | ServiceBlock |
+| Performance | `#servicio-performance` | ServiceBlock |
+| Sistemas web | `#servicio-sistemas-web` | ServiceBlock |
+| Arquitectura | `#servicio-arquitectura` | ServiceBlock |
+| Seguridad | `#servicio-seguridad` | ServiceBlock |
 
----
+**Fuente de contenido:** Cada bloque se construye con el contenido de las antiguas páginas individuales (`servicios/*/index.njk`), ahora inline en `servicios/index.njk`.
 
-### 3.3 Servicio: Diagnóstico técnico (`/servicios/diagnostico-tecnico/`)
-
-**Propósito:** Explicar en detalle el servicio de diagnóstico. Justificar el valor de hacerlo antes de construir.
-
-**Audiencia principal:** Empresas que no saben por dónde empezar o que tienen problemas técnicos sin diagnóstico.
-
----
-
-### 3.4 Servicio: Modernización web (`/servicios/modernizacion-web/`)
-
-**Propósito:** Explicar modernización progresiva como alternativa al rewrite total.
-
----
-
-### 3.5 Servicio: Performance (`/servicios/performance/`)
-
-**Propósito:** Posicionarse en Core Web Vitals y optimización de experiencia. Hablar el idioma de LCP, INP, CLS.
-
----
-
-### 3.6 Servicio: Seguridad (`/servicios/seguridad/`)
-
-**Propósito:** Hardening, OWASP, DevSecOps como práctica integrada (no auditoría puntual).
-
----
-
-### 3.7 Servicio: Sistemas web (`/servicios/sistemas-web/`)
-
-**Propósito:** Desarrollo de portales, dashboards e integraciones. Énfasis en operación real y escalabilidad.
-
----
-
-### 3.8 Servicio: Arquitectura (`/servicios/arquitectura/`)
-
-**Propósito:** Reducción de deuda técnica con roadmap documentado y ejecutable.
+**Nota de migración:** Las 6 páginas de servicio individual (`/servicios/diagnostico-tecnico/`, `/modernizacion-web/`, `/performance/`, `/seguridad/`, `/sistemas-web/`, `/arquitectura/`) se consolidan en esta única página. Los contenidos de cada una (hero, problemas, entregables, grid-6, proceso, FAQ, CTA) se integran como secciones del bloque correspondiente.
 
 ---
 

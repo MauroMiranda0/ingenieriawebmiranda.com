@@ -9,7 +9,7 @@ twitterTitle: "Servicios de ingeniería web | Ingeniería Web Miranda"
 twitterDescription: "Diagnóstico técnico, modernización web, performance, seguridad, arquitectura y sistemas. Entregables claros, decisiones documentadas."
 ---
 
-<main id="contenido-principal" class="pt-24">
+<main id="contenido-principal">
   <section
     class="relative py-24 flex items-center min-h-[380px] md:min-h-[440px] overflow-hidden bg-primary network-pattern">
     <div class="absolute top-1/4 -left-20 w-96 h-96 bg-white/5 gradient-blur"></div>
@@ -29,47 +29,31 @@ twitterDescription: "Diagnóstico técnico, modernización web, performance, seg
     </div>
   </section>
 
-  <section class="py-16">
-    <div class="max-w-7xl mx-auto px-6 relative">
-      <div class="services-grid">
-        {% for service in services %}
-        <article class="service-card" style="--card-bg: url({{ service.image }})">
-          <span class="material-icons service-card-icon" aria-hidden="true">{{ service.icon }}</span>
-          <p class="service-card-eyebrow">{{ service.eyebrow }}</p>
-          <h3 class="service-card-title">{{ service.name }}</h3>
-          <p class="service-card-desc">{{ service.listingDescription }}</p>
-          <a class="service-card-btn" href="{{ service.route }}">Ver servicio</a>
-        </article>
-        {% endfor %}
-      </div>
+  <nav
+    id="servicios-indice"
+    class="sticky top-0 z-20 bg-white/95 border-b border-slate-200"
+    aria-label="Índice de servicios">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+      {% for s in serviceBlocks %}
+      <a href="#{{ s.id }}" class="text-primary hover:opacity-80 transition font-medium">{{ s.title }}</a>
+      {% endfor %}
     </div>
-  </section>
+  </nav>
 
-  <section class="py-16 border-t border-b border-slate-200 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-14">
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Método</p>
-        <h2 class="mt-3 font-display text-3xl md:text-4xl text-primary">Cómo trabajamos</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <article class="border border-slate-200 bg-white p-8 shadow-sm">
-          <h3 class="font-display text-2xl text-primary mb-3">Diagnóstico</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Baseline técnico y riesgos para entender qué atacar primero y qué evitar.
-          </p>
-        </article>
-        <article class="border border-slate-200 bg-white p-8 shadow-sm">
-          <h3 class="font-display text-2xl text-primary mb-3">Plan defendible</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Roadmap priorizado y decisiones documentadas para ejecutar con criterio.
-          </p>
-        </article>
-        <article class="border border-slate-200 bg-white p-8 shadow-sm">
-          <h3 class="font-display text-2xl text-primary mb-3">Ejecución</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Entregables concretos y seguimiento técnico para sostener evolución.
-          </p>
-        </article>
+  <div class="divide-y divide-slate-200">
+    {% for s in serviceBlocks %} {% include "partials/service-block.njk" %} {% endfor %}
+  </div>
+
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-primary mb-4">¿No sabes por cuál empezar?</h2>
+      <p class="text-base text-slate-600 max-w-2xl mx-auto mb-8">
+        Un diagnóstico técnico resuelve esa pregunta primero. Evaluamos tu situación y te recomendamos la ruta sin
+        compromiso.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a class="btn btn-primary" href="/contacto/">Solicitar diagnóstico</a>
+        <a class="btn btn-outline" href="/metodo/">Ver método</a>
       </div>
     </div>
   </section>
