@@ -175,6 +175,47 @@ Sin hover. Para contenido informativo sin acción directa.
 
 ---
 
+---
+
+### Service Grid Card
+
+Variante para el grid posicionado de 6 servicios en `/servicios/`. Usa un layout 3×3 con posiciones específicas, líneas decorativas de fondo y dots en intersecciones. Visible solo en `lg+`; en `md` colapsa a 2 columnas y en `sm` a 1.
+
+```html
+<article class="service-card service-card-pos-tl">
+  <div class="overflow-hidden">
+    <img src="/assets/img/diagnostico.png" alt="Visual del servicio" class="service-card-image" />
+  </div>
+  <div class="service-card-body">
+    <span class="material-icons service-card-body-icon" aria-hidden="true">travel_explore</span>
+    <p class="service-card-eyebrow">Diagnóstico</p>
+    <h3 class="service-card-title">Diagnóstico técnico</h3>
+    <p class="service-card-desc">Claridad, riesgos y próximos pasos.</p>
+    <a class="service-card-link" href="/servicios/diagnostico-tecnico/">Ver servicio</a>
+  </div>
+</article>
+```
+
+**Posiciones del grid (solo `lg+`):**
+
+| Clase | Grid area | Servicio (índice) |
+|-------|-----------|-------------------|
+| `service-card-pos-tl` | `1 / 1 / 2 / 2` | 0 (Diagnóstico) |
+| `service-card-pos-tr` | `1 / 3 / 2 / 4` | 4 (Arquitectura) |
+| `service-card-pos-center` + `service-card-featured` | `2 / 2 / 3 / 3` | 3 (Sistemas web) — 110% width |
+| `service-card-pos-bl` | `3 / 1 / 4 / 2` | 1 (Modernización) |
+| `service-card-pos-bc` + `service-card-bc-offset` | `3 / 2 / 4 / 3` | 5 (Seguridad) — translateY(-2rem) |
+| `service-card-pos-br` | `3 / 3 / 4 / 4` | 2 (Performance) |
+
+**Decoración de fondo:** Contenedor `.services-bg-lines` con líneas (`.services-line-h-*`, `.services-line-v-*`) y dots (`.services-dot-*`) visibles solo en `lg+`.
+
+**Reglas específicas:**
+- Sin `border-radius` en ningún elemento de la card.
+- En mobile/tablet, todas las cards fluyen en grid normal (1 o 2 columnas) sin posicionamiento.
+- Las líneas y dots usan `rgba(11, 42, 74, 0.08)` y `rgba(11, 42, 74, 0.2)` respectivamente (adaptación del sistema de diseño actual, no del tema oscuro original).
+
+---
+
 ## Reglas de uso
 
 - Siempre `<article>` para cards de contenido independiente; `<a>` solo cuando toda la card es un enlace.
