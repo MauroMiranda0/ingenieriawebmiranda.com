@@ -9,7 +9,7 @@ twitterTitle: "Servicios de ingeniería web | Ingeniería Web Miranda"
 twitterDescription: "Diagnóstico técnico, modernización web, performance, seguridad, arquitectura y sistemas. Entregables claros, decisiones documentadas."
 ---
 
-<main id="contenido-principal">
+<main id="contenido-principal" class="pt-12">
   <section
     class="relative py-24 flex items-center min-h-[380px] md:min-h-[440px] overflow-hidden bg-primary network-pattern">
     <div class="absolute top-1/4 -left-20 w-96 h-96 bg-white/5 gradient-blur"></div>
@@ -40,11 +40,9 @@ twitterDescription: "Diagnóstico técnico, modernización web, performance, seg
     </div>
   </nav>
 
-  <div class="divide-y divide-slate-200">
-    {% for s in serviceBlocks %} {% include "partials/service-block.njk" %} {% endfor %}
-  </div>
+  {% for s in serviceBlocks %} {% include "partials/service-block.njk" %} {% endfor %}
 
-  <section class="py-20 bg-slate-50">
+  <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <h2 class="font-display text-3xl md:text-4xl text-primary mb-4">¿No sabes por cuál empezar?</h2>
       <p class="text-base text-slate-600 max-w-2xl mx-auto mb-8">

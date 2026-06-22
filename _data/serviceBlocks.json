@@ -1,6 +1,7 @@
 [
   {
     "id": "servicio-diagnostico-tecnico",
+    "image": "diagnostico.png",
     "eyebrow": "Diagnóstico",
     "title": "Diagnóstico técnico",
     "description": "Claridad antes de construir. Riesgos, oportunidades y próximos pasos documentados.",
@@ -33,6 +34,7 @@
   },
   {
     "id": "servicio-modernizacion-web",
+    "image": "modernizacion.png",
     "eyebrow": "Modernización",
     "title": "Modernización web",
     "description": "De sitio a plataforma sostenible. Sin reescribir todo, sin perder lo que funciona.",
@@ -65,6 +67,7 @@
   },
   {
     "id": "servicio-performance",
+    "image": "optimization.png",
     "eyebrow": "Performance",
     "title": "Performance & Core Web Vitals",
     "description": "Reducimos fricción de carga e interacción. Mejor experiencia. Mejor conversión.",
@@ -97,6 +100,7 @@
   },
   {
     "id": "servicio-sistemas-web",
+    "image": "sistemas.png",
     "eyebrow": "Sistemas",
     "title": "Sistemas web",
     "description": "Portales, dashboards e integraciones listos para operar y evolucionar.",
@@ -129,6 +133,7 @@
   },
   {
     "id": "servicio-arquitectura",
+    "image": "debt.png",
     "eyebrow": "Arquitectura",
     "title": "Arquitectura & Modernización",
     "description": "Reducimos deuda técnica sin detener operación. Diseñamos un camino defendible para escalar.",
@@ -161,6 +166,7 @@
   },
   {
     "id": "servicio-seguridad",
+    "image": "security.png",
     "eyebrow": "Seguridad",
     "title": "Seguridad & DevSecOps",
     "description": "Reducimos superficie de ataque. Endurecemos la entrega. Priorizamos riesgos reales.",
