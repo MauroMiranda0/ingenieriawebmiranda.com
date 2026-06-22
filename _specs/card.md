@@ -177,42 +177,26 @@ Sin hover. Para contenido informativo sin acción directa.
 
 ---
 
-### Service Grid Card
+### Service Grid Card (hexagonal)
 
-Variante para el grid posicionado de 6 servicios en `/servicios/`. Usa un layout 3×3 con posiciones específicas, líneas decorativas de fondo y dots en intersecciones. Visible solo en `lg+`; en `md` colapsa a 2 columnas y en `sm` a 1.
+Variante para los 6 servicios en `/servicios/`. Cards con forma de hexágono vertical (`clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)`), grid uniforme 3 columnas en `lg+`, 2 en `md`, 1 en `sm`. Contenido centrado, sin imágenes, sin bordes.
 
 ```html
-<article class="service-card service-card-pos-tl">
-  <div class="overflow-hidden">
-    <img src="/assets/img/diagnostico.png" alt="Visual del servicio" class="service-card-image" />
-  </div>
-  <div class="service-card-body">
-    <span class="material-icons service-card-body-icon" aria-hidden="true">travel_explore</span>
-    <p class="service-card-eyebrow">Diagnóstico</p>
-    <h3 class="service-card-title">Diagnóstico técnico</h3>
-    <p class="service-card-desc">Claridad, riesgos y próximos pasos.</p>
-    <a class="service-card-link" href="/servicios/diagnostico-tecnico/">Ver servicio</a>
-  </div>
+<article class="service-card">
+  <span class="material-icons service-card-icon" aria-hidden="true">travel_explore</span>
+  <p class="service-card-eyebrow">Diagnóstico</p>
+  <h3 class="service-card-title">Diagnóstico técnico</h3>
+  <p class="service-card-desc">Claridad, riesgos y próximos pasos.</p>
+  <a class="service-card-link" href="/servicios/diagnostico-tecnico/">Ver servicio</a>
 </article>
 ```
 
-**Posiciones del grid (solo `lg+`):**
-
-| Clase | Grid area | Servicio (índice) |
-|-------|-----------|-------------------|
-| `service-card-pos-tl` | `1 / 1 / 2 / 2` | 0 (Diagnóstico) |
-| `service-card-pos-tr` | `1 / 3 / 2 / 4` | 4 (Arquitectura) |
-| `service-card-pos-center` + `service-card-featured` | `2 / 2 / 3 / 3` | 3 (Sistemas web) — 110% width |
-| `service-card-pos-bl` | `3 / 1 / 4 / 2` | 1 (Modernización) |
-| `service-card-pos-bc` + `service-card-bc-offset` | `3 / 2 / 4 / 3` | 5 (Seguridad) — translateY(-2rem) |
-| `service-card-pos-br` | `3 / 3 / 4 / 4` | 2 (Performance) |
-
-**Decoración de fondo:** Contenedor `.services-bg-lines` con líneas (`.services-line-h-*`, `.services-line-v-*`) y dots (`.services-dot-*`) visibles solo en `lg+`.
-
 **Reglas específicas:**
-- Sin `border-radius` en ningún elemento de la card.
-- En mobile/tablet, todas las cards fluyen en grid normal (1 o 2 columnas) sin posicionamiento.
-- Las líneas y dots usan `rgba(11, 42, 74, 0.08)` y `rgba(11, 42, 74, 0.2)` respectivamente (adaptación del sistema de diseño actual, no del tema oscuro original).
+- Sin `border-radius` en ningún elemento.
+- Sin bordes ni contornos en la card.
+- Contenido centrado (text-align: center + align-items: center).
+- Clip-path hexagonal: `polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)`.
+- En `lg+` grid de 3 columnas uniformes; no hay posicionamiento por índice.
 
 ---
 
