@@ -24,12 +24,12 @@
       "«Hay riesgos técnicos que nadie ha documentado»"
     ],
     "areas": [
-      { "heading": "Arquitectura", "content": "Estructura, componentes, dependencias y decisiones técnicas vigentes." },
-      { "heading": "Performance", "content": "Tiempos de carga, cuellos de botella y oportunidades de optimización." },
-      { "heading": "Seguridad", "content": "Superficie de ataque, configuración y riesgos críticos." },
-      { "heading": "Código", "content": "Calidad, mantenibilidad y deuda técnica acumulada." },
-      { "heading": "Infraestructura", "content": "Hosting, despliegue, escalabilidad y costos operativos." },
-      { "heading": "Procesos", "content": "Flujo de trabajo, revisión y barreras de entrega." }
+      { "icon": "account_tree", "heading": "Arquitectura", "content": "Estructura, componentes, dependencias y decisiones técnicas vigentes." },
+      { "icon": "speed", "heading": "Performance", "content": "Tiempos de carga, cuellos de botella y oportunidades de optimización." },
+      { "icon": "shield", "heading": "Seguridad", "content": "Superficie de ataque, configuración y riesgos críticos." },
+      { "icon": "code", "heading": "Código", "content": "Calidad, mantenibilidad y deuda técnica acumulada." },
+      { "icon": "dns", "heading": "Infraestructura", "content": "Hosting, despliegue, escalabilidad y costos operativos." },
+      { "icon": "sync_alt", "heading": "Procesos", "content": "Flujo de trabajo, revisión y barreras de entrega." }
     ]
   },
   {
@@ -57,12 +57,12 @@
       "«El código legacy frena cualquier evolución»"
     ],
     "areas": [
-      { "heading": "Estructura", "content": "Organización de código, componentes y dependencias." },
-      { "heading": "Rendimiento", "content": "Carga, renderizado y experiencia de usuario." },
-      { "heading": "Mantenibilidad", "content": "Claridad para que un equipo pueda trabajar sin fricción." },
-      { "heading": "Contenido", "content": "Estructura de datos, gestión y publicación." },
-      { "heading": "Integraciones", "content": "Conexiones existentes y nuevas sin duplicación." },
-      { "heading": "Despliegue", "content": "Pipeline, automatización y control de calidad." }
+      { "icon": "layers", "heading": "Estructura", "content": "Organización de código, componentes y dependencias." },
+      { "icon": "speed", "heading": "Rendimiento", "content": "Carga, renderizado y experiencia de usuario." },
+      { "icon": "build", "heading": "Mantenibilidad", "content": "Claridad para que un equipo pueda trabajar sin fricción." },
+      { "icon": "article", "heading": "Contenido", "content": "Estructura de datos, gestión y publicación." },
+      { "icon": "integration_instructions", "heading": "Integraciones", "content": "Conexiones existentes y nuevas sin duplicación." },
+      { "icon": "rocket_launch", "heading": "Despliegue", "content": "Pipeline, automatización y control de calidad." }
     ]
   },
   {
@@ -90,12 +90,12 @@
       "«No sabemos qué está causando la lentitud»"
     ],
     "areas": [
-      { "heading": "Render crítico", "content": "CSS crítico y orden de carga para contenido above-the-fold." },
-      { "heading": "Imágenes", "content": "Compresión, formatos modernos y dimensionado correcto." },
-      { "heading": "JS", "content": "Reducir, dividir, diferir. Menos trabajo en main thread." },
-      { "heading": "Fuentes", "content": "Carga eficiente y fallback para evitar CLS." },
-      { "heading": "Caching", "content": "Políticas y headers para repetir carga más rápido." },
-      { "heading": "Infra/Entrega", "content": "CDN, compresión, HTTP/2/3 cuando aplica." }
+      { "icon": "visibility", "heading": "Render crítico", "content": "CSS crítico y orden de carga para contenido above-the-fold." },
+      { "icon": "image", "heading": "Imágenes", "content": "Compresión, formatos modernos y dimensionado correcto." },
+      { "icon": "code", "heading": "JS", "content": "Reducir, dividir, diferir. Menos trabajo en main thread." },
+      { "icon": "text_fields", "heading": "Fuentes", "content": "Carga eficiente y fallback para evitar CLS." },
+      { "icon": "cached", "heading": "Caching", "content": "Políticas y headers para repetir carga más rápido." },
+      { "icon": "cloud_queue", "heading": "Infra/Entrega", "content": "CDN, compresión, HTTP/2/3 cuando aplica." }
     ]
   },
   {
@@ -123,12 +123,12 @@
       "«Dependemos de procesos manuales que solo una persona sabe»"
     ],
     "areas": [
-      { "heading": "Frontend", "content": "Interfaz funcional, responsive y preparada para crecer." },
-      { "heading": "Backend", "content": "API, lógica de negocio y manejo de datos." },
-      { "heading": "Base de datos", "content": "Esquema, consultas y migraciones controladas." },
-      { "heading": "Autenticación", "content": "Login, roles, sesiones y permisos." },
-      { "heading": "Integraciones", "content": "Conexiones con servicios externos documentadas." },
-      { "heading": "Despliegue", "content": "Pipeline, entorno y estrategia de publicación." }
+      { "icon": "devices", "heading": "Frontend", "content": "Interfaz funcional, responsive y preparada para crecer." },
+      { "icon": "storage", "heading": "Backend", "content": "API, lógica de negocio y manejo de datos." },
+      { "icon": "database", "heading": "Base de datos", "content": "Esquema, consultas y migraciones controladas." },
+      { "icon": "verified_user", "heading": "Autenticación", "content": "Login, roles, sesiones y permisos." },
+      { "icon": "link", "heading": "Integraciones", "content": "Conexiones con servicios externos documentadas." },
+      { "icon": "publish", "heading": "Despliegue", "content": "Pipeline, entorno y estrategia de publicación." }
     ]
   },
   {
@@ -156,12 +156,12 @@
       "«La velocidad de entrega cae cada mes»"
     ],
     "areas": [
-      { "heading": "Boundaries", "content": "Separación clara por dominio / módulos para reducir acoplamiento." },
-      { "heading": "Contratos", "content": "Interfaces y responsabilidades explícitas, menos ambigüedad." },
-      { "heading": "Observabilidad mínima", "content": "Eventos clave para entender fallos y cuellos." },
-      { "heading": "Deuda visible", "content": "Backlog técnico priorizado, no deuda escondida." },
-      { "heading": "Estrategia de migración", "content": "Strangler pattern / fases para modernizar sin apagar producción." },
-      { "heading": "Documentación útil", "content": "ADRs breves + decisiones y tradeoffs (sin PDFs eternos)." }
+      { "icon": "border_style", "heading": "Boundaries", "content": "Separación clara por dominio / módulos para reducir acoplamiento." },
+      { "icon": "contract", "heading": "Contratos", "content": "Interfaces y responsabilidades explícitas, menos ambigüedad." },
+      { "icon": "monitor_heart", "heading": "Observabilidad mínima", "content": "Eventos clave para entender fallos y cuellos." },
+      { "icon": "warning", "heading": "Deuda visible", "content": "Backlog técnico priorizado, no deuda escondida." },
+      { "icon": "transform", "heading": "Estrategia de migración", "content": "Strangler pattern / fases para modernizar sin apagar producción." },
+      { "icon": "description", "heading": "Documentación útil", "content": "ADRs breves + decisiones y tradeoffs (sin PDFs eternos)." }
     ]
   },
   {
@@ -189,12 +189,12 @@
       "«Dependemos de que nadie nos ataque»"
     ],
     "areas": [
-      { "heading": "Headers", "content": "CSP, HSTS, X-Content-Type-Options, Referrer-Policy y más." },
-      { "heading": "Cookies", "content": "Secure, HttpOnly, SameSite y caducidad razonable." },
-      { "heading": "CORS", "content": "Orígenes explícitos. Menos exposición, menos sorpresas." },
-      { "heading": "Dependencias", "content": "Revisión y actualización con criterios (no a ciegas)." },
-      { "heading": "Autenticación (si aplica)", "content": "Sesiones, expiración, manejo de tokens y rutas críticas." },
-      { "heading": "Registro mínimo", "content": "Eventos clave para rastrear abuso y fallos sin invadir privacidad." }
+      { "icon": "code", "heading": "Headers", "content": "CSP, HSTS, X-Content-Type-Options, Referrer-Policy y más." },
+      { "icon": "lock", "heading": "Cookies", "content": "Secure, HttpOnly, SameSite y caducidad razonable." },
+      { "icon": "public", "heading": "CORS", "content": "Orígenes explícitos. Menos exposición, menos sorpresas." },
+      { "icon": "widgets", "heading": "Dependencias", "content": "Revisión y actualización con criterios (no a ciegas)." },
+      { "icon": "verified_user", "heading": "Autenticación (si aplica)", "content": "Sesiones, expiración, manejo de tokens y rutas críticas." },
+      { "icon": "receipt", "heading": "Registro mínimo", "content": "Eventos clave para rastrear abuso y fallos sin invadir privacidad." }
     ]
   }
 ]

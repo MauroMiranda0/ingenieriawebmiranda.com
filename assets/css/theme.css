@@ -1276,6 +1276,63 @@
   color: #fff;
 }
 
+/* Area cards — border cutout (6 cards template) */
+.area-card {
+  position: relative;
+  border: 1px solid #e2e8f0;
+  padding: 2rem 1.25rem 1.25rem;
+  background: #fff;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.area-card:hover {
+  border-color: #0b2a4a;
+  box-shadow: 0 4px 16px -6px rgba(11, 42, 74, 0.1);
+}
+
+.area-card-icon {
+  position: absolute;
+  top: -16px;
+  left: 1.25rem;
+  background: #fff;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.area-card-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #0b2a4a;
+  color: #fff;
+  font-size: 16px;
+}
+
+.area-card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0b2a4a;
+}
+
+.area-card-desc {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+@media (hover: none) {
+  .area-card:active {
+    border-color: #0b2a4a;
+  }
+}
 /* Why Choose Us — stepper + gallery + card grid */
 .why-stepper {
   position: relative;
