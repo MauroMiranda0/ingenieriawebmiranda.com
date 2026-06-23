@@ -1312,6 +1312,7 @@
   background: #0b2a4a;
   color: #fff;
   font-size: 16px;
+  line-height: 1;
 }
 
 .area-card-title {
@@ -1331,6 +1332,145 @@
 @media (hover: none) {
   .area-card:active {
     border-color: #0b2a4a;
+  }
+}
+/* 3-card — deliverables / benefits / signals */
+.cards-3 {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .cards-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card-3 {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.card-3.is-active {
+  background: #0b2a4a;
+  border-color: #0b2a4a;
+  z-index: 2;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.card-3-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #c8d1db;
+  line-height: 1;
+}
+
+.card-3.is-active .card-3-icon {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-3-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0b2a4a;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.card-3.is-active .card-3-title {
+  color: #fff;
+}
+
+.card-3-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+
+.card-3.is-active .card-3-text {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.card-3-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.card-3-list li {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+.card-3.is-active .card-3-list li {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.card-3-list li + li {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 0.35rem;
+}
+
+.card-3.is-active .card-3-list li + li {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.card-3-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 1.25rem;
+  background: #fff;
+  color: #0b2a4a;
+  font-size: 1.25rem;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+}
+
+.card-3-btn:hover {
+  opacity: 0.85;
+  transform: translateX(3px);
+}
+
+@media (max-width: 767px) {
+  .cards-3 {
+    gap: 0;
+  }
+
+  .card-3.is-active {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 }
 /* Why Choose Us — stepper + gallery + card grid */

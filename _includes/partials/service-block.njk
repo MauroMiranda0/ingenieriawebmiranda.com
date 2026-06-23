@@ -15,31 +15,37 @@
       </div>
     </div>
 
-    <div class="mt-12 grid md:grid-cols-3 gap-5">
-      <article class="border border-slate-200 bg-white p-6 lg:p-8">
-        <h3 class="font-display text-xl text-primary mb-4">Entregables</h3>
-        <ul class="space-y-2 text-sm text-slate-600">
-          {% for item in s.deliverables %}
+    <div class="cards-3 mt-12">
+      <div class="card-3">
+        <span class="card-3-icon material-icons" aria-hidden="true">assignment</span>
+        <h3 class="card-3-title">Entregables</h3>
+        <p class="card-3-text">{{ s.deliverables[0] }}</p>
+        <ul class="card-3-list">
+          {% for item in s.deliverables %} {% if not loop.first %}
           <li>{{ item }}</li>
-          {% endfor %}
+          {% endif %} {% endfor %}
         </ul>
-      </article>
-      <article class="border border-slate-200 bg-white p-6 lg:p-8">
-        <h3 class="font-display text-xl text-primary mb-4">Beneficios</h3>
-        <ul class="space-y-2 text-sm text-slate-600">
-          {% for item in s.benefits %}
+      </div>
+      <div class="card-3 is-active">
+        <span class="card-3-icon material-icons" aria-hidden="true">trending_up</span>
+        <h3 class="card-3-title">Beneficios</h3>
+        <p class="card-3-text">{{ s.benefits[0] }}</p>
+        <ul class="card-3-list">
+          {% for item in s.benefits %} {% if not loop.first %}
           <li>{{ item }}</li>
-          {% endfor %}
+          {% endif %} {% endfor %}
         </ul>
-      </article>
-      <article class="border border-slate-200 bg-white p-6 lg:p-8">
-        <h3 class="font-display text-xl text-primary mb-4">Señales</h3>
-        <ul class="space-y-2 text-sm text-slate-600">
-          {% for item in s.signals %}
+      </div>
+      <div class="card-3">
+        <span class="card-3-icon material-icons" aria-hidden="true">warning</span>
+        <h3 class="card-3-title">Señales</h3>
+        <p class="card-3-text">{{ s.signals[0] }}</p>
+        <ul class="card-3-list">
+          {% for item in s.signals %} {% if not loop.first %}
           <li>{{ item }}</li>
-          {% endfor %}
+          {% endif %} {% endfor %}
         </ul>
-      </article>
+      </div>
     </div>
 
     <div class="mt-10">

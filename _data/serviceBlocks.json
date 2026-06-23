@@ -124,8 +124,8 @@
     ],
     "areas": [
       { "icon": "devices", "heading": "Frontend", "content": "Interfaz funcional, responsive y preparada para crecer." },
-      { "icon": "storage", "heading": "Backend", "content": "API, lógica de negocio y manejo de datos." },
-      { "icon": "database", "heading": "Base de datos", "content": "Esquema, consultas y migraciones controladas." },
+      { "icon": "developer_mode", "heading": "Backend", "content": "API, lógica de negocio y manejo de datos." },
+      { "icon": "storage", "heading": "Base de datos", "content": "Esquema, consultas y migraciones controladas." },
       { "icon": "verified_user", "heading": "Autenticación", "content": "Login, roles, sesiones y permisos." },
       { "icon": "link", "heading": "Integraciones", "content": "Conexiones con servicios externos documentadas." },
       { "icon": "publish", "heading": "Despliegue", "content": "Pipeline, entorno y estrategia de publicación." }
@@ -157,7 +157,7 @@
     ],
     "areas": [
       { "icon": "border_style", "heading": "Boundaries", "content": "Separación clara por dominio / módulos para reducir acoplamiento." },
-      { "icon": "contract", "heading": "Contratos", "content": "Interfaces y responsabilidades explícitas, menos ambigüedad." },
+      { "icon": "assignment", "heading": "Contratos", "content": "Interfaces y responsabilidades explícitas, menos ambigüedad." },
       { "icon": "monitor_heart", "heading": "Observabilidad mínima", "content": "Eventos clave para entender fallos y cuellos." },
       { "icon": "warning", "heading": "Deuda visible", "content": "Backlog técnico priorizado, no deuda escondida." },
       { "icon": "transform", "heading": "Estrategia de migración", "content": "Strangler pattern / fases para modernizar sin apagar producción." },
