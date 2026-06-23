@@ -1,0 +1,8 @@
+[
+  { "label": "Servicios", "href": "/servicios/", "type": "link" },
+  { "label": "Casos", "href": "/casos/", "type": "link" },
+  { "label": "Método", "href": "/metodo/", "type": "link" },
+  { "label": "Recursos", "href": "/recursos/", "type": "link" },
+  { "label": "Proyectos", "href": "/proyectos/", "type": "link" },
+  { "label": "Solicitar diagnóstico", "href": "/contacto/", "type": "cta" }
+]
