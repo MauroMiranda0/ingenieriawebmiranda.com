@@ -96,22 +96,10 @@ twitterDescription: "Diagnóstico técnico, modernización web, performance, seg
             Mauricio Vergara · Ingeniería Web Miranda
           </div>
         </div>
-
-        <div class="why-bottom-cards">
-          {% for s in serviceBlocks %}
-          <article class="why-card">
-            <img class="why-card-img" src="/assets/img/{{ s.image }}" alt="{{ s.title }}" loading="lazy" />
-            <div class="why-card-body">
-              <h3 class="why-card-title">{{ s.title }}</h3>
-              <p class="why-card-desc">{{ s.description }}</p>
-              <a class="why-card-btn" href="/contacto/" aria-label="Solicitar {{ s.title }}">›</a>
-            </div>
-          </article>
-          {% endfor %}
-        </div>
       </div>
     </div>
   </section>
+  {% for s in serviceBlocks %} {% include "partials/service-block.njk" %} {% endfor %}
 
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6 text-center">
