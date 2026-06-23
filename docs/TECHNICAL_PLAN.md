@@ -119,6 +119,7 @@ jsonld: |                       # solo en home y contacto
 | `tailwind.config.js` en raíz | Baja | Formato Node.js inactivo (sin build process); puede confundir. Eliminar o migrar |
 | Formspree endpoint visible | Info | `xpqjevwp` visible en el HTML del formulario. Aceptable para Formspree (es público por diseño) |
 | OG images genéricas | Media | 16 páginas usan `og-cover.png`. Ideal: imágenes específicas por sección |
+| Cache-buster manual en `head.njk` | Baja | Al subir cambios a producción, el navegador sirve CSS/JS cacheados. Hay que incrementar `v=YYYYMMDD` en las URLs de `theme.css` y `tailwind-config.js` en `_includes/partials/head.njk`. Alternativa: implementar hash automático vía Eleventy o migrar a build process de CSS |
 
 ---
 

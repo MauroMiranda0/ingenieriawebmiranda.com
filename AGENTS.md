@@ -58,6 +58,7 @@ jsonld: |                                    # only for home and contacto
 |-------|------|-----|
 | `title: "Metodo"` (missing accent) | `metodo/index.njk:3` | Change to `"Método \| Ingeniería Web Miranda"` |
 | `.skip-link` defined in CSS but not in `base.njk` | `_includes/layouts/base.njk` | Implement skip-link before `{{ content \| safe }}` |
+| Cache stale after deploy | `_includes/partials/head.njk` | Update `v=YYYYMMDD` in `theme.css` and `tailwind-config.js` URLs before each deploy to force browser refresh |
 
 ## Formatting quirks
 
