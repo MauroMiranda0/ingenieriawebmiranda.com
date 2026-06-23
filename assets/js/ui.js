@@ -34,50 +34,6 @@
 })();
 
 (() => {
-  const dialogTriggers = document.querySelectorAll("[data-dialog-target]");
-  if (!dialogTriggers.length) return;
-
-  const closeDialog = (dialog) => {
-    if (dialog?.open) {
-      dialog.close();
-    }
-  };
-
-  dialogTriggers.forEach((trigger) => {
-    const targetId = trigger.getAttribute("data-dialog-target");
-    const dialog = targetId ? document.getElementById(targetId) : null;
-    if (!dialog || typeof dialog.showModal !== "function") return;
-
-    trigger.addEventListener("click", (event) => {
-      if (trigger.tagName === "A") {
-        event.preventDefault();
-      }
-
-      dialog.showModal();
-    });
-  });
-
-  document.querySelectorAll(".blog-card-dialog").forEach((dialog) => {
-    dialog.addEventListener("click", (event) => {
-      const rect = dialog.getBoundingClientRect();
-      const isInside =
-        rect.top <= event.clientY &&
-        event.clientY <= rect.top + rect.height &&
-        rect.left <= event.clientX &&
-        event.clientX <= rect.left + rect.width;
-
-      if (!isInside) {
-        closeDialog(dialog);
-      }
-    });
-
-    dialog.querySelectorAll("[data-dialog-close]").forEach((button) => {
-      button.addEventListener("click", () => closeDialog(dialog));
-    });
-  });
-})();
-
-(() => {
   const cardLinks = document.querySelectorAll(".fix-btn-blog .trigger[href]");
   if (!cardLinks.length) return;
 

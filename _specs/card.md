@@ -37,47 +37,6 @@ Sobre fondos ligeramente coloreados (`bg-slate-50`). Fondo semitransparente. Hov
 
 ---
 
-### Card Link
-
-Card completa navegable. Usa `<a>` en lugar de `<article>`.
-
-```html
-<a
-  class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block"
-  href="/servicios/diagnostico-tecnico/">
-  <!-- contenido -->
-</a>
-```
-
-**Uso:** Directorio de servicios en home (`/`).
-
----
-
-### Card Link Dark Banner
-
-Variante agrupada para directorios cortos de 4 elementos dentro de un único panel oscuro. Inspirada en referencias de banner horizontal con íconos blancos y columnas, adaptada a la identidad blueprint: esquinas rectas, fondo `primary`, capas técnicas sutiles y contraste alto.
-
-```html
-<div class="services-tech-banner">
-  <a class="services-tech-item" href="/servicios/diagnostico-tecnico/">
-    <span class="material-icons" aria-hidden="true">travel_explore</span>
-    <h3>Diagnóstico técnico</h3>
-    <p>Claridad, riesgos y próximos pasos antes de construir.</p>
-  </a>
-</div>
-```
-
-**Uso:** Resumen de servicios en home (`#servicios`).
-
-**Reglas específicas:**
-
-- El panel completo no usa `border-radius`, aunque la referencia visual tenga esquinas redondeadas.
-- Cada ítem mantiene semántica de enlace porque navega a una página profunda.
-- Los íconos y textos se muestran en blanco sobre fondo oscuro.
-- El fondo puede usar pseudo-elementos para crear capas visuales, sin imágenes externas ni estilos inline.
-
----
-
 ### Card Blog Post
 
 Card de contenido con imagen, acción secundaria y modal de entregables. Reutiliza el patrón `zoomimg` / `zoom-wrap` / `fixico` / `fadef` para la imagen y `fix-btn-blog` / `istria-btn` / `istria-over` / `istria-line` para el CTA. La lupa abre un modal con el detalle de entregables en lugar de agrandar la imagen.
@@ -213,6 +172,37 @@ Sin hover. Para contenido informativo sin acción directa.
 | `primary`                    | `text-primary` en títulos, `hover:border-primary/40` |
 | `background-light` / `white` | `bg-white`, `bg-white/70`                            |
 | `border-slate-200`           | borde base (accent)                                  |
+
+---
+
+---
+
+### Service Grid Card (hero image with gradient overlay)
+
+Variante para los 6 servicios en `/servicios/`. Cards con imagen de fondo, overlay degradado del color primario en la parte inferior, y contenido alineado abajo. Inspirado en diseño de tarjetas de producto con imagen de portada.
+
+```html
+<article class="service-card" style="--card-bg: url(/assets/img/servicio.png)">
+  <div class="service-card-overlay"></div>
+  <div class="service-card-badge">Diagnóstico</div>
+  <div class="service-card-content">
+    <span class="material-icons service-card-icon" aria-hidden="true">travel_explore</span>
+    <h3 class="service-card-title">Diagnóstico técnico</h3>
+    <p class="service-card-desc">Claridad, riesgos y próximos pasos.</p>
+    <a class="service-card-btn" href="/servicios/diagnostico-tecnico/">Ver servicio</a>
+  </div>
+</article>
+```
+
+**Reglas específicas:**
+- Sin `border-radius` en ningún elemento.
+- Sin bordes ni contornos en la card.
+- La imagen de fondo se setea via `--card-bg` con `background-size: cover`.
+- Overlay degradado inferior: `linear-gradient(to top, rgba(11,42,74,1) 0%, rgba(11,42,74,0.9) 40%, rgba(11,42,74,0.4) 70%, transparent 100%)` con `height: 70%`.
+- Badge en esquina superior derecha con fondo semitransparente.
+- Contenido alineado abajo (flex column, justify-content: flex-end).
+- Color de texto blanco sobre el overlay.
+- En `lg+` grid de 3 columnas uniformes.
 
 ---
 

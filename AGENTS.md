@@ -10,6 +10,7 @@ Static site (Eleventy + Nunjucks), Tailwind via CDN, vanilla JS, 18 pages.
 | `npm run build` | Generate static site to `_site/` |
 | `npm run format` | Prettier on `*.{njk,css,js}` |
 | `npm run format:check` | Prettier check (no write) |
+| `node scripts/preview-site.mjs` | Preview `_site/` at `http://localhost:8081` |
 
 Run `npm run build` and verify zero errors before finishing any task.
 
@@ -19,7 +20,7 @@ Run `npm run build` and verify zero errors before finishing any task.
 - Legal pages (`/legal/*`) set `navStyle: "legal"`; all others omit it
 - **No JS framework** (React, Vue, etc.) — constitution constraint
 - **No border-radius on cards** — constitution constraint
-- Tailwind is CDN-only (`tailwind.config.js` is a design-token reference, not used by a build)
+- Tailwind is CDN-only (design tokens in `assets/js/tailwind-config.js`, not used by a build)
 - All CSS custom classes in `assets/css/theme.css`
 - All JS in `assets/js/ui.js` (mobile menu toggle + copyright year)
 

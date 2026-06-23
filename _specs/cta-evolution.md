@@ -1,9 +1,14 @@
 # CTA Evolution
 
-**Archivo fuente:** `index.njk`, `assets/css/theme.css`, `assets/img/logo-sphere.png`
+**Archivo fuente:** `index.njk`, `servicios/index.njk`, `assets/css/theme.css`, `assets/img/logo-sphere.png`
 
-Banner promocional final del home para convertir visitas en solicitudes de diagnostico.
+Banner promocional para convertir visitas en solicitudes de diagnostico.
 Replica el lenguaje visual de una pieza tipo anuncio: contenedor oscuro, recorte superior semicircular, esfera del logotipo flotante y contenido centrado.
+
+## Uso
+
+- **Home** (`index.njk`): seccion `#cta-final` al final de la pagina, con titulo generico de conversion.
+- **Servicios** (`servicios/index.njk`): seccion "Próximo paso" al final del listado de servicios, con contenido especifico del contexto de servicios.
 
 ---
 

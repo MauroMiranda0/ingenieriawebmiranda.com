@@ -1,122 +1,108 @@
 ---
 layout: layouts/base.njk
 title: "Servicios | Ingeniería Web Miranda"
-description: "Servicios de ingeniería web para transformación digital: diagnóstico técnico, modernización web, performance y sistemas web."
+description: "Servicios de ingeniería web para transformación digital: diagnóstico técnico, modernización web, performance, seguridad, arquitectura y sistemas web."
 ogTitle: "Servicios de ingeniería web | Ingeniería Web Miranda"
-ogDescription: "Diagnóstico técnico, modernización web, performance y sistemas. Entregables claros, decisiones documentadas."
+ogDescription: "Diagnóstico técnico, modernización web, performance, seguridad, arquitectura y sistemas. Entregables claros, decisiones documentadas."
 ogImage: "og-cover.png"
 twitterTitle: "Servicios de ingeniería web | Ingeniería Web Miranda"
-twitterDescription: "Diagnóstico técnico, modernización web, performance y sistemas. Entregables claros, decisiones documentadas."
+twitterDescription: "Diagnóstico técnico, modernización web, performance, seguridad, arquitectura y sistemas. Entregables claros, decisiones documentadas."
 ---
 
-<main id="contenido-principal" class="pt-24">
-  <section class="py-16 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-6">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">Servicios</p>
-      <h1 class="mt-3 font-display text-4xl md:text-6xl text-primary">Ingeniería web para transformación digital.</h1>
-      <p class="mt-4 text-lg text-slate-600 max-w-3xl">
+<main id="contenido-principal" class="pt-12">
+  <section
+    class="relative py-24 flex items-center min-h-[380px] md:min-h-[440px] overflow-hidden bg-primary network-pattern">
+    <div class="absolute top-1/4 -left-20 w-96 h-96 bg-white/5 gradient-blur"></div>
+    <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-white/60">Servicios</p>
+      <h1 class="mt-3 font-display text-4xl md:text-6xl text-white">Ingeniería web para transformación digital.</h1>
+      <p class="mt-4 text-lg text-white/80 max-w-3xl mx-auto">
         Soluciones digitales desde la ingeniería: claridad de alcance, decisiones defendibles y ejecución.
       </p>
-      <p class="mt-2 text-sm text-slate-500 max-w-3xl">
-        Si necesitas “una web”, hacemos diagnóstico primero. Si necesitas un sistema, diseñamos la ruta.
+      <p class="mt-2 text-sm text-white/60 max-w-3xl mx-auto">
+        Si necesitas "una web", hacemos diagnóstico primero. Si necesitas un sistema, diseñamos la ruta.
       </p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-6">
+        <a class="btn btn-white" href="/contacto/">Solicitar diagnóstico</a>
+        <a class="btn btn-ghost" href="/casos/">Ver casos</a>
+      </div>
+    </div>
+  </section>
 
-      <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+  <!-- Why Choose Us — top -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-400 text-center">Nuestro proceso</p>
+      <h2 class="mt-2 font-display text-3xl md:text-4xl text-primary text-center">Del análisis a la transformación</h2>
+
+      <div class="why-stepper mt-10">
+        <div class="why-stepper-line"></div>
+        <div class="why-stepper-track">
+          <div class="why-step">
+            <span class="why-step-label">Diagnóstico</span>
+            <div class="why-dot"></div>
+          </div>
+          <div class="why-step is-active">
+            <span class="why-step-label">Transformación</span>
+            <div class="why-dot"></div>
+          </div>
+          <div class="why-step">
+            <span class="why-step-label">Escalabilidad</span>
+            <div class="why-dot"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div class="why-gallery">
+          <img src="/assets/img/diagnostico.png" alt="Diagnóstico técnico" class="why-gallery-back" loading="lazy" />
+          <img src="/assets/img/modernizacion.png" alt="Modernización web" class="why-gallery-front" loading="lazy" />
+        </div>
+        <div>
+          <p class="text-base text-slate-600 leading-relaxed">
+            Cada proyecto comienza con un diagnóstico técnico que mapea riesgos, oportunidades y deuda acumulada. Sin
+            adivinanzas ni suposiciones: datos, decisiones documentadas y un backlog claro para avanzar.
+          </p>
+          <p class="mt-4 text-base text-slate-600 leading-relaxed">
+            A partir de ese baseline, diseñamos una ruta de transformación progresiva —modernización, performance,
+            arquitectura— que no detiene tu operación. El resultado: un sistema que escala sin reescribir todo cada seis
+            meses.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6 servicios text -->
+      <div class="mt-16 text-center">
+        <h2 class="font-display text-3xl md:text-4xl text-primary">6 servicios, un enfoque</h2>
+        <div class="mt-4 max-w-2xl mx-auto space-y-4">
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Cada servicio está diseñado como un módulo independiente pero conectado. Puedes empezar por diagnosticar,
+            saltar a optimizar performance, o reforzar seguridad —la ruta la define tu contexto, no un roadmap
+            prefabricado.
+          </p>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Todos comparten el mismo estándar: alcance documentado, decisiones trazables, entregables operativos. Sin
+            promesas abstractas, sin depender de una sola persona.
+          </p>
+        </div>
+        <div class="mt-4 text-xs font-semibold tracking-[0.12em] uppercase text-slate-400">
+          Dirección de Proyectos · Ingeniería Web Miranda
+        </div>
+      </div>
+    </div>
+  </section>
+  {% for s in serviceBlocks %} {% include "partials/service-block.njk" %} {% endfor %}
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-primary mb-4">¿No sabes por cuál empezar?</h2>
+      <p class="text-base text-slate-600 max-w-2xl mx-auto mb-8">
+        Un diagnóstico técnico resuelve esa pregunta primero. Evaluamos tu situación y te recomendamos la ruta sin
+        compromiso.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
         <a class="btn btn-primary" href="/contacto/">Solicitar diagnóstico</a>
-        <a class="btn btn-outline" href="/casos/">Ver casos</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-16">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-5">
-        <article
-          class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-          <p class="text-[11px] tracking-[0.12em] uppercase text-slate-500">Diagnóstico</p>
-          <h3 class="mt-3 text-xl font-display text-primary">Diagnóstico técnico</h3>
-          <p class="mt-3 text-sm text-slate-600">
-            Claridad, riesgos y próximos pasos. Te entregamos un panorama defendible antes de construir.
-          </p>
-          <a
-            class="mt-5 inline-flex hero-link-tech text-sm font-medium text-primary"
-            href="/servicios/diagnostico-tecnico/">
-            Ver servicio
-          </a>
-        </article>
-
-        <article
-          class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-          <p class="text-[11px] tracking-[0.12em] uppercase text-slate-500">Modernización</p>
-          <h3 class="mt-3 text-xl font-display text-primary">Modernización web</h3>
-          <p class="mt-3 text-sm text-slate-600">
-            Evolución progresiva: de “sitio” a plataforma sostenible, con bases para crecer.
-          </p>
-          <a
-            class="mt-5 inline-flex hero-link-tech text-sm font-medium text-primary"
-            href="/servicios/modernizacion-web/">
-            Ver servicio
-          </a>
-        </article>
-
-        <article
-          class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-          <p class="text-[11px] tracking-[0.12em] uppercase text-slate-500">Performance</p>
-          <h3 class="mt-3 text-xl font-display text-primary">Performance</h3>
-          <p class="mt-3 text-sm text-slate-600">
-            Optimización priorizada por impacto: velocidad percibida, estabilidad visual y experiencia fluida.
-          </p>
-          <a class="mt-5 inline-flex hero-link-tech text-sm font-medium text-primary" href="/servicios/performance/">
-            Ver servicio
-          </a>
-        </article>
-
-        <article
-          class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
-          <p class="text-[11px] tracking-[0.12em] uppercase text-slate-500">Sistemas</p>
-          <h3 class="mt-3 text-xl font-display text-primary">Sistemas web</h3>
-          <p class="mt-3 text-sm text-slate-600">Portales, dashboards e integraciones orientadas a operación real.</p>
-          <a class="mt-5 inline-flex hero-link-tech text-sm font-medium text-primary" href="/servicios/sistemas-web/">
-            Ver servicio
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-16 border-t border-b border-slate-200 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="font-display text-3xl text-primary mb-8">Cómo trabajamos</h2>
-      <div class="grid md:grid-cols-3 gap-5">
-        <article class="border border-slate-200 bg-white p-6">
-          <h3 class="font-display text-2xl text-primary mb-2">Diagnóstico</h3>
-          <p class="text-sm text-slate-600">
-            Baseline técnico y riesgos para entender qué atacar primero y qué evitar.
-          </p>
-        </article>
-        <article class="border border-slate-200 bg-white p-6">
-          <h3 class="font-display text-2xl text-primary mb-2">Plan defendible</h3>
-          <p class="text-sm text-slate-600">Roadmap priorizado y decisiones documentadas para ejecutar con criterio.</p>
-        </article>
-        <article class="border border-slate-200 bg-white p-6">
-          <h3 class="font-display text-2xl text-primary mb-2">Ejecución</h3>
-          <p class="text-sm text-slate-600">Entregables concretos y seguimiento técnico para sostener evolución.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="bg-primary text-white p-10">
-        <h2 class="font-display text-4xl mb-4">¿Quieres claridad antes de construir?</h2>
-        <p class="text-white/80 text-lg mb-8 max-w-2xl">
-          Definimos baseline, riesgos y un plan de ejecución defendible.
-        </p>
-        <a class="btn btn-white" href="/contacto/">
-          Solicitar diagnóstico
-          <span class="material-icons">arrow_forward</span>
-        </a>
+        <a class="btn btn-outline" href="/metodo/">Ver método</a>
       </div>
     </div>
   </section>

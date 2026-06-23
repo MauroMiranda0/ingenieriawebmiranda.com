@@ -129,14 +129,15 @@ jsonld: |                       # solo en home y contacto
 - [x] Corregir typo `"Metodo"` → `"Método"` en front matter de `metodo/index.njk`
 - [x] Implementar `.skip-link` en `_includes/layouts/base.njk`
 - [ ] Configurar secrets de FTP en GitHub y hacer primer deploy automatizado
-- [ ] Revisar y consolidar las dos secciones de casos en el home
+  - Pendiente: agregar `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` en GitHub repo → Settings → Secrets and variables → Actions
+- [x] Revisar y consolidar las dos secciones de casos en el home
 
 ### Corto plazo
 
 - [ ] OG images específicas por sección (performance, seguridad, casos, etc.)
-- [ ] Eliminar `tailwind.config.js` de la raíz o documentarlo claramente
-- [ ] Agregar `sitemap.xml` (puede generarse con plugin 11ty: `@11ty/eleventy-plugin-sitemap`)
-- [ ] Agregar `robots.txt`
+- [x] Eliminar `tailwind.config.js` de la raíz (no existía)
+- [x] Agregar `sitemap.xml` (estático, con las 18 URLs del sitio)
+- [x] Agregar `robots.txt`
 
 ### Medio plazo
 

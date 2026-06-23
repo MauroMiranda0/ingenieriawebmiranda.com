@@ -1,0 +1,70 @@
+<section id="{{ s.id }}" class="py-20 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div>
+        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">{{ s.eyebrow }}</p>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl text-primary">{{ s.title }}</h2>
+        <p class="mt-4 text-base text-slate-600 leading-relaxed">{{ s.description }}</p>
+      </div>
+      <div class="order-first lg:order-last">
+        <img
+          src="/assets/img/{{ s.image }}"
+          alt="{{ s.title }}"
+          class="border border-slate-200 w-full"
+          loading="lazy" />
+      </div>
+    </div>
+
+    <div class="cards-3 mt-12">
+      <div class="card-3">
+        <span class="card-3-icon material-icons" aria-hidden="true">assignment</span>
+        <h3 class="card-3-title">Entregables</h3>
+        <p class="card-3-text">{{ s.deliverables[0] }}</p>
+        <ul class="card-3-list">
+          {% for item in s.deliverables %} {% if not loop.first %}
+          <li>{{ item }}</li>
+          {% endif %} {% endfor %}
+        </ul>
+      </div>
+      <div class="card-3">
+        <span class="card-3-icon material-icons" aria-hidden="true">trending_up</span>
+        <h3 class="card-3-title">Beneficios</h3>
+        <p class="card-3-text">{{ s.benefits[0] }}</p>
+        <ul class="card-3-list">
+          {% for item in s.benefits %} {% if not loop.first %}
+          <li>{{ item }}</li>
+          {% endif %} {% endfor %}
+        </ul>
+      </div>
+      <div class="card-3">
+        <span class="card-3-icon material-icons" aria-hidden="true">warning</span>
+        <h3 class="card-3-title">Señales</h3>
+        <p class="card-3-text">{{ s.signals[0] }}</p>
+        <ul class="card-3-list">
+          {% for item in s.signals %} {% if not loop.first %}
+          <li>{{ item }}</li>
+          {% endif %} {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <h3 class="font-display text-xl text-primary mb-8">Áreas que cubrimos</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        {% for area in s.areas %}
+        <div class="area-card">
+          <div class="area-card-icon">
+            <span class="area-card-dot material-icons" aria-hidden="true">{{ area.icon }}</span>
+          </div>
+          <h4 class="area-card-title">{{ area.heading }}</h4>
+          <p class="area-card-desc">{{ area.content }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="mt-10 flex">
+      <a class="btn btn-primary" href="/contacto/">Solicitar {{ s.eyebrow | lower }}</a>
+    </div>
+  </div>
+</section>

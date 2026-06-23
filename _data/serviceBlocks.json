@@ -1,0 +1,200 @@
+[
+  {
+    "id": "servicio-diagnostico-tecnico",
+    "image": "diagnostico.png",
+    "eyebrow": "Diagnóstico",
+    "title": "Diagnóstico técnico",
+    "description": "Claridad antes de construir. Riesgos, oportunidades y próximos pasos documentados.",
+    "deliverables": [
+      "Resumen ejecutivo con hallazgos clave (1–2 páginas)",
+      "Baseline técnico del estado actual",
+      "Lista priorizada de riesgos y oportunidades",
+      "Backlog inicial con estimaciones de impacto/esfuerzo",
+      "Roadmap recomendado con próximos pasos"
+    ],
+    "benefits": [
+      "Sabes por dónde empezar sin incertidumbre",
+      "Evitas retrabajos costosos",
+      "Alineas expectativas con el equipo técnico",
+      "Traduces incertidumbre en backlog priorizado"
+    ],
+    "signals": [
+      "«No sabemos por dónde empezar»",
+      "«Las estimaciones siempre fallan»",
+      "«Hay riesgos técnicos que nadie ha documentado»"
+    ],
+    "areas": [
+      { "icon": "account_tree", "heading": "Arquitectura", "content": "Estructura, componentes, dependencias y decisiones técnicas vigentes." },
+      { "icon": "speed", "heading": "Performance", "content": "Tiempos de carga, cuellos de botella y oportunidades de optimización." },
+      { "icon": "shield", "heading": "Seguridad", "content": "Superficie de ataque, configuración y riesgos críticos." },
+      { "icon": "code", "heading": "Código", "content": "Calidad, mantenibilidad y deuda técnica acumulada." },
+      { "icon": "dns", "heading": "Infraestructura", "content": "Hosting, despliegue, escalabilidad y costos operativos." },
+      { "icon": "sync_alt", "heading": "Procesos", "content": "Flujo de trabajo, revisión y barreras de entrega." }
+    ]
+  },
+  {
+    "id": "servicio-modernizacion-web",
+    "image": "modernizacion.png",
+    "eyebrow": "Modernización",
+    "title": "Modernización web",
+    "description": "De sitio a plataforma sostenible. Sin reescribir todo, sin perder lo que funciona.",
+    "deliverables": [
+      "Diagnóstico de estructura actual y deuda técnica",
+      "Plan de modernización progresiva por fases",
+      "Reestructuración de base técnica sin romper operación",
+      "Migración controlada de contenidos y funcionalidades",
+      "Documentación de arquitectura resultante"
+    ],
+    "benefits": [
+      "El sitio existente sigue operando durante la transformación",
+      "Solo se cambia lo que justifica cambio técnico",
+      "El equipo puede trabajar sin fricción después de la intervención",
+      "Base preparada para escalar sin rehacer cada seis meses"
+    ],
+    "signals": [
+      "«El sitio creció sin control»",
+      "«Hacer cambios toma semanas»",
+      "«El código legacy frena cualquier evolución»"
+    ],
+    "areas": [
+      { "icon": "layers", "heading": "Estructura", "content": "Organización de código, componentes y dependencias." },
+      { "icon": "speed", "heading": "Rendimiento", "content": "Carga, renderizado y experiencia de usuario." },
+      { "icon": "build", "heading": "Mantenibilidad", "content": "Claridad para que un equipo pueda trabajar sin fricción." },
+      { "icon": "article", "heading": "Contenido", "content": "Estructura de datos, gestión y publicación." },
+      { "icon": "integration_instructions", "heading": "Integraciones", "content": "Conexiones existentes y nuevas sin duplicación." },
+      { "icon": "rocket_launch", "heading": "Despliegue", "content": "Pipeline, automatización y control de calidad." }
+    ]
+  },
+  {
+    "id": "servicio-performance",
+    "image": "optimization.png",
+    "eyebrow": "Performance",
+    "title": "Performance & Core Web Vitals",
+    "description": "Reducimos fricción de carga e interacción. Mejor experiencia. Mejor conversión.",
+    "deliverables": [
+      "Baseline de performance (Lighthouse + datos de campo si existen)",
+      "Lista priorizada de oportunidades por impacto/esfuerzo",
+      "Performance budget con límites de JS/CSS/imagen",
+      "Plan de optimización por etapas",
+      "Checklist de regresión (antes/después)"
+    ],
+    "benefits": [
+      "Carga rápida en dispositivos reales, no solo en laboratorio",
+      "Mejora de conversión al remover fricción de interacción",
+      "Equipo con criterios claros para no degradar con el tiempo",
+      "Cambios trazables, no optimización a ciegas"
+    ],
+    "signals": [
+      "«El sitio se siente lento aunque carga»",
+      "«Las métricas de CWV están en rojo»",
+      "«No sabemos qué está causando la lentitud»"
+    ],
+    "areas": [
+      { "icon": "visibility", "heading": "Render crítico", "content": "CSS crítico y orden de carga para contenido above-the-fold." },
+      { "icon": "image", "heading": "Imágenes", "content": "Compresión, formatos modernos y dimensionado correcto." },
+      { "icon": "code", "heading": "JS", "content": "Reducir, dividir, diferir. Menos trabajo en main thread." },
+      { "icon": "text_fields", "heading": "Fuentes", "content": "Carga eficiente y fallback para evitar CLS." },
+      { "icon": "cached", "heading": "Caching", "content": "Políticas y headers para repetir carga más rápido." },
+      { "icon": "cloud_queue", "heading": "Infra/Entrega", "content": "CDN, compresión, HTTP/2/3 cuando aplica." }
+    ]
+  },
+  {
+    "id": "servicio-sistemas-web",
+    "image": "sistemas.png",
+    "eyebrow": "Sistemas",
+    "title": "Sistemas web",
+    "description": "Portales, dashboards e integraciones listos para operar y evolucionar.",
+    "deliverables": [
+      "Sistema web funcional (portal, dashboard, catálogo, etc.)",
+      "Documentación técnica de arquitectura y decisiones",
+      "Integraciones con servicios existentes documentadas",
+      "Despliegue automatizado (CI/CD básico)",
+      "Guía operativa para el equipo"
+    ],
+    "benefits": [
+      "Sistema que no depende de una sola persona para operar",
+      "Cambios sin regresión inesperada",
+      "Operación automatizada sin supervisión constante",
+      "Decisiones documentadas para que el equipo evolucione"
+    ],
+    "signals": [
+      "«Cualquier cambio rompe algo»",
+      "«Las integraciones son una caja negra»",
+      "«Dependemos de procesos manuales que solo una persona sabe»"
+    ],
+    "areas": [
+      { "icon": "devices", "heading": "Frontend", "content": "Interfaz funcional, responsive y preparada para crecer." },
+      { "icon": "developer_mode", "heading": "Backend", "content": "API, lógica de negocio y manejo de datos." },
+      { "icon": "storage", "heading": "Base de datos", "content": "Esquema, consultas y migraciones controladas." },
+      { "icon": "verified_user", "heading": "Autenticación", "content": "Login, roles, sesiones y permisos." },
+      { "icon": "link", "heading": "Integraciones", "content": "Conexiones con servicios externos documentadas." },
+      { "icon": "publish", "heading": "Despliegue", "content": "Pipeline, entorno y estrategia de publicación." }
+    ]
+  },
+  {
+    "id": "servicio-arquitectura",
+    "image": "debt.png",
+    "eyebrow": "Arquitectura",
+    "title": "Arquitectura & Modernización",
+    "description": "Reducimos deuda técnica sin detener operación. Diseñamos un camino defendible para escalar.",
+    "deliverables": [
+      "Mapa del sistema (componentes, flujos, riesgos)",
+      "Roadmap técnico por fases (impacto / esfuerzo / riesgo)",
+      "Decisiones de arquitectura documentadas (ADR simple)",
+      "Plan de refactor defendible (qué, por qué, cuándo)",
+      "Lineamientos mínimos: estructura, naming, boundaries"
+    ],
+    "benefits": [
+      "El equipo entiende qué depende de qué",
+      "Los cambios se hacen con control de regresión",
+      "La velocidad de entrega se recupera progresivamente",
+      "Deuda técnica visible, no escondida"
+    ],
+    "signals": [
+      "«Cada cambio genera regresión inesperada»",
+      "«Nadie sabe qué depende de qué»",
+      "«La velocidad de entrega cae cada mes»"
+    ],
+    "areas": [
+      { "icon": "border_style", "heading": "Boundaries", "content": "Separación clara por dominio / módulos para reducir acoplamiento." },
+      { "icon": "assignment", "heading": "Contratos", "content": "Interfaces y responsabilidades explícitas, menos ambigüedad." },
+      { "icon": "monitor_heart", "heading": "Observabilidad mínima", "content": "Eventos clave para entender fallos y cuellos." },
+      { "icon": "warning", "heading": "Deuda visible", "content": "Backlog técnico priorizado, no deuda escondida." },
+      { "icon": "transform", "heading": "Estrategia de migración", "content": "Strangler pattern / fases para modernizar sin apagar producción." },
+      { "icon": "description", "heading": "Documentación útil", "content": "ADRs breves + decisiones y tradeoffs (sin PDFs eternos)." }
+    ]
+  },
+  {
+    "id": "servicio-seguridad",
+    "image": "security.png",
+    "eyebrow": "Seguridad",
+    "title": "Seguridad & DevSecOps",
+    "description": "Reducimos superficie de ataque. Endurecemos la entrega. Priorizamos riesgos reales.",
+    "deliverables": [
+      "Checklist OWASP Top 10 aplicado al contexto",
+      "Hardening básico (headers, cookies, CORS, TLS cuando aplica)",
+      "Revisión de dependencias (riesgos + acciones)",
+      "Recomendaciones priorizadas (impacto / esfuerzo)",
+      "Guía operativa: lo mínimo para sostener seguridad"
+    ],
+    "benefits": [
+      "Riesgos reales identificados y mitigados",
+      "Equipo con controles mínimos integrados al ciclo de entrega",
+      "Sin depender de «ojalá no pase nada»",
+      "Seguridad sin romper UX ni operación"
+    ],
+    "signals": [
+      "«No sabemos qué tan expuestos estamos»",
+      "«La seguridad es un pendiente que nunca se atiende»",
+      "«Dependemos de que nadie nos ataque»"
+    ],
+    "areas": [
+      { "icon": "code", "heading": "Headers", "content": "CSP, HSTS, X-Content-Type-Options, Referrer-Policy y más." },
+      { "icon": "lock", "heading": "Cookies", "content": "Secure, HttpOnly, SameSite y caducidad razonable." },
+      { "icon": "public", "heading": "CORS", "content": "Orígenes explícitos. Menos exposición, menos sorpresas." },
+      { "icon": "widgets", "heading": "Dependencias", "content": "Revisión y actualización con criterios (no a ciegas)." },
+      { "icon": "verified_user", "heading": "Autenticación (si aplica)", "content": "Sesiones, expiración, manejo de tokens y rutas críticas." },
+      { "icon": "receipt", "heading": "Registro mínimo", "content": "Eventos clave para rastrear abuso y fallos sin invadir privacidad." }
+    ]
+  }
+]
