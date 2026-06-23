@@ -9,7 +9,7 @@ twitterTitle: "Servicios de ingeniería web | Ingeniería Web Miranda"
 twitterDescription: "Diagnóstico técnico, modernización web, performance, seguridad, arquitectura y sistemas. Entregables claros, decisiones documentadas."
 ---
 
-<main id="contenido-principal">
+<main id="contenido-principal" class="pt-12">
   <section
     class="relative py-24 flex items-center min-h-[380px] md:min-h-[440px] overflow-hidden bg-primary network-pattern">
     <div class="absolute top-1/4 -left-20 w-96 h-96 bg-white/5 gradient-blur"></div>
@@ -29,20 +29,89 @@ twitterDescription: "Diagnóstico técnico, modernización web, performance, seg
     </div>
   </section>
 
-  <nav
-    id="servicios-indice"
-    class="sticky top-0 z-20 bg-white/95 border-b border-slate-200"
-    aria-label="Índice de servicios">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-      {% for s in serviceBlocks %}
-      <a href="#{{ s.id }}" class="text-primary hover:opacity-80 transition font-medium">{{ s.title }}</a>
-      {% endfor %}
-    </div>
-  </nav>
+  <!-- Why Choose Us — top -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-400 text-center">Nuestro proceso</p>
+      <h2 class="mt-2 font-display text-3xl md:text-4xl text-primary text-center">De la diagnosis a la evolución</h2>
 
-  <div class="divide-y divide-slate-200">
-    {% for s in serviceBlocks %} {% include "partials/service-block.njk" %} {% endfor %}
-  </div>
+      <div class="why-stepper mt-10">
+        <div class="why-stepper-line"></div>
+        <div class="why-stepper-track">
+          <div class="why-step">
+            <span class="why-step-label">Diagnóstico</span>
+            <div class="why-dot"></div>
+          </div>
+          <div class="why-step is-active">
+            <span class="why-step-label">Transformación</span>
+            <div class="why-dot"></div>
+          </div>
+          <div class="why-step">
+            <span class="why-step-label">Escalabilidad</span>
+            <div class="why-dot"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div class="why-gallery">
+          <img src="/assets/img/diagnostico.png" alt="Diagnóstico técnico" class="why-gallery-back" loading="lazy" />
+          <img src="/assets/img/modernizacion.png" alt="Modernización web" class="why-gallery-front" loading="lazy" />
+        </div>
+        <div>
+          <p class="text-base text-slate-600 leading-relaxed">
+            Cada proyecto comienza con un diagnóstico técnico que mapea riesgos, oportunidades y deuda acumulada. Sin
+            adivinanzas ni suposiciones: datos, decisiones documentadas y un backlog claro para avanzar.
+          </p>
+          <p class="mt-4 text-base text-slate-600 leading-relaxed">
+            A partir de ese baseline, diseñamos una ruta de transformación progresiva —modernización, performance,
+            arquitectura— que no detiene tu operación. El resultado: un sistema que escala sin reescribir todo cada seis
+            meses.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us — bottom -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="why-bottom-grid">
+        <div>
+          <h2 class="font-display text-3xl md:text-4xl text-primary leading-tight">
+            6 servicios,
+            <br />
+            un enfoque
+          </h2>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+            Cada servicio está diseñado como un módulo independiente pero conectado. Puedes empezar por diagnosticar,
+            saltar a optimizar performance, o reforzar seguridad —la ruta la define tu contexto, no un roadmap
+            prefabricado.
+          </p>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+            Todos comparten el mismo estándar: alcance documentado, decisiones trazables, entregables operativos. Sin
+            promesas abstractas, sin depender de una sola persona.
+          </p>
+          <div class="mt-6 text-xs font-semibold tracking-[0.12em] uppercase text-slate-400">
+            Mauricio Vergara · Ingeniería Web Miranda
+          </div>
+        </div>
+
+        <div class="why-bottom-cards">
+          {% for s in serviceBlocks %}
+          <article class="why-card">
+            <img class="why-card-img" src="/assets/img/{{ s.image }}" alt="{{ s.title }}" loading="lazy" />
+            <div class="why-card-body">
+              <h3 class="why-card-title">{{ s.title }}</h3>
+              <p class="why-card-desc">{{ s.description }}</p>
+              <a class="why-card-btn" href="/contacto/" aria-label="Solicitar {{ s.title }}">›</a>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-6 text-center">
