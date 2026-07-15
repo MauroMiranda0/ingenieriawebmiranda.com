@@ -1,35 +1,38 @@
 ---
 layout: layouts/base.njk
 title: "Caso | Migración a PWA | Ingeniería Web Miranda"
-description: "Caso técnico: migración a PWA desde base HTML/CSS existente, con enfoque en instalación y offline baseline."
+description: "Caso técnico: migración de aplicación de cálculo de costos de impresión 3D a PWA con instalación, offline y almacenamiento local."
 ogTitle: "Caso: Migración a PWA | Ingeniería Web Miranda"
-ogDescription: "De HTML/CSS existente a arquitectura PWA con instalación, offline baseline y experiencia app-like documentada."
+ogDescription: "De aplicación web de cálculo de costos a PWA instalable con soporte offline y gestión de piezas persistente."
 ogImage: "og-cover.png"
 twitterTitle: "Caso: Migración a PWA | Ingeniería Web Miranda"
-twitterDescription: "De HTML/CSS existente a arquitectura PWA con instalación, offline baseline y experiencia app-like documentada."
+twitterDescription: "De aplicación web de cálculo de costos a PWA instalable con soporte offline y gestión de piezas persistente."
 ---
 
-{% set caseTitle = "Migración a PWA" %} {% set caseDescription = "Implementación desde base HTML/CSS existente para
-experiencia instalable y offline baseline." %} {% set caseTags = ["Tipo: PWA", "Rol: Implementación", "Enfoque:
-Experiencia app-like"] %} {% set caseSections = [ { heading: "Contexto", type: "text", content: "Base existente en
-HTML/CSS, con necesidad de mejorar experiencia de uso y portabilidad en distintos contextos de acceso." }, { heading:
-"Objetivo", type: "text", content: "Habilitar instalación, offline baseline, consistencia de carga y control de
-actualización sin rehacer toda la base existente." }, { heading: "Qué se implementó", type: "list", items: [ "Web App
-Manifest: definición de identidad, íconos, modo de visualización y acceso instalable.", "Service Worker: capa de control
-para interceptar solicitudes y gestionar comportamiento offline.", "Cache strategy (offline baseline): reglas de caché
-por recurso para mantener disponibilidad básica.", "Criterios de instalación: validación de requisitos y comportamiento
-esperado al instalar." ] }, { heading: "Decisiones clave", type: "list", items: [ "Scope del Service Worker acotado al
-caso para reducir riesgo de interferir con rutas no objetivo.", "Caché por tipo de recurso: estáticos con mayor
-persistencia y datos dinámicos con refresco más agresivo.", "Actualización controlada con estrategia stale/refresh para
-balancear continuidad y versión vigente.", "Compatibilidad progresiva: experiencia funcional en navegadores modernos y
-fallback sin bloquear uso." ] }, { heading: "Riesgos y mitigaciones", type: "list", items: [ "Contenido obsoleto:
-mitigado con invalidación selectiva y políticas de expiración por recurso.", "Actualización invisible para usuarios:
-mitigada con control de versión y recarga en ventana de cambio.", "Almacenamiento limitado en dispositivo: mitigado con
-priorización de assets críticos y limpieza periódica." ] }, { heading: "Limitaciones conscientes", type: "list", items:
-[ "No se realizó reescritura completa de frontend para evitar ampliar alcance sin validación previa.", "No se implementó
-sincronización avanzada offline para mantener complejidad operativa bajo control.", "No se prometió mejora de
-performance sin baseline e instrumentación de medición definidos." ] }, { heading: "Entregables", type: "list", items: [
-"manifest.json", "service-worker.js", "checklist de pruebas", "notas técnicas (resumen)" ] }, { heading: "Lo que
-haríamos distinto hoy", type: "list", items: [ "Definir baseline con medición desde el día 1", "Instrumentación mínima
-(eventos de instalación/uso)", "Estrategia de actualización más explícita", "Instrumentación mínima desde día 1 (eventos
-+ baseline) para defender decisiones con datos." ] } ] %} {% include "partials/case-study.njk" %}
+{% set caseTitle = "Migración a PWA" %} {% set caseDescription = "Aplicación de cálculo de costos de impresión 3D
+migrada a PWA con instalación, soporte offline y gestión de piezas persistente en dispositivo." %} {% set caseTags =
+["Tipo: PWA", "Rol: Implementación", "Stack: HTML/CSS/JS", "Deploy: Vercel"] %} {% set caseSections = [ { heading: "La
+aplicación", type: "gallery", cols: 2, images: [ { src: "/assets/img/casos/pwa.png", alt: "Interfaz de la aplicación de
+control de costos de impresión 3D", caption: "Vista principal: formulario de datos de pieza, parámetros de impresión y
+cálculo de costos en tiempo real." } ], note: "URL de producción: app-impresion3-d-pwa.vercel.app" }, { heading:
+"Contexto", type: "text", content: "El cliente necesita calcular costos de impresión 3D de forma ágil en taller, donde
+la conectividad es intermitente. La app original no era instalable ni funcionaba offline." }, { heading: "Qué se
+implementó", type: "list", items: [ "Web App Manifest con display standalone, theme color e icono 512x512", "Service
+Worker network-first con precaching de assets críticos", "Gestión de versiones: caché versionado con limpieza
+automática", "Indicador de offline visible para el usuario", "Motor de cálculo en tiempo real (horas, gramos, mano de
+obra, margen)", "Gestión de piezas con tabla responsiva y almacenamiento local", "Controles +/- con validación de
+mínimos" ] }, { heading: "Decisiones clave", type: "list", items: [ "Network-first: prioriza contenido fresco, fallback
+a caché offline", "Precaching selectivo: solo HTML, logo y manifest (4 assets)", "Sin backend: datos persistidos en
+dispositivo, sin sincronización", "Start_url relativo para compatibilidad con subdirectorio de Vercel" ] }, { heading:
+"Arquitectura", type: "list", items: [ "Frontend: HTML semántico, CSS custom, JavaScript vanilla (sin framework)",
+"Service Worker: install → precache, fetch → network-first, activate → limpieza", "Manifest: JSON con name, display,
+theme_color, icons", "Deploy: Vercel, estático, assets con hashes" ] }, { heading: "Riesgos", type: "list", items: [
+"Datos confinados al dispositivo → enlace al modelo 3D permite reconstrucción", "Caché obsoleto → versión en nombre +
+limpieza automática en activate", "Instalación opcional → la app funciona igual en navegador" ] }, { heading:
+"Limitaciones", type: "list", items: [ "Sin sincronización multi-dispositivo", "Sin backend ni respaldo server-side",
+"Sin medición de instalación ni update prompt" ] }, { heading: "Entregables", type: "list", items: [ "manifest.json —
+Web App Manifest", "sw.js — Service Worker con network-first", "index.html — Estructura semántica + indicador offline",
+"app.js — Lógica de cálculo y gestión de piezas", "styles.css — Sistema de diseño custom" ] }, { heading: "Lo que
+haríamos distinto", type: "list", items: [ "Instrumentar eventos de instalación y uso offline desde el día 1",
+"Implementar prompt de actualización del Service Worker", "Agregar exportación de datos (CSV/JSON)", "Definir baseline
+de performance antes de la migración" ] } ] %} {% include "partials/case-study.njk" %}
