@@ -1,8 +1,14 @@
 # Header / Nav
 
-**Archivo fuente:** `_includes/partials/nav.njk` (estándar), `_includes/partials/nav-legal.njk` (legal)
+**Archivo fuente:** `_includes/layouts/base.njk`, `_includes/partials/nav.njk` (estándar), `_includes/partials/nav-legal.njk` (legal)
 
 Barra de navegación global. Presente en las 18 páginas a través del layout `_includes/layouts/base.njk`.
+
+El layout incluye un enlace de salto accesible antes del header:
+```html
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+```
+Cada página debe exponer un único `<main id="contenido-principal">` como destino.
 
 ---
 
@@ -65,7 +71,7 @@ Front matter de páginas legales: `navStyle: "legal"`.
   <div class="md:hidden border-t border-slate-200 bg-background-light/95 backdrop-blur"
        id="mobile-menu" hidden>
     <nav class="flex flex-col gap-4 px-6 py-6 text-sm font-medium tracking-widest uppercase">
-      <!-- mismos links sin aria-current -->
+      <!-- mismos links con aria-current idéntico al desktop -->
     </nav>
   </div>
 </header>
@@ -92,13 +98,14 @@ El `aria-current="page"` se genera dinámicamente en Nunjucks: `{% if '/ruta/' i
 
 Controlado por `assets/js/ui.js`:
 - `#menu-toggle` toggle del atributo `hidden` en `#mobile-menu`.
-- Año de copyright `#y` (en footer, no en nav).
+- Año de copyright `#copyright-year` (en footer, no en nav).
 
 ---
 
 ## Clases CSS propias usadas
 
 - `.nav-link-tech` — underline animado en hover/focus. Excluye `.btn-primary` via `:not()`.
+- `.nav-link-tech[aria-current="page"]` — estado activo: `color: primary` + underline permanente (`scaleX(1)`). Definido en `theme.css`.
 - `.btn.btn-primary` — CTA de contacto.
 
 ---
@@ -116,6 +123,7 @@ Controlado por `assets/js/ui.js`:
 ## Reglas de uso
 
 - No modificar `id="menu-toggle"` ni `id="mobile-menu"` — son selectores del JS.
+- No modificar `id="contenido-principal"` — es el destino del skip link global.
 - No usar `aria-current` en el CTA (`.btn-primary`) — solo en los links de texto.
 - Si se agrega un nuevo item de nav, añadirlo en ambos bloques (desktop y mobile) y actualizar esta tabla.
 - `nav.njk` está excluido de Prettier (`.prettierignore`) por tener Nunjucks inline en atributos. Editar manualmente con cuidado de indentación.

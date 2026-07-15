@@ -1,0 +1,50 @@
+{
+  "/": null,
+  "/servicios/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Servicios", "url": null }
+  ],
+  "/casos/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Casos", "url": null }
+  ],
+  "/casos/migracion-pwa/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Casos", "url": "/casos/" },
+    { "label": "Migración a PWA", "url": null }
+  ],
+  "/casos/landing-captacion/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Casos", "url": "/casos/" },
+    { "label": "Landing de captación", "url": null }
+  ],
+  "/casos/sitio-de-servicios/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Casos", "url": "/casos/" },
+    { "label": "Sitio de servicios", "url": null }
+  ],
+  "/metodo/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Método", "url": null }
+  ],
+  "/recursos/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Recursos", "url": null }
+  ],
+  "/proyectos/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Proyectos", "url": null }
+  ],
+  "/contacto/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Contacto", "url": null }
+  ],
+  "/legal/privacidad/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Privacidad", "url": null }
+  ],
+  "/legal/terminos/": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Términos", "url": null }
+  ]
+}

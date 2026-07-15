@@ -1,6 +1,6 @@
 # Card
 
-**Archivo fuente:** Tailwind utilitarios (sin clase CSS custom)
+**Archivo fuente:** Tailwind utilitarios + `assets/css/theme.css` para variantes con interacción custom
 
 Contenedor de contenido estructurado. Siempre `<article>` semántico cuando representa una unidad de contenido independiente (caso, servicio, área). Puede ser `<a>` cuando la card completa es navegable.
 
@@ -9,10 +9,12 @@ Contenedor de contenido estructurado. Siempre `<article>` semántico cuando repr
 ## Variantes
 
 ### Card Default
+
 Sobre fondos blancos. Hover con lift sutil.
 
 ```html
-<article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+<article
+  class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
   <!-- contenido -->
 </article>
 ```
@@ -22,6 +24,7 @@ Sobre fondos blancos. Hover con lift sutil.
 ---
 
 ### Card Feature
+
 Sobre fondos ligeramente coloreados (`bg-slate-50`). Fondo semitransparente. Hover con sombra.
 
 ```html
@@ -34,20 +37,89 @@ Sobre fondos ligeramente coloreados (`bg-slate-50`). Fondo semitransparente. Hov
 
 ---
 
-### Card Link
-Card completa navegable. Usa `<a>` en lugar de `<article>`.
+### Card Blog Post
+
+Card de contenido con imagen, acción secundaria y modal de entregables. Reutiliza el patrón `zoomimg` / `zoom-wrap` / `fixico` / `fadef` para la imagen y `fix-btn-blog` / `istria-btn` / `istria-over` / `istria-line` para el CTA. La lupa abre un modal con el detalle de entregables en lugar de agrandar la imagen.
 
 ```html
-<a class="border border-slate-200 bg-white/70 p-8 hover:shadow-xl transition-all block" href="/servicios/diagnostico-tecnico/">
-  <!-- contenido -->
-</a>
+<article class="blog-card-post bg-white shadow-[0_1px_3px_rgba(34,25,25,0.4)] flex flex-col">
+  <div class="h-px w-full bg-[#0099ff]"></div>
+  <div class="zoomimg">
+    <div class="zoom-wrap">
+      <a href="" class="fixico" data-dialog-target="entregables-performance" aria-label="Ver detalle de entregables">
+        <span class="material-icons" aria-hidden="true">search</span>
+      </a>
+      <img src="/assets/img/example.png" alt="Descripción" class="blog-card-post-image h-64 w-full object-cover" />
+      <span class="fadef"></span>
+    </div>
+  </div>
+  <div class="p-8 flex flex-col flex-1">
+    <div class="grid grid-cols-2 gap-4 text-[12px] text-slate-700">
+      <p class="italic">Servicio</p>
+      <p class="text-right">Entregables: ...</p>
+    </div>
+    <h3 class="blog-card-post-title">Título</h3>
+    <p class="blog-card-post-excerpt">Descripción del contenido.</p>
+    <div class="fix-btn-blog">
+      <a href="/ruta/" class="istria-btn trigger">Saber más</a>
+      <div class="istria-over"></div>
+      <div class="istria-line left">
+        <div class="inner"></div>
+      </div>
+      <div class="istria-line right">
+        <div class="inner"></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<dialog id="entregables-performance" class="blog-card-dialog">
+  <!-- detalle de entregables -->
+</dialog>
 ```
 
-**Uso:** Directorio de servicios en home (`/`).
+**Uso:** Secciones de problema/solución en home (`#que-resolvemos`). Las últimas 3 cards usan la misma estructura visual pero con `<span class="istria-btn">` sin enlace (modal como única interacción). También admite variante sin imagen (solo ícono Material + badge) para mostrar casos destacados, usando la misma estructura pero reemplazando `.zoomimg` por un ícono centrado y la lista de decisiones clave en lugar del detalle de entregables.
+
+---
+
+### Card Interactiva Animated Product
+
+Card interactiva para casos destacados: estado inicial compacto con ícono central, transición horizontal en hover/focus, contenido revelado y una ilustración técnica que emerge desde el costado. La adaptación conserva la identidad blueprint: esquinas rectas, paleta primaria y sin fuentes externas adicionales.
+
+```html
+<article class="case-animated-card">
+  <div class="case-animated-card-mark" aria-hidden="true">
+    <span class="material-icons">install_mobile</span>
+  </div>
+
+  <div class="case-animated-card-content">
+    <span class="case-animated-card-kicker">PWA</span>
+    <h3>Migración a PWA</h3>
+    <p>Implementación desde código HTML/CSS existente para habilitar instalación y experiencia app-like.</p>
+    <ul>
+      <li>Service Worker + estrategia de caché</li>
+      <li>Web App Manifest + criterios de instalación</li>
+    </ul>
+    <a href="/casos/migracion-pwa/">Ver caso</a>
+  </div>
+
+  <img src="/assets/img/casos/pwa.png" alt="Interfaz técnica de PWA" class="case-animated-card-image" />
+</article>
+```
+
+**Uso:** Casos destacados en home (`#casos-accion`). Requiere contenedor `.case-animated-list` para permitir expansión horizontal coordinada entre las 3 cards.
+
+**Reglas específicas:**
+
+- No usar `border-radius`: la forma inicial es cuadrada/rectangular, no circular.
+- En desktop, la card activa crece horizontalmente y revela contenido + imagen.
+- En mobile, las cards se apilan y muestran el contenido sin depender de hover.
+- La imagen cumple el rol de "producto" del ejemplo original, pero con ilustraciones técnicas del proyecto.
 
 ---
 
 ### Card Static
+
 Sin hover. Para contenido informativo sin acción directa.
 
 ```html
@@ -63,9 +135,11 @@ Sin hover. Para contenido informativo sin acción directa.
 ## Estructura interna habitual
 
 ```html
-<article class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
+<article
+  class="border border-slate-200 bg-white p-6 transition-all duration-200 hover:-translate-y-px hover:border-primary/40">
   <!-- Badge / eyebrow (opcional) -->
-  <span class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
+  <span
+    class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-[11px] tracking-[0.12em] uppercase text-slate-600">
     Categoría
   </span>
 
@@ -93,11 +167,42 @@ Sin hover. Para contenido informativo sin acción directa.
 
 ## Tokens de diseño usados
 
-| Token | Aplicación |
-|-------|-----------|
-| `primary` | `text-primary` en títulos, `hover:border-primary/40` |
-| `background-light` / `white` | `bg-white`, `bg-white/70` |
-| `border-slate-200` | borde base (accent) |
+| Token                        | Aplicación                                           |
+| ---------------------------- | ---------------------------------------------------- |
+| `primary`                    | `text-primary` en títulos, `hover:border-primary/40` |
+| `background-light` / `white` | `bg-white`, `bg-white/70`                            |
+| `border-slate-200`           | borde base (accent)                                  |
+
+---
+
+---
+
+### Service Grid Card (hero image with gradient overlay)
+
+Variante para los 6 servicios en `/servicios/`. Cards con imagen de fondo, overlay degradado del color primario en la parte inferior, y contenido alineado abajo. Inspirado en diseño de tarjetas de producto con imagen de portada.
+
+```html
+<article class="service-card" style="--card-bg: url(/assets/img/servicio.png)">
+  <div class="service-card-overlay"></div>
+  <div class="service-card-badge">Diagnóstico</div>
+  <div class="service-card-content">
+    <span class="material-icons service-card-icon" aria-hidden="true">travel_explore</span>
+    <h3 class="service-card-title">Diagnóstico técnico</h3>
+    <p class="service-card-desc">Claridad, riesgos y próximos pasos.</p>
+    <a class="service-card-btn" href="/servicios/diagnostico-tecnico/">Ver servicio</a>
+  </div>
+</article>
+```
+
+**Reglas específicas:**
+- Sin `border-radius` en ningún elemento.
+- Sin bordes ni contornos en la card.
+- La imagen de fondo se setea via `--card-bg` con `background-size: cover`.
+- Overlay degradado inferior: `linear-gradient(to top, rgba(11,42,74,1) 0%, rgba(11,42,74,0.9) 40%, rgba(11,42,74,0.4) 70%, transparent 100%)` con `height: 70%`.
+- Badge en esquina superior derecha con fondo semitransparente.
+- Contenido alineado abajo (flex column, justify-content: flex-end).
+- Color de texto blanco sobre el overlay.
+- En `lg+` grid de 3 columnas uniformes.
 
 ---
 

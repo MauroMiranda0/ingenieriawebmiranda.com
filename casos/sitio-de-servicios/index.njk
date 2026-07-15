@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+title: "Caso | Sitio de servicios | Ingeniería Web Miranda"
+description: "Caso técnico: sitio de servicios enfocado en claridad de oferta, confianza y contacto calificado."
+ogTitle: "Caso: Sitio de servicios | Ingeniería Web Miranda"
+ogDescription: "Sitio de servicios enfocado en claridad de oferta, señales de confianza y reducción de fricción para contacto calificado."
+ogImage: "og-cover.png"
+twitterTitle: "Caso: Sitio de servicios | Ingeniería Web Miranda"
+twitterDescription: "Sitio de servicios enfocado en claridad de oferta, señales de confianza y reducción de fricción para contacto calificado."
+---
+
+{% set caseTitle = "Sitio de servicios" %} {% set caseDescription = "Sitio web enfocado en presentar servicios con
+claridad de oferta, confianza y rutas de contacto calificado." %} {% set caseTags = ["Tipo: Sitio", "Rol:
+Implementación", "Enfoque: Claridad + confianza + contacto calificado"] %} {% set caseSections = [ { heading:
+"Contexto", type: "text", content: "Se requería presentar servicios con claridad de alcance y filtrar la intención del
+visitante para evitar contactos no calificados, dentro de una estructura de sitio completa y no una landing aislada." },
+{ heading: "Objetivo", type: "text", content: "Construir confianza y facilitar acción directa hacia contacto calificado,
+reduciendo ambigüedad en oferta y siguiente paso, con navegación entre secciones y profundidad de contenido." }, {
+heading: "Qué se implementó", type: "list", items: [ "Arquitectura por intención: secciones ordenadas para que el
+usuario entienda oferta, evidencia y siguiente paso desde cualquier punto de entrada.", "Alcance explícito de servicios:
+límites y foco para reducir expectativas ambiguas en cada página.", "Señales de confianza: elementos de credibilidad
+ubicados en puntos de decisión a lo largo del sitio.", "Sistema de CTAs: principal y secundarios alineados con etapas de
+intención en cada sección.", "Formulario de calificación: captura de contexto mínimo para priorizar contactos
+relevantes.", "Baseline técnico: base de SEO/performance para iterar sin rehacer estructura." ] }, { heading:
+"Decisiones clave", type: "list", items: [ "Oferta explícita desde cada página: qué se resuelve, para quién y con qué
+alcance.", "Orden de secciones como filtro: primero claridad, luego evidencia, después acción, en todas las páginas.",
+"CTA principal dominante en cada sección clave para evitar dispersión en la toma de decisión.", "Fricción controlada en
+formulario: menos campos, mejor secuencia y validación legible.", "Semántica + accesibilidad baseline para lectura
+consistente y navegación predecible.", "Navegación entre páginas de servicio con consistencia de tono y estructura." ]
+}, { heading: "Riesgos y mitigaciones", type: "list", items: [ "Mensaje ambiguo de oferta: mitigado con encabezados
+explícitos y alcance visible por bloque en cada página.", "Baja conversión por fricción de contacto: mitigada con
+formulario corto y rutas alternativas de intención visibles desde múltiples secciones.", "Caída de interacción por carga
+lenta: mitigada con control de assets críticos y optimización base en todo el sitio." ] }, { heading: "Entregables",
+type: "list", items: [ "Estructura completa de sitio de servicios lista para implementación.", "Microcopy estructural
+para titulares, bloques, CTAs y navegación.", "Checklist de señales de confianza distribuidas por sección.", "Checklist
+de formulario y criterios de contacto calificado.", "Plantilla de analítica: view_page, click_cta_principal,
+click_ruta_secundaria, submit_form, scroll_50, scroll_90." ] }, { heading: "Lo que haríamos distinto hoy", type: "list",
+items: [ "Pruebas de orden de secciones para validar secuencia de decisión por tipo de visitante.", "Variantes de copy
+para ajustar claridad según segmento y página de entrada.", "Medición específica de abandono en formulario por campo y
+etapa.", "Instrumentación mínima desde día 1 (eventos + baseline) para defender decisiones con datos." ] } ] %} {%
+include "partials/case-study.njk" %}

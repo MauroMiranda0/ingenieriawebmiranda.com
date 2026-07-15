@@ -5,16 +5,20 @@ Cada spec es la **fuente de verdad** del componente: antes de modificar código,
 
 ## Índice
 
-| Spec | Archivo fuente | Estado |
-|------|---------------|--------|
-| [Tokens de diseño](tokens.md) | `assets/js/tailwind-config.js` | ✅ |
-| [Button](button.md) | `assets/css/theme.css` | ✅ |
-| [Card](card.md) | Tailwind (utilitarios) | ✅ |
-| [SectionHeader](section-header.md) | Tailwind (utilitarios) | ✅ |
-| [Header / Nav](header.md) | `_includes/partials/nav.njk` | ✅ |
-| [Footer](footer.md) | `_includes/partials/footer.njk` | ✅ |
-| [NavLink y HeroLink](nav-link.md) | `assets/css/theme.css` | ✅ |
-| [Efectos visuales](visual-effects.md) | `assets/css/theme.css` | ✅ |
+| Spec                                  | Archivo fuente                  | Estado |
+| ------------------------------------- | ------------------------------- | ------ |
+| [Tokens de diseño](tokens.md)         | `assets/js/tailwind-config.js`  | ✅     |
+| [Button](button.md)                   | `assets/css/theme.css`          | ✅     |
+| [Card](card.md)                       | Tailwind (utilitarios)          | ✅     |
+| [SectionHeader](section-header.md)    | Tailwind (utilitarios)          | ✅     |
+| [Header / Nav](header.md)             | `_includes/partials/nav.njk`    | ✅     |
+| [Footer](footer.md)                   | `_includes/partials/footer.njk` | ✅     |
+| [NavLink y HeroLink](nav-link.md)     | `assets/css/theme.css`          | ✅     |
+| [Efectos visuales](visual-effects.md) | `assets/css/theme.css`          | ✅     |
+| [MethodStack](method-stack.md)        | `assets/css/theme.css`          | ✅     |
+| [CTA Evolution](cta-evolution.md)     | `index.njk`, `theme.css`        | ✅     |
+| [Page Hero](page-hero.md)             | `servicios/index.njk`, `theme.css` | ✅   |
+| [Content Architecture](content-architecture.md) | `servicios/index.njk`, `index.njk` | ✅ |
 
 ## Convención
 

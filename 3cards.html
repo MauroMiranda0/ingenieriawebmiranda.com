@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de Servicios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Estilos base */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5; /* Fondo gris claro para contrastar las tarjetas blancas */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenedor principal de las 3 tarjetas */
+        .services-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1050px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Estilos generales de las tarjetas (Laterales) */
+        .card {
+            background-color: #ffffff;
+            flex: 1; /* Para que todas midan igual de ancho */
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .card i.main-icon {
+            font-size: 3.5rem;
+            color: #c8d1db; /* Color gris claro para los íconos de las tarjetas blancas */
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: #0b3b7c; /* Azul oscuro para los títulos */
+            font-size: 1.15rem;
+            margin: 10px 0 5px;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            color: #7f8fa6;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Estilos específicos para la tarjeta central (Activa) */
+        .card.active {
+            background-color: #006aff; /* Azul vibrante */
+            color: #ffffff;
+            padding: 70px 20px; /* Hacemos la tarjeta más alta */
+            margin: -30px 0; /* Margen negativo para que sobresalga por arriba y abajo */
+            z-index: 2; /* Para que se superponga a las tarjetas laterales */
+            box-shadow: 0 15px 40px rgba(0, 106, 255, 0.3); /* Sombra azulada */
+        }
+
+        .card.active i.main-icon {
+            color: #ffffff;
+        }
+
+        .card.active h3, 
+        .card.active p {
+            color: #ffffff;
+        }
+
+        /* Botón redondo con flecha */
+        .arrow-btn {
+            background-color: #ffffff;
+            color: #006aff;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: none;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.2s ease;
+        }
+
+        .arrow-btn i {
+            font-size: 1.1rem;
+        }
+
+        .arrow-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Diseño Responsivo para celulares */
+        @media (max-width: 768px) {
+            .services-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .card {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .card.active {
+                margin: 0;
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="services-container">
+        
+        <div class="card">
+            <i class="fas fa-ship main-icon"></i>
+            <h3>Sea Freight</h3>
+            <p>Container Shipping</p>
+        </div>
+
+        <div class="card active">
+            <i class="fas fa-truck-loading main-icon"></i>
+            <h3>Project Cargo</h3>
+            <p>Handling Service</p>
+            <button class="arrow-btn" aria-label="Ver más">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-boxes-stacked main-icon"></i>
+            <h3>Shipping Agency</h3>
+            <p>Trusted Operations</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
