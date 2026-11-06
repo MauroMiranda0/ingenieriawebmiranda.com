@@ -121,6 +121,7 @@
       const isActive = index === currentIndex;
       slide.classList.toggle("is-active", isActive);
       slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+      slide.inert = !isActive;
     });
   };
 
