@@ -13,7 +13,7 @@ Sitio corporativo de [ingenieriawebmiranda.com](https://ingenieriawebmiranda.com
 
 ```
 _includes/
-  layouts/base.njk         # Layout único para las 18 páginas
+  layouts/base.njk         # Layout único para las 12 páginas
   partials/
     head.njk               # <head> con SEO y scripts
     nav.njk                # Navegación estándar

@@ -102,7 +102,7 @@ Toda decisión que contradiga este documento requiere actualizar el documento pr
 | Sin framework JS (React, Vue, etc.) | El sitio es contenido estático; la complejidad no está justificada |
 | Sin border-radius en cards | Decisión de identidad visual (estética blueprint) |
 | Tailwind via CDN, no build | Simplicidad; aceptable hasta que el tamaño del proyecto lo requiera |
-| Un solo layout para las 18 páginas | DRY; la variación se gestiona con front matter |
+| Un solo layout para las 12 páginas | DRY; la variación se gestiona con front matter |
 | `_site/` no se versiona | Es output generado, no fuente |
 
 ---

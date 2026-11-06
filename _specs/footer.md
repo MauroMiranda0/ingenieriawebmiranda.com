@@ -2,7 +2,7 @@
 
 **Archivo fuente:** `_includes/partials/footer.njk`
 
-Footer corporativo global. Presente en las 18 páginas a través del layout `_includes/layouts/base.njk`.
+Footer corporativo global. Presente en las 12 páginas a través del layout `_includes/layouts/base.njk`.
 No tiene variantes — es un componente único y estático.
 Usa `.site-footer` como capa CSS propia para asegurar render estable aunque Tailwind CDN tarde en aplicar utilidades.
 

@@ -91,7 +91,7 @@ jsonld: |                       # solo en home y contacto
 
 ### SEO
 - 16 páginas actualizadas con `ogTitle`, `ogDescription`, `twitterTitle`, `twitterDescription` únicos y específicos
-- Solo home y contacto tenían meta específico — ahora las 18 páginas lo tienen
+- Solo home y contacto tenían meta específico — ahora las 12 páginas lo tienen
 
 ### SDD — Especificaciones de componentes
 - `_specs/tokens.md` — design tokens
@@ -137,7 +137,7 @@ jsonld: |                       # solo en home y contacto
 
 - [ ] OG images específicas por sección (performance, seguridad, casos, etc.)
 - [x] Eliminar `tailwind.config.js` de la raíz (no existía)
-- [x] Agregar `sitemap.xml` (estático, con las 18 URLs del sitio)
+- [x] Agregar `sitemap.xml` (estático, con las 12 URLs del sitio)
 - [x] Agregar `robots.txt`
 
 ### Medio plazo

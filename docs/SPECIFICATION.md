@@ -31,7 +31,7 @@ Es la referencia para evaluar si el sitio está completo y correcto.
 
 ## 2. Componentes globales
 
-Presentes en las 18 páginas vía `_includes/layouts/base.njk`.
+Presentes en las 12 páginas vía `_includes/layouts/base.njk`.
 
 | Componente | Archivo | Variantes |
 |-----------|---------|-----------|
@@ -179,7 +179,7 @@ Presentes en las 18 páginas vía `_includes/layouts/base.njk`.
 
 | Página | `title` único | `description` única | `ogTitle` específico | JSON-LD |
 |--------|:---:|:---:|:---:|:---:|
-| Todas las 18 | ✅ | ✅ | ✅ | Solo home y contacto |
+| Todas las 12 | ✅ | ✅ | ✅ | Solo home y contacto |
 
 ### Patrón de `title`
 - Home: `[Marca] | [Tagline]`

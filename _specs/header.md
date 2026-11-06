@@ -2,7 +2,7 @@
 
 **Archivo fuente:** `_includes/layouts/base.njk`, `_includes/partials/nav.njk` (estándar), `_includes/partials/nav-legal.njk` (legal)
 
-Barra de navegación global. Presente en las 18 páginas a través del layout `_includes/layouts/base.njk`.
+Barra de navegación global. Presente en las 12 páginas a través del layout `_includes/layouts/base.njk`.
 
 El layout incluye un enlace de salto accesible antes del header:
 ```html
