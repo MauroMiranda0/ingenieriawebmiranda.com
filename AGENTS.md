@@ -1,6 +1,6 @@
 # AGENTS.md — Ingeniería Web Miranda
 
-Static site (Eleventy + Nunjucks), Tailwind via CDN, vanilla JS, 18 pages.
+Static site (Eleventy + Nunjucks), Tailwind via CDN, vanilla JS, 12 pages.
 
 ## Commands
 
@@ -40,7 +40,7 @@ jsonld: |                                    # only for home and contacto
   { "@context": "https://schema.org", ... }
 ```
 
-- ALL 18 pages must have unique `title`, `description`, `ogTitle`, `ogDescription`
+- ALL 12 pages must have unique `title`, `description`, `ogTitle`, `ogDescription`
 - Section `id` attributes: Spanish (kebab-case)
 - JS hook `id` attributes: English
 

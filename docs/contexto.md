@@ -1,5 +1,5 @@
 Contexto para nueva sesión
-Proyecto: ingenieriawebmiranda.com — sitio HTML estático + Tailwind CDN, sin framework ni build process. 18 páginas */index.html.
+Proyecto: ingenieriawebmiranda.com — sitio HTML estático + Tailwind CDN, sin framework ni build process. 12 páginas */index.html.
 
 Lo que se hizo en sesiones anteriores:
 
