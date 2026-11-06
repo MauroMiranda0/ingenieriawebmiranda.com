@@ -1,0 +1,32 @@
+{
+  "id": "proyectos",
+  "eyebrow": "Proyectos",
+  "title": "Laboratorio técnico en construcción",
+  "description": "Demostraciones navegables, prototipos y patrones que usamos para resolver problemas reales. Estamos preparando el contenido.",
+  "status": "En construcción",
+  "ctaLabel": "Ver proyectos",
+  "ctaUrl": "/proyectos/",
+  "items": [
+    {
+      "icon": "schema",
+      "title": "Patrones de arquitectura",
+      "description": "Diagramas interactivos con decisiones documentadas.",
+      "ctaLabel": "Ver proyecto",
+      "url": "/proyectos/"
+    },
+    {
+      "icon": "bolt",
+      "title": "Proyectos CWV",
+      "description": "Pruebas reproducibles de performance y hardening.",
+      "ctaLabel": "Ver proyecto",
+      "url": "/proyectos/"
+    },
+    {
+      "icon": "integration_instructions",
+      "title": "Sistemas internos",
+      "description": "Flujos de dashboards y portales corporativos listos para adaptar.",
+      "ctaLabel": "Ver proyecto",
+      "url": "/proyectos/"
+    }
+  ]
+}

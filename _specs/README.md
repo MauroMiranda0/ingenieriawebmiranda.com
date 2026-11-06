@@ -19,6 +19,7 @@ Cada spec es la **fuente de verdad** del componente: antes de modificar código,
 | [CTA Evolution](cta-evolution.md)     | `index.njk`, `theme.css`        | ✅     |
 | [Page Hero](page-hero.md)             | `servicios/index.njk`, `theme.css` | ✅   |
 | [Content Architecture](content-architecture.md) | `servicios/index.njk`, `index.njk` | ✅ |
+| [Projects teaser](projects-teaser.md)     | `_includes/partials/projects-teaser.njk`, `_data/projectsTeaser.json` | ✅     |
 
 ## Convención
 
