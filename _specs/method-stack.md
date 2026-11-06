@@ -9,7 +9,7 @@ Componente interactivo para presentar las fases del método como capas apiladas 
 ## Estructura
 
 ```html
-<div class="method-stack" aria-label="Fases del método de ingeniería">
+<div class="method-stack" role="group" aria-label="Fases del método de ingeniería">
   <ol class="method-stack-list">
     <li class="method-stack-item">
       <span class="material-icons" aria-hidden="true">travel_explore</span>

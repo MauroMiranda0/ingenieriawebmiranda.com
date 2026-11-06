@@ -80,6 +80,8 @@ Card de contenido con imagen, acción secundaria y modal de entregables. Reutili
 
 **Uso:** Secciones de problema/solución en home (`#que-resolvemos`). Las últimas 3 cards usan la misma estructura visual pero con `<span class="istria-btn">` sin enlace (modal como única interacción). También admite variante sin imagen (solo ícono Material + badge) para mostrar casos destacados, usando la misma estructura pero reemplazando `.zoomimg` por un ícono centrado y la lista de decisiones clave en lugar del detalle de entregables.
 
+- `.istria-btn` debe mantener contraste AA sobre fondo blanco: `color: #0369a1` y `opacity: 1` (5.93:1).
+
 ---
 
 ### Card Interactiva Animated Product

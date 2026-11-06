@@ -54,7 +54,8 @@ Front matter de páginas legales: `navStyle: "legal"`.
     <!-- Hamburger (mobile) -->
     <button
       class="md:hidden p-2 rounded-lg border border-slate-200 text-slate-700 hover:text-primary hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
-      type="button" aria-label="Abrir menú" id="menu-toggle">
+      type="button" aria-label="Abrir menú" aria-expanded="false"
+      aria-controls="mobile-menu" id="menu-toggle">
       <span class="material-icons" aria-hidden="true">menu</span>
     </button>
 
@@ -97,7 +98,7 @@ El `aria-current="page"` se genera dinámicamente en Nunjucks: `{% if '/ruta/' i
 ## Comportamiento JS
 
 Controlado por `assets/js/ui.js`:
-- `#menu-toggle` toggle del atributo `hidden` en `#mobile-menu`.
+- `#menu-toggle` toggle del atributo `hidden` en `#mobile-menu`, actualizando `aria-expanded` (`false`/`true`) y `aria-label` (“Abrir menú”/“Cerrar menú”).
 - Año de copyright `#copyright-year` (en footer, no en nav).
 
 ---
