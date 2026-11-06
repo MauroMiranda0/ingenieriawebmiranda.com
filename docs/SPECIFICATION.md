@@ -68,7 +68,7 @@ Presentes en las 12 páginas vía `_includes/layouts/base.njk`.
 | `#areas` | Áreas clave | SectionHeader, carrusel nativo de 4× Card Feature con Material Icons y navegación previa/siguiente |
 | `#casos-accion` | Transformación digital en acción | SectionHeader split, 3× Card interactiva con ícono Material, intro mínima, ilustración técnica, decisiones clave, enlace "Ver caso" y CTAs al pie |
 | `#metodo` | Método de ingeniería | SectionHeader centrado, diagrama de fases con `.node-glow`, `.btn-outline` |
-| — | Proyectos teaser | Card estático ancho, `.btn-primary` |
+| `#proyectos` | Proyectos teaser | SectionHeader, Card Static ancha, 3 ítems con Material Icons, estado "En construcción" y `.btn-primary` a `/proyectos/` |
 | `#cta-final` | CTA final | H2 grande, `.btn-white`, `.btn-ghost` sobre `bg-primary` |
 
 **JSON-LD:** Organization schema.
