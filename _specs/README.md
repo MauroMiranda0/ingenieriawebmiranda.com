@@ -18,6 +18,7 @@ Cada spec es la **fuente de verdad** del componente: antes de modificar código,
 | [MethodStack](method-stack.md)        | `assets/css/theme.css`          | ✅     |
 | [CTA Evolution](cta-evolution.md)     | `index.njk`, `theme.css`        | ✅     |
 | [Page Hero](page-hero.md)             | `servicios/index.njk`, `theme.css` | ✅   |
+| [Services Index](services-index.md)   | `_includes/partials/services-index.njk`, `_data/serviceBlocks.json` | ✅ |
 | [Content Architecture](content-architecture.md) | `servicios/index.njk`, `index.njk` | ✅ |
 | [Projects teaser](projects-teaser.md)     | `_includes/partials/projects-teaser.njk`, `_data/projectsTeaser.json` | ✅     |
 

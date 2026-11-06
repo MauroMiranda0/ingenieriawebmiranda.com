@@ -1,4 +1,10 @@
 /* Global utility classes */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 .bg-primary {
   background-color: #0b2a4a;
 }
@@ -1551,7 +1557,7 @@
 .why-step-label {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: #64748b;
   margin-bottom: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;

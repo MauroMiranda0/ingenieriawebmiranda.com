@@ -83,13 +83,26 @@ Presentes en las 12 páginas vía `_includes/layouts/base.njk`.
 | Bloque | Anchor ID | Componentes |
 |--------|-----------|-------------|
 | Hero de sección | — | PageHero con título, descripción y CTAs |
-| Índice de navegación | `#servicios-indice` | Lista horizontal/vertical de 6 anchors con scroll suave |
+| Índice de servicios | `#servicios-indice` | ServicesIndex: nav con 6 anchors, grid 1/2/3 columnas y scroll suave |
+| Introducción y proceso | — | Stepper, galería y texto "6 servicios, un enfoque" |
 | Diagnóstico técnico | `#servicio-diagnostico-tecnico` | ServiceBlock (eyebrow + H2 + desc + entregables + beneficios + señales + áreas + CTA) |
 | Modernización web | `#servicio-modernizacion-web` | ServiceBlock |
 | Performance | `#servicio-performance` | ServiceBlock |
 | Sistemas web | `#servicio-sistemas-web` | ServiceBlock |
 | Arquitectura | `#servicio-arquitectura` | ServiceBlock |
 | Seguridad | `#servicio-seguridad` | ServiceBlock |
+| CTA final | — | "¿No sabes por cuál empezar?" con CTAs a contacto y método |
+
+**Orden canónico de los 6 servicios:** el índice y los bloques comparten el orden de `_data/serviceBlocks.json`:
+
+1. Diagnóstico técnico — `#servicio-diagnostico-tecnico`
+2. Modernización web — `#servicio-modernizacion-web`
+3. Performance & Core Web Vitals — `#servicio-performance`
+4. Sistemas web — `#servicio-sistemas-web`
+5. Arquitectura & Modernización — `#servicio-arquitectura`
+6. Seguridad & DevSecOps — `#servicio-seguridad`
+
+El criterio es de catálogo, no una secuencia obligatoria: entrada por diagnóstico, evolución del sitio existente (modernización y performance), construcción de plataformas (sistemas), decisiones estructurales (arquitectura) y endurecimiento transversal (seguridad). El detalle del componente está en `_specs/services-index.md`.
 
 **Fuente de contenido:** Cada bloque se construye con el contenido de las antiguas páginas individuales (`servicios/*/index.njk`), ahora inline en `servicios/index.njk`.
 

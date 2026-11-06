@@ -53,14 +53,14 @@ Comunicar propuesta de valor en segundos. Las 6 cards funcionan como **storefron
 Única página que contiene el desarrollo completo de los 6 servicios. Sin cards de preview. Cada servicio es un **módulo narrativo completo** con índice de navegación rápida.
 
 ### Navegación
-Índice lateral (desktop) o superior (mobile) con anchors a cada servicio:
+Índice superior (`#servicios-indice`) con anchors a cada servicio, en grid de 1/2/3 columnas (mobile/tablet/desktop):
 
 ```
-[ Diagnóstico técnico ] [ Modernización web ] [ Performance ]
-[ Sistemas web        ] [ Arquitectura      ] [ Seguridad    ]
+[ 01 Diagnóstico técnico ] [ 02 Modernización web ] [ 03 Performance & CWV ]
+[ 04 Sistemas web       ] [ 05 Arquitectura     ] [ 06 Seguridad & DevSecOps ]
 ```
 
-Cada item del índice hace scroll suave (`scroll-behavior: smooth`) al `id` del bloque.
+Cada item del índice hace scroll suave (`scroll-behavior: smooth`, condicionado a `prefers-reduced-motion`) al `id` del bloque. El detalle vive en `_specs/services-index.md`.
 
 ### Estructura de cada bloque de servicio
 
@@ -217,7 +217,7 @@ Cada bloque sigue esta estructura exacta, sin variaciones entre servicios:
 | Cuerpo | Inter (`font-sans`), `text-slate-600`, `leading-relaxed` |
 | CTA primario | `.btn-primary` → uno por bloque |
 | Separación entre bloques | `border-t border-slate-200` o `py-24` |
-| Índice de navegación | Links con `text-primary`, `hover:opacity-80`, sin border-radius |
+| Índice de navegación | Grid de celdas con borde recto; hover `bg-primary` con texto blanco, sin border-radius |
 | Grid de 6 áreas | `grid grid-cols-1 md:grid-cols-3 gap-5`, cards sin border-radius, `bg-white` con `shadow-[0_1px_3px_rgba(34,25,25,0.4)]` |
 
 ---
