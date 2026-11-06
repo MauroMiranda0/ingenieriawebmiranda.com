@@ -671,7 +671,7 @@
 
 @media (max-width: 1023px) {
   .case-animated-card {
-    background: linear-gradient(135deg, rgba(11, 42, 74, 0.94), rgba(11, 42, 74, 0.78)), #0b2a4a;
+    background: #0b2a4a;
   }
 
   .case-animated-card-mark {
